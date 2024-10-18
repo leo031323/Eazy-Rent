@@ -37,8 +37,8 @@ public class PublicacionServiceImpl implements PublicacionService{
     }
 
     @Override
-    public List<Publication> findAllByStatePublicacion(String statePublicacion) {
-        return publicationRepository.findAllByStatePublication(statePublicacion);
+    public List<Publication> findAllByEstadoPublicacion(String estadoPublicacion) {
+        return publicationRepository.findAllByStatePublication(estadoPublicacion);
     }
 
     //    borrado logico de publicacion
@@ -49,10 +49,10 @@ public class PublicacionServiceImpl implements PublicacionService{
         publicationRepository.save(publication);
     }
 
-    //    metodo de busqueda publicaciones por id o qualification
+    //    metodo de busqueda publicaciones por id o titulo
     @Override
-    public List<Publication> findByQualificationPublicacionContaining(String qualification) {
-        return publicationRepository.findByQualificationPublicationContaining(qualification);
+    public List<Publication> findByTituloPublicacionContaining(String titulo) {
+        return publicationRepository.findByQualificationPublicationContaining(titulo);
     }
 
 

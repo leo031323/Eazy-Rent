@@ -48,7 +48,7 @@
                         <tr>
                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Publicacion</th>
                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tipo</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">State</th>
+                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Estado</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Visualizaciones</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Fecha de publication</th>
                             <th class="text-secondary opacity-7"></th>
@@ -64,12 +64,12 @@
                                 <div class="d-flex px-2 py-1">
                                     <div>
 <%--                                        <c:choose>--%>
-<%--                                            <c:when test="${propiedad.images.size() > 0}">--%>
-<%--                                                images en la posicion 0--%>
-                                                <img src="../../assets/img/rents/${propiedad.images.get(0).url}" class="avatar avatar-xl me-3" alt="logo">
+<%--                                            <c:when test="${propiedad.imagenes.size() > 0}">--%>
+<%--                                                imagenes en la posicion 0--%>
+                                                <img src="../../assets/img/rents/${propiedad.imagenes.get(0).url}" class="avatar avatar-xl me-3" alt="logo">
 <%--                                            </c:when>--%>
 <%--                                            <c:otherwise>--%>
-<%--                                                <img src="../../assets/img/rents/${propiedad.imag1}" class="avatar avatar-xl me-3" alt="logo">--%>
+<%--                                                <img src="../../assets/img/rents/${propiedad.imagen1}" class="avatar avatar-xl me-3" alt="logo">--%>
 <%--                                            </c:otherwise>--%>
 <%--                                        </c:choose>--%>
                                     </div>
@@ -85,7 +85,7 @@
                             </td>
                             <td class="align-middle text-center">
                                 <c:choose>
-                                    <c:when test="${propiedad.statePublication == \"active\" }">
+                                    <c:when test="${propiedad.statePublication == \"activo\" }">
                                         <span class="badge bg-gradient-success">${propiedad.statePublication}</span>
                                     </c:when>
                                     <c:otherwise>

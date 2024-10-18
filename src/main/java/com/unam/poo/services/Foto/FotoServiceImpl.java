@@ -1,4 +1,4 @@
-package com.unam.poo.services.Photo;
+package com.unam.poo.services.Foto;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.unam.poo.repository.PhotosRepository;
 
 @Service
-public class PhotoServiceImpl implements PhotoService{
+public class FotoServiceImpl implements FotoService{
 
     @Autowired
     PhotosRepository photosRepository;
@@ -20,17 +20,17 @@ public class PhotoServiceImpl implements PhotoService{
     }
 
     @Override
-    public void deletePhotoById(Long id) {
+    public void deleteFotoById(Long id) {
         photosRepository.deleteById(id);
     }
 
     @Override
-    public Photo getPhotoById(Long id) {
+    public Photo getFotoById(Long id) {
         return photosRepository.findById(id).orElse(null);
     }
  
     @Override
-    public Photo savePhoto(Photo photo) {
+    public Photo saveFoto(Photo photo) {
         return photosRepository.save(photo);
     }
 

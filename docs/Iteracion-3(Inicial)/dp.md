@@ -1,7 +1,7 @@
 # Trabajo en equipo
 El lider de la primera iteracion sera: Guillermo Quintana
 
-La division de las Historias de User sera la siguiente:
+La division de las Historias de Usuario sera la siguiente:
 - Modificar datos de user
     - **Encargados**: Marcela Stigelmeier y Matias Fernandez
 
@@ -14,13 +14,13 @@ La division de las Historias de User sera la siguiente:
 
 # Diseño OO
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/DC_ite_1-2.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/DC_ite_1-2.jpeg" width="800"/>
 
 # Wireframe y caso de uso
 
 ## Wireframe Modificar datos de user
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/modificar_datos_users.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/modificar_datos_usuarios.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**:   
@@ -88,7 +88,7 @@ La division de las Historias de User sera la siguiente:
 
 ## Wireframe Consultar user
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/consultar_user.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/consultar_usuario.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**:
@@ -138,7 +138,7 @@ La division de las Historias de User sera la siguiente:
 
 ## Wireframe Consultar ubicación
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/consultar_ubicacion.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/consultar_ubicacion.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**:   
@@ -220,7 +220,7 @@ La division de las Historias de User sera la siguiente:
 
 -
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
@@ -242,7 +242,7 @@ La division de las Historias de User sera la siguiente:
 
 -
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
@@ -265,7 +265,7 @@ La division de las Historias de User sera la siguiente:
 
 -
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos

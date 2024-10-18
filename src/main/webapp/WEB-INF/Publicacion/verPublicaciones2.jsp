@@ -25,9 +25,9 @@
           <div class="card-header">
             <h4 class="card-title">Puede filtrar por:</h4>
           </div>
-        <!-- Price start -->
+        <!-- Precio start -->
         <div class="border-bottom mb-4 pb-4">
-          <h5 class="font-weight-semi-bold mb-4"><i class="fas fa-dollar-sign text-primary me-3"></i>Price</h5>
+          <h5 class="font-weight-semi-bold mb-4"><i class="fas fa-dollar-sign text-primary me-3"></i>Precio</h5>
           <form>
             <div class="form-group mb-4">
               <label>Desde:</label>
@@ -41,7 +41,7 @@
             </div>
           </form>
         </div>
-        <!-- Price end -->
+        <!-- Precio end -->
 
           <!-- Dimensiones start -->
           <div class="border-bottom mb-4 pb-4">
@@ -68,13 +68,13 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault33">
                   <label class="form-check-label" for="flexCheckDefault33">
-                    Homes
+                    Casas
                   </label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault98">
                   <label class="form-check-label" for="flexCheckDefault98">
-                    Monoenvironments
+                    Monoambientes
                   </label>
                 </div>
                 <div class="form-check">
@@ -111,7 +111,7 @@
               <h5 class="font-weight-semi-bold mb-4"><i class="fas fa-map-marker-alt text-primary me-3"></i>Ubicación</h5>
               <form>
                 <div class="form-group">
-                  <label class="form-label">Province</label>
+                  <label class="form-label">Provincia</label>
                   <select class="form-select" aria-label="Default select example">
                     <option selected>Seleccione una province</option>
                     <option value="1">Buenos Aires</option>
@@ -181,9 +181,9 @@
             </div>
             <!-- Pet friendly end -->
 
-          <!-- Garage start -->
+          <!-- Cochera start -->
           <div class="border-bottom mb-4 pb-4">
-            <h5 class="font-weight-semi-bold mb-4"><i class="fas fa-car text-primary me-3"></i>Garage</h5>
+            <h5 class="font-weight-semi-bold mb-4"><i class="fas fa-car text-primary me-3"></i>Cochera</h5>
             <form>
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault089">
@@ -199,7 +199,7 @@
               </div>
             </form>
           </div>
-          <!-- Garage end -->
+          <!-- Cochera end -->
 
     </div>
     </div>
@@ -213,7 +213,7 @@
           <div class="d-flex align-items-center justify-content-between mb-4">
 <%--            <form action="">--%>
 <%--              <div class="input-group input-group-dynamic w-lg-auto">--%>
-<%--                <input type="text" class="form-control" placeholder="Buscar por name o description">--%>
+<%--                <input type="text" class="form-control" placeholder="Buscar por nombre o descripcion">--%>
 <%--                <div class="input-group-append">--%>
 <%--                  <span class="input-group-text bg-transparent text-primary">--%>
 <%--                    <i class="fa fa-search"></i>--%>
@@ -229,8 +229,8 @@
                 <div class="d-flex align-items-center">
                     <label class="mb-0 me-2">Ordenar por:</label>
                     <select class="form-select form-select-sm">
-                    <option selected>Name</option>
-                    <option value="1">Price</option>
+                    <option selected>Nombre</option>
+                    <option value="1">Precio</option>
                     <option value="2">Dimensiones</option>
                     </select>
                 </div>
@@ -247,7 +247,7 @@
                 <div class="ratio ratio-1x1">
                   <div id="carousel-12" class="carousel slide" data-bs-ride="false">
                     <div class="carousel-inner">
-                      <div class="carousel-item active ratio ratio-1x1"><img class="w-100 d-block card-img-top" style="object-fit:cover; height:100%; width: 100%;" src="../../assets/img/rents/${publication.images.get(0).url}" alt="Slide Image"/></div>
+                      <div class="carousel-item active ratio ratio-1x1"><img class="w-100 d-block card-img-top" style="object-fit:cover; height:100%; width: 100%;" src="../../assets/img/rents/${publication.imagenes.get(0).url}" alt="Slide Image"/></div>
 
                       <div class="carousel-item ratio ratio-1x1"><img class="w-100 d-block card-img-top" style="object-fit:cover; height:100%; width: 100%;" src="../../assets/img/rents/2.webp" alt="Slide Image" /></div>
                       <div class="carousel-item ratio ratio-1x1"><img class="w-100 d-block card-img-top" style="object-fit:cover; height:100%; width: 100%;" src="../../assets/img/rents/3.webp" alt="Slide Image" /></div>
@@ -374,9 +374,9 @@
         const texto = e.target.value.toLowerCase();
         const cards = document.querySelectorAll('.card');
         cards.forEach((card) => {
-            const qualification = card.querySelector('.card-title').textContent.toLowerCase();
-            const description = card.querySelector('.card-text').textContent.toLowerCase();
-            if (qualification.indexOf(texto) != -1 || description.indexOf(texto) != -1) {
+            const titulo = card.querySelector('.card-title').textContent.toLowerCase();
+            const descripcion = card.querySelector('.card-text').textContent.toLowerCase();
+            if (titulo.indexOf(texto) != -1 || descripcion.indexOf(texto) != -1) {
                 card.style.display = 'block';
             } else {
                 card.style.display = 'none';

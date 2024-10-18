@@ -1,4 +1,4 @@
-package com.unam.poo.services.  Comfort;
+package com.unam.poo.services.Comodidad;
 
 import com.unam.poo.models.Comfort;
 import com.unam.poo.repository.ComfortRepository;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class   ComfortServiceImpl implements   ComfortService {
+public class ComodidadServiceImpl implements ComodidadService {
 
     @Autowired
     private ComfortRepository comfortRepository;
@@ -19,17 +19,17 @@ public class   ComfortServiceImpl implements   ComfortService {
     }
 
     @Override
-    public void delete  ComfortById(Long id) {
+    public void deleteComodidadById(Long id) {
 
     }
 
     @Override
-    public Comfort get  ComfortById(Long id) {
+    public Comfort getComodidadById(Long id) {
         return comfortRepository.findById(id).get();
     }
 
     @Override
-    public Comfort save  Comfort(Comfort comfort) {
+    public Comfort saveComodidad(Comfort comfort) {
         return null;
     }
 }

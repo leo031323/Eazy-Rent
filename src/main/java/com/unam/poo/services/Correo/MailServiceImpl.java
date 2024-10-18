@@ -1,4 +1,4 @@
-package com.unam.poo.services.Mail;
+package com.unam.poo.services.Correo;
 
 import java.util.List;
 
@@ -20,25 +20,25 @@ public class MailServiceImpl implements MailService {
     }
 
     @Override
-    public void deleteMailById(Long id) {
+    public void deleteCorreoById(Long id) {
         mailRepository.deleteById(id);
     }
 
     @Override
-    public Mail getMailById(Long id) {
+    public Mail getCorreoById(Long id) {
         return mailRepository.findById(id).orElse(null);
     }
 
     @Override
-    public Mail saveMail(Mail mail) {
+    public Mail saveCorreo(Mail mail) {
         return mailRepository.save(mail);
     }
 
     @Override
-    public Mail getMailByMail(String mail) {
-        for (Mail mail : mailRepository.findAll()) {
-            if (mail.getUser().getMail().equals(mail)){
-                return mail;
+    public Mail getCorreoByMail(String mail) {
+        for (Mail correo : mailRepository.findAll()) {
+            if (correo.getUser().getMail().equals(mail)){
+                return correo;
             }
         }
         return null;

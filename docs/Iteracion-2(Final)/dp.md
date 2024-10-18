@@ -1,7 +1,7 @@
 # Trabajo en equipo
 El lider de la primera iteracion sera: Ariel Cristaldo
 
-La division de las Historias de User sera la siguiente:
+La division de las Historias de Usuario sera la siguiente:
 - Dar de baja una propiedad
     - **Encargados**: Marcela Stigelmeier y Matias Fernandez
 
@@ -16,13 +16,13 @@ La division de las Historias de User sera la siguiente:
 
 # Diseño OO
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/DC_ite_1-2.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/DC_ite_1-2.jpeg" width="800"/>
 
 # Wireframe y caso de uso
 
 ## Wireframe Dar de baja una propiedad
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/Baja_propiedad.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/Baja_propiedad.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**: Dar de baja una propiedad
@@ -54,7 +54,7 @@ La division de las Historias de User sera la siguiente:
 
 ## Wireframe Consultar propiedad(exclusivo para propietarios)
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/consultar_propiedad.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/consultar_propiedad.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**: Consultar propiedad
@@ -72,17 +72,17 @@ La division de las Historias de User sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando el propietario ingresa en <br>la publicación deseada presionando sobre el name de la publicación
+    <td><b>1</b>. Este caso de uso comienza cuando el propietario ingresa en <br>la publicación deseada presionando sobre el nombre de la publicación
     <td></td>
   </tr> 
   <tr>
     <td></td>
     <td><b>2</b>. El sistema despliegue la información asociada a la publicación como ser:<br> 
-            - Photo asociada a la Propiedad <br>
-            - Name de la publication <br>
-            - Description de publication<br>
-            - Servicios y     comforts brindados por la propiedad <br>
-            - Price de la propiedad <br>
+            - Foto asociada a la Propiedad <br>
+            - Nombre de la publication <br>
+            - Descripcion de publication<br>
+            - Servicios y comodidades brindados por la propiedad <br>
+            - Precio de la propiedad <br>
             - Ubicaion de la propiedad <br>
             - Mapa asociado a la publication<br>
    <tr>
@@ -100,7 +100,7 @@ La division de las Historias de User sera la siguiente:
 
 ## Wireframe Ver detalles del alquiler(exclusivo para inquilinos)
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/ver_detalles_Alquiler_este.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/ver_detalles_Alquiler_este.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**: Ver detalles del Alquiler  
@@ -115,17 +115,17 @@ La division de las Historias de User sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando el propietario ingresa en <br>la publicación deseada presionando sobre el name de la publicación
+    <td><b>1</b>. Este caso de uso comienza cuando el propietario ingresa en <br>la publicación deseada presionando sobre el nombre de la publicación
     <td></td>
   </tr> 
   <tr>
     <td></td>
     <td><b>2</b>. El sistema despliegue la información asociada a la publicación como ser:<br> 
-            - Photo asociada a la Propiedad <br>
-            - Name de la publication <br>
-            - Description de publication<br>
-            - Servicios y     comforts brindados por la propiedad <br>
-            - Price de la propiedad <br>
+            - Foto asociada a la Propiedad <br>
+            - Nombre de la publication <br>
+            - Descripcion de publication<br>
+            - Servicios y comodidades brindados por la propiedad <br>
+            - Precio de la propiedad <br>
             - Ubicaion de la propiedad <br>
             - Mapa asociado a la publication<br>
    <tr>
@@ -144,13 +144,13 @@ La division de las Historias de User sera la siguiente:
 
 ## Wireframe Consultar alquileres obtenidos
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/Alquileres_obtenidos.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/Alquileres_obtenidos.jpeg" width="800"/>
 
 <br><br>
 
 **Caso de uso**:  Consultar alquileres obtenidos.
 
-**Descripción**: El user en su profile puede ver los alquileres asociados a su cuenta.
+**Descripción**: El user en su perfil puede ver los alquileres asociados a su cuenta.
 
 **Precondición**:   Haber ingresado al sistema.
   
@@ -182,7 +182,7 @@ La division de las Historias de User sera la siguiente:
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso** 2:  El sistema da aviso al user de que no has alquileres asociados y termina el caso de uso.
+**Paso** 2:  El sistema da aviso al user de que no tiene alquileres asociados y termina el caso de uso.
 
 
 
@@ -211,18 +211,18 @@ La division de las Historias de User sera la siguiente:
    - La publication debe existir
    - La publication debe estar activa y no debe estar asociada a ningun inquilino
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
          - incorporacion de botón con la funcionalidad de dar de baja y la etiqueta "Dar de baja la publicación.
 - Descripción del Uso del wireframe (Caso de Uso real)
-- Establecer el cambio de state en el atributo asociado a la publicación
+- Establecer el cambio de estado en el atributo asociado a la publicación
 
 <u>Criterios de aceptación</u>
 
    - El propietario debe ingresar al sistema con su user.
-   - El sistema da aviso al user de que no has alquileres asociados y termina el caso de uso.
+   - El sistema da aviso al user de que no tiene alquileres asociados y termina el caso de uso.
 
 ## **Tareas para Consultar propiedad (Exclusivo para propietarios)**
 
@@ -230,18 +230,18 @@ La division de las Historias de User sera la siguiente:
 **Quiero** consultar una propiedad <br/>
 **Para** ver los detalles de la misma <br/>
     
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
         - Etiqueta que contenga el título de la publicación
         - Etiqueta que contenga la descripción de la publicación
-        - Etiqueta que contenga el price de la publicación
-        - Sección donde se muestre las     comforts y servicios asociados a la propiedad
+        - Etiqueta que contenga el precio de la publicación
+        - Sección donde se muestre las comodidades y servicios asociados a la propiedad
         - Complemento de mapa para ver la ubicación de la propiedad
         - Botón con la Etiqueta “Contactar”
-        - Botón con la Etiqueta “Agregar a Favorites”
-        - Cuadro de Imag para ver las imágenes asociadas a la publicación
+        - Botón con la Etiqueta “Agregar a Favoritos”
+        - Cuadro de Imagen para ver las imágenes asociadas a la publicación
         - Botón con la Etiqueta “Dar de Baja”
         - Botón con la Etiqueta “Modificar” 
 - Descripción del Uso del wireframe (Caso de Uso real)
@@ -260,18 +260,18 @@ La division de las Historias de User sera la siguiente:
 
 - La publication debe estar activa
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
         - Etiqueta que contenga el título de la publicación
         - Etiqueta que contenga la descripción de la publicación
-        - Etiqueta que contenga el price de la publicación
-        - Sección donde se muestre las     comforts y servicios asociados a la propiedad
+        - Etiqueta que contenga el precio de la publicación
+        - Sección donde se muestre las comodidades y servicios asociados a la propiedad
         - Complemento de mapa para ver la ubicación de la propiedad
         - Botón con la Etiqueta “Contactar”
-        - Botón con la Etiqueta “Agregar a Favorites”
-        - Cuadro de Imag para ver las imágenes asociadas a la publicación
+        - Botón con la Etiqueta “Agregar a Favoritos”
+        - Cuadro de Imagen para ver las imágenes asociadas a la publicación
         - Botón con la Etiqueta “Dar de Baja”
         - Botón con la Etiqueta “Modificar” 
 - Descripción del Uso del wireframe (Caso de Uso real)
@@ -290,7 +290,7 @@ La division de las Historias de User sera la siguiente:
 
 - El user debe tener alquileres asociados(si no, se da aviso de tal circunstancia).
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
 - Descripción del Uso del wireframe (Caso de Uso real)
@@ -303,10 +303,10 @@ Teniendo en cuenta lo realizado en la release 1 podemos decir que hubo un gran a
 cada uno cumpliendo con sus tareas asignadas y trabajando de manera correcta con el repositorio de github.
 Por otra parte se realizo 3 actividades (Crear un nuevo user, Ingresar user, Registrar propiedad) totalmente funcionales de las 4 planteadas 
 de las cuales 1(Modificar propiedad) solo se realizo la documentacion y se establecio entre los integrantes del equipo en moverla
-a alguna iteracion futura(Iteracion 4), ya que nos dimos cuenta que iba a ser complicado integrar la funcionalidad en esta height
-del desarrollo por no poseer el registro de propiedades de manera totalmente funcional (Ya que no se posee integrado el manejo de images y la integracion de la ubicacion)
+a alguna iteracion futura(Iteracion 4), ya que nos dimos cuenta que iba a ser complicado integrar la funcionalidad en esta altura
+del desarrollo por no poseer el registro de propiedades de manera totalmente funcional (Ya que no se posee integrado el manejo de imagenes y la integracion de la ubicacion)
 Ademas de esto se establecio el una forma de trabajo de a pares, siguiendo con esta metodologia para las siguientes iteraciones.
 
 Cambios en otros documentos realizados
 - Se realizo una actualizacion de la Hoja de ruta que se encuentra en la Iteracion 0
-    - Moviendo de iteracion la Historia de User "Modificar propiedad"
+    - Moviendo de iteracion la Historia de Usuario "Modificar propiedad"

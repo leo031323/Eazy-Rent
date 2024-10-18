@@ -1,12 +1,12 @@
 # Trabajo en equipo
 El lider de la cuarta iteracion sera: Marcelo Kachuck
 
-La division de las Historias de User sera la siguiente:
+La division de las Historias de Usuario sera la siguiente:
 
-- Consultar alquileres Favorites
+- Consultar alquileres Favoritos
     - **Encargados**: Emiliano Blazco y Ariel Cristaldo
 
-- Restablecer password
+- Restablecer contraseña
     - **Encargados**: Marcela Stigelmeier y Matias Fernandez
 
 - Testing
@@ -14,17 +14,17 @@ La division de las Historias de User sera la siguiente:
 
 # Tablero de Proyecto
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/tablero5I.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/tablero5I.jpeg" width="800"/>
 
 # Diseño OO
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/DC_ite_4.png" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/DC_ite_4.png" width="800"/>
 
 # Wireframe y caso de uso
 
-## Wireframe Consultar alquileres Favorites
+## Wireframe Consultar alquileres Favoritos
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/consultar_alquileres_fav.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/consultar_alquileres_fav.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**:   
@@ -90,9 +90,9 @@ La division de las Historias de User sera la siguiente:
 
 **Paso**:
 
-## Wireframe Restablecer password
+## Wireframe Restablecer contraseña
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/restablecer_contra.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/restablecer_contra.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**:
@@ -142,15 +142,15 @@ La division de las Historias de User sera la siguiente:
 
 # Backlog de iteraciones
 **Iteracion 5**
-- Consultar alquileres Favorites
-- Restablecer password
+- Consultar alquileres Favoritos
+- Restablecer contraseña
 - Testing
 
 # Tareas
 
 <br><br>
 
-## **Tareas para Consultar alquileres Favorites**
+## **Tareas para Consultar alquileres Favoritos**
 
 **Como**  
 **Quiero**  
@@ -160,7 +160,7 @@ La division de las Historias de User sera la siguiente:
 
 -
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
@@ -172,7 +172,7 @@ La division de las Historias de User sera la siguiente:
 - Validación de campos con sus respectivas alertas
 
 
-## **Tareas para Restablecer password**
+## **Tareas para Restablecer contraseña**
 
 **Como**  
 **Quiero**  
@@ -182,7 +182,7 @@ La division de las Historias de User sera la siguiente:
 
 -
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
@@ -198,7 +198,7 @@ La division de las Historias de User sera la siguiente:
 
 Teniendo en cuenta lo realizado en la release 4 podemos decir que hubo un gran aporte por parte de todos los integrantes del grupo
 cada uno cumpliendo con sus tareas asignadas y trabajando de manera correcta con el repositorio de github.
-Por otra parte se realizaron de manera completa las 4 actividades (Dar de baja un user (baja lógica), Agregar un alquiler a Favorites, Eliminar un alquiler de Favorites, Modificar propiedad) planteadas para la iteracion. 
+Por otra parte se realizaron de manera completa las 4 actividades (Dar de baja un user (baja lógica), Agregar un alquiler a Favoritos, Eliminar un alquiler de Favoritos, Modificar propiedad) planteadas para la iteracion. 
 Cumpliendo con su documentacion, desarrollo de wireframes e implementacion de funcionalidades
 Ademas de esto se mantuvo la forma de trabajo de a pares, siguiendo con esta metodologia para las siguientes iteraciones.
 

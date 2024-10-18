@@ -1,7 +1,7 @@
 # Trabajo en equipo
 El lider de la primera iteracion sera: Guillermo Quintana
 
-La division de las Historias de User sera la siguiente:
+La division de las Historias de Usuario sera la siguiente:
 - Modificar datos de user
     - **Encargados**: Marcela Stigelmeier y Matias Fernandez
 
@@ -14,13 +14,13 @@ La division de las Historias de User sera la siguiente:
 
 # Diseño OO
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/DC_ite_3.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/DC_ite_3.jpeg" width="800"/>
 
 # Wireframe y caso de uso
 
 ## Wireframe Modificar datos de user
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/modificar_datos_users.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/modificar_datos_usuarios.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**:  Modificar datos de user <br>
@@ -35,7 +35,7 @@ La division de las Historias de User sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando el user está <br>en su profile y presiona sobre la etiqueta “Modificar datos”
+    <td><b>1</b>. Este caso de uso comienza cuando el user está <br>en su perfil y presiona sobre la etiqueta “Modificar datos”
     <td></td>
   </tr> 
   <tr>
@@ -43,7 +43,7 @@ La division de las Historias de User sera la siguiente:
     <td><b>2</b>. El sistema despliega un formulario con los datos <br> del user ya cargados 
   </tr>
       <tr>
-    <td><b>3</b>. El User busca el dato a cambiar, lo modifica <br>y presiona en el botón con la etiqueta <br> “Guardar Modificación”
+    <td><b>3</b>. El Usuario busca el dato a cambiar, lo modifica <br>y presiona en el botón con la etiqueta <br> “Guardar Modificación”
     <td></td>
   </tr> 
      <tr>
@@ -61,11 +61,11 @@ La division de las Historias de User sera la siguiente:
 
 ## Wireframe Consultar user
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/consultar_user.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/consultar_usuario.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**: Consultar user  
-**Descripción**: Un user (inquilino/propietario/administrador) desea consultar la información asociada a un profile dentro del sistema.  
+**Descripción**: Un user (inquilino/propietario/administrador) desea consultar la información asociada a un perfil dentro del sistema.  
 **Precondición**:  
 **Postcondición**:  
 
@@ -78,13 +78,13 @@ La division de las Historias de User sera la siguiente:
   <tr>
     <td><b>1.</b> Este caso de uso comienza cuando<br> 
     un user ingresa a una publicación<br> 
-    y hace click en el name del propietario.</td>
+    y hace click en el nombre del propietario.</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
     <td><b>2.</b> El sistema despliega un cuadro<br> con toda la información pública<br> 
-    (name, localidad, etc) asociada<br>
+    (nombre, localidad, etc) asociada<br>
      a ese user.
   </tr>
   <tr>
@@ -96,13 +96,13 @@ La division de las Historias de User sera la siguiente:
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso 1**: El user hace click en el name de un comentario de la publicación. El sistema responde igual.  
+**Paso 1**: El user hace click en el nombre de un comentario de la publicación. El sistema responde igual.  
 
 <br><br>
 
 ## Wireframe Consultar ubicación
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/consultar_ubicacion.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/consultar_ubicacion.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**:  Consultar Ubicación 
@@ -117,14 +117,14 @@ La division de las Historias de User sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando el user ingresa <br> en una publicación presionando sobre el name de <br>la publicación.
+    <td><b>1</b>. Este caso de uso comienza cuando el user ingresa <br> en una publicación presionando sobre el nombre de <br>la publicación.
     <td></td>
   </tr> 
   <tr>
     <td></td>
     <td><b>2</b>. El sistema carga la información asociada a la publicación<br> desplegando:<br>
-    -Imag de la propiedad <br>
-    -    Comforts asociadas<br>
+    -Imagen de la propiedad <br>
+    -Comodidades asociadas<br>
     -Ubicación asociada a la propiedad<br>
     -Mapa con la ubicación especificada<br>
   </tr>
@@ -154,7 +154,7 @@ La division de las Historias de User sera la siguiente:
 
 ## **Tareas para Consultar ubicación**
 
-**Como**  User <br>
+**Como**  Usuario <br>
 **Quiero**  consultar ubicación<br>
 **Para** poder encontrar la propiedad de manera más eficiente<br>
 
@@ -164,11 +164,11 @@ La division de las Historias de User sera la siguiente:
 -La ubicación especificada debe coincidir con la exhibida en el mapa
 
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
-        - Dentro del wireframe usado en la Historia de User consultar una propiedad se incorpora un mapa el cual muestre la ubicación ingresada por el propietario
+        - Dentro del wireframe usado en la Historia de Usuario consultar una propiedad se incorpora un mapa el cual muestre la ubicación ingresada por el propietario
 - Descripción del Uso del wireframe (Caso de Uso real)
 - Creación del modelo de datos(Entidad/es de Base de datos)
 - Validación de campos con sus respectivas alertas
@@ -187,7 +187,7 @@ La division de las Historias de User sera la siguiente:
 -Los datos modificados deben ser validos 
 
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
@@ -210,9 +210,9 @@ La division de las Historias de User sera la siguiente:
 
 - El sistema debe informar de la inexistencia (si así fuese) del user consultado.
 - El inquilino/propietario debe haber ingresado al sistema.
-- Solo el profile de propietario puede ser visto de manera pública (sin haber ingresado al sistema).
+- Solo el perfil de propietario puede ser visto de manera pública (sin haber ingresado al sistema).
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe.
 - Descripción del Uso del wireframe (Caso de Uso real).

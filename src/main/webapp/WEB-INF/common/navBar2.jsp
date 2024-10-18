@@ -79,10 +79,10 @@
           <span>Departamentos</span>
         </a>
         <a href="#" class="dropdown-item border-radius-md">
-          <span>Homes</span>
+          <span>Casas</span>
         </a>
         <a href="#" class="dropdown-item border-radius-md">
-          <span>Monoenvironments</span>
+          <span>Monoambientes</span>
         </a>
       </div>
       <%--Duplicado para cuando la barra esta colapsada--%>
@@ -95,10 +95,10 @@
           <span>Departamentos</span>
         </a>
         <a href="#" class="dropdown-item border-radius-md">
-          <span>Homes</span>
+          <span>Casas</span>
         </a>
         <a href="#" class="dropdown-item border-radius-md">
-          <span>Monoenvironments</span>
+          <span>Monoambientes</span>
         </a>
       </div>
     </div>
@@ -157,7 +157,7 @@
              if (session.getAttribute("autenticado") == "true"){
              %>
             <li><a class="dropdown-item" href="${pageContext.request.contextPath}/logout">Cerrar sesión</a></li>
-            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/user/profile">Profile</a></li>
+            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/user/profile">Perfil</a></li>
             <%
             }
             %> 

@@ -2,7 +2,7 @@ package com.unam.poo.controllers.auth;
 import com.unam.poo.controllers.PanelUsrController;
 import com.unam.poo.dto.LoginDto;
 import com.unam.poo.models.User;
-import com.unam.poo.services.UserService;
+import com.unam.poo.services.UsuarioService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse; 
@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class LoginController { 
 
     @Autowired
-    UserService userService; 
+    UsuarioService usuarioService; 
     
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -33,7 +33,7 @@ public class LoginController {
 
     @GetMapping("/logout")
     public String logout(HttpServletRequest request, HttpServletResponse response) throws IOException { 
-        request.getSession().removeAttribute("user"); 
+        request.getSession().removeAttribute("usuario"); 
         request.getSession().removeAttribute("autenticado"); 
         response.sendRedirect(request.getContextPath() + "/");
         return "welcome";
@@ -54,10 +54,10 @@ public class LoginController {
           return "Error";
         }  
         try { 
-            User user = userService.getUserByMail(loginDto.getMail().toString());
+            User user = usuarioService.getUsuarioByCorreo(loginDto.getCorreo().toString());
             if (user != null){  
                 if (user.getActive()){
-                    if (passwordEncoder.matches(loginDto.getPassword(), user.getPassword())){
+                    if (passwordEncoder.matches(loginDto.getContraseña(), user.getPassword())){
                         //Coinciden entonces:
                         System.out.println("AUTENTICADO: Redireccionando...");
                        
@@ -68,45 +68,45 @@ public class LoginController {
                         /*C1: Ejemplo de como mapear la variable de Session Storage para su uso
     
                         HttpSession httpSession = request.getSession();
-                        request.getSession().setAttribute("user", user); 
+                        request.getSession().setAttribute("usuario", user); 
     
-                        System.out.println("HTTP SESSION USER (Objeto): " + httpSession.getAttribute("user"));
+                        System.out.println("HTTP SESSION USER (Objeto): " + httpSession.getAttribute("usuario"));
     
                         System.out.println("Para mapear como un objeto User de nuestro modelo:");
                         ObjectMapper mapper = new ObjectMapper();
     
                         System.out.println("Se transforma el objeto generico de la session storage en Json");
-                        String userJson = mapper.writeValueAsString(httpSession.getAttribute("user"));
-                        request.getSession().removeAttribute("user"); 
+                        String usuarioJson = mapper.writeValueAsString(httpSession.getAttribute("usuario"));
+                        request.getSession().removeAttribute("usuario"); 
     
                         System.out.println("Se transforma el Json en un objeto User de nuestro modelo");
-                        User userMapped = mapper.readValue(userJson, User.class);
+                        User userMapped = mapper.readValue(usuarioJson, User.class);
                         
                         System.out.println("Se realiza el mapping con exito, los datos son: ");
                         System.out.println("ID: " + userMapped.getId());
-                        System.out.println("Name: " + userMapped.getName());
-                        System.out.println("Lastname: " + userMapped.getLastName());
+                        System.out.println("Nombre: " + userMapped.getName());
+                        System.out.println("Apellido: " + userMapped.getLastName());
                         System.out.println("DNI: " + userMapped.getDni());
                         System.out.println("Mail: " + userMapped.getMail());
     
-                        System.out.println("Mediante controladores podemos usar el dato de ID de este user para obtener publicaciones, etc.");
+                        System.out.println("Mediante controladores podemos usar el dato de ID de este usuario para obtener publicaciones, etc.");
                         
                         Todo lo de arriba hasta el comentario C1 es opcional y se puede eliminar o comentar a gusto */
                         
-                        /* cambiar para redireccionar a panel de user -> */ 
+                        /* cambiar para redireccionar a panel de usuario -> */ 
                         
                         response.sendRedirect(request.getContextPath() + "/");
                         return "welcome";
                         /* Alternativa: response.sendRedirect() */
                     }else{
-                        System.out.println("ERROR: Password incorrecta");
-                        model.addAttribute("mensaje", "Password incorrecta");
+                        System.out.println("ERROR: Contraseña incorrecta");
+                        model.addAttribute("mensaje", "Contraseña incorrecta");
                         return "error";
                         //return "authLogin";
                     }
                 }else{
-                    System.out.println("ERROR: User inactive");
-                    model.addAttribute("mensaje", "User inactive");
+                    System.out.println("ERROR: User inactivo");
+                    model.addAttribute("mensaje", "User inactivo");
                     return "error";
                 }
             }else{

@@ -1,13 +1,13 @@
-package com.unam.poo.services.Photo;
+package com.unam.poo.services.Foto;
 
 import java.util.List;
 
 import com.unam.poo.models.Photo;
 
-public interface PhotoService {
+public interface FotoService {
     List<Photo> findAll();
-    void deletePhotoById(Long id);
-    Photo getPhotoById(Long id);
-    Photo savePhoto(Photo photo);
+    void deleteFotoById(Long id);
+    Photo getFotoById(Long id);
+    Photo saveFoto(Photo photo);
     String transformToDataURI(Photo photo);
 }

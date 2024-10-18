@@ -1,6 +1,6 @@
 package com.unam.poo.controllers.auth;
 
-import com.unam.poo.dto.UserDto;
+import com.unam.poo.dto.UsuarioDto;
 import com.unam.poo.models.City;
 import com.unam.poo.models.Mail;
 import com.unam.poo.models.Photo;
@@ -8,10 +8,10 @@ import com.unam.poo.models.User;
 import com.unam.poo.security.enums.RoleName;
 import com.unam.poo.security.modelo.Role;
 import com.unam.poo.security.service.RolService;
-import com.unam.poo.services.UserService;
-import com.unam.poo.services.City.CityService;
-import com.unam.poo.services.Mail.MailService;
-import com.unam.poo.services.Photo.PhotoService;
+import com.unam.poo.services.UsuarioService;
+import com.unam.poo.services.Ciudad.CiudadService;
+import com.unam.poo.services.Correo.MailService;
+import com.unam.poo.services.Foto.FotoService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -37,10 +37,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RegisterController {
 
     @Autowired
-    UserService userService;
+    UsuarioService usuarioService;
  
-    public RegisterController(UserService userService) {
-        this.userService = userService;
+    public RegisterController(UsuarioService usuarioService) {
+        this.usuarioService = usuarioService;
     }
 
     @Autowired
@@ -50,66 +50,66 @@ public class RegisterController {
     RolService rolService;
 
     @Autowired
-    CityService cityService;
+    CiudadService ciudadService;
     
     @Autowired
-    PhotoService photoService;
+    FotoService fotoService;
 
     @Autowired
     MailService mailService;
 
     @GetMapping ("/authRegister")
     public String registerload(Model model) {
-        List<City> cities = cityService.findAll();
-        model.addAttribute("cities", cities);
+        List<City> ciudades = ciudadService.findAll();
+        model.addAttribute("ciudades", ciudades);
         return "authRegister";
     }
 
     @PostMapping("/newRegister")
-    public String register(Model model, @Validated @ModelAttribute("UserDto") UserDto userDto, HttpServletRequest request, HttpServletResponse response, BindingResult result) throws IOException {
+    public String register(Model model, @Validated @ModelAttribute("UsuarioDto") UsuarioDto usuarioDto, HttpServletRequest request, HttpServletResponse response, BindingResult result) throws IOException {
         if (result.hasErrors()) {
             //aca deberia ir una pagina de error o algo xd
           return "authRegister";
         } 
         try {
             User user = new User();
-            if (userDto.getName()!="" && userDto.getLastname() != "" && userDto.getMail() != ""){
-                if (userDto.getDni() > 10000000L){
-                    if (userDto.getPassword().length() > 7 && userDto.getPassword().length() < 17){                   
-                        City city = cityService.getCityById(userDto.getCity());
+            if (usuarioDto.getNombre()!="" && usuarioDto.getApellido() != "" && usuarioDto.getCorreo() != ""){
+                if (usuarioDto.getDni() > 10000000L){
+                    if (usuarioDto.getContraseña().length() > 7 && usuarioDto.getContraseña().length() < 17){                   
+                        City city = ciudadService.getCiudadById(usuarioDto.getCiudad());
                         System.out.println(city);
                         user.setCity(city);
-                        user.setName(userDto.getName());
-                        user.setLastName(userDto.getLastname());
-                        user.setPhone(userDto.getTelephone());
-                        user.setDescription("¡Ingrese una description!");
-                        user.setMail(userDto.getMail());
-                        user.setDni(userDto.getDni());
-                        user.setPassword(passwordEncoder.encode(userDto.getPassword()));
+                        user.setName(usuarioDto.getNombre());
+                        user.setLastName(usuarioDto.getApellido());
+                        user.setPhone(usuarioDto.getTelefono());
+                        user.setDescription("¡Ingrese una descripcion!");
+                        user.setMail(usuarioDto.getCorreo());
+                        user.setDni(usuarioDto.getDni());
+                        user.setPassword(passwordEncoder.encode(usuarioDto.getContraseña()));
                         
                         Set<Role> roles = new HashSet<>();
-                        roles.add(rolService.getByRolName(RoleName.ROL_USER).get());
+                        roles.add(rolService.getByRolNombre(RoleName.ROL_USER).get());
                         user.setRoles(roles); 
                         
                         Photo photo = new Photo();
                         photo.setUser(user);
                         photo.setProfile("../assets/img/pp.jpeg");
                         photo.setFront("../assets/img/bgdep.jpeg");
-                        photoService.savePhoto(photo);
+                        fotoService.saveFoto(photo);
                         user.setPhoto(photo);
 
                         Mail mail = new Mail();
                         mail.setUser(user);
-                        mailService.saveMail(mail);
+                        mailService.saveCorreo(mail);
 
                         System.out.println("Registrando...");
-                        userService.saveUser(user);
+                        usuarioService.saveUsuario(user);
                         System.out.println("Registro exitoso.");
                         response.sendRedirect(request.getContextPath() + "/login");
                         return "authLogin";
                     }else{
-                        System.out.println("ERROR: La password debe ser mayor a 8 caracteres y menor a 16 caracteres");
-                        model.addAttribute("mensaje", "ERROR: La password debe ser mayor a 8 caracteres y menor a 16 caracteres");
+                        System.out.println("ERROR: La contraseña debe ser mayor a 8 caracteres y menor a 16 caracteres");
+                        model.addAttribute("mensaje", "ERROR: La contraseña debe ser mayor a 8 caracteres y menor a 16 caracteres");
                         return "error";
                     }                
                 }else{
@@ -118,8 +118,8 @@ public class RegisterController {
                     return "error";
                 }
             }else{
-                System.out.println("ERROR: Debe especificar un valor para name, lastname y mail");
-                model.addAttribute("mensaje", "Debe especificar un valor para name, lastname y mail");
+                System.out.println("ERROR: Debe especificar un valor para nombre, apellido y correo");
+                model.addAttribute("mensaje", "Debe especificar un valor para nombre, apellido y correo");
                 return "error";
             } 
         } catch (Exception e) {

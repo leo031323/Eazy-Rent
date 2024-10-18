@@ -91,7 +91,7 @@
                                 <h5 class="mb-0">Busca</h5>
                             </div>
                         </div>
-                        <p class="mt-3 mb-0">Busca el alquiler que mas te guste, con la mejor ubicacion y el mejor price.</p>
+                        <p class="mt-3 mb-0">Busca el alquiler que mas te guste, con la mejor ubicacion y el mejor precio.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
@@ -139,7 +139,7 @@
                     <div class="row">
                         <div class="col-10"><h2 class="card-text"> $ 10.000 </h2></div>
                         <div class="col-2"><h4 class="card-text mt-2"><i class="far fa-heart text-primary"></i></h4></div>
-<%--                        corazon relleno para cuando esta en favorites --%>
+<%--                        corazon relleno para cuando esta en favoritos --%>
 <%--                        <div class="col-2"><h4 class="card-text mt-2"><i class="fa fa-heart text-primary"></i></h4></div>--%>
                     </div>
 <%--                    <h2 class="card-text"> $ 10.000 <i class="far fa-heart text-primary"></i></h2>--%>

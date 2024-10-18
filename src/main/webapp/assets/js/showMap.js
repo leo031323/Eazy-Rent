@@ -1,7 +1,7 @@
 // function iniciarMap(){
 //
 //
-//     // establecer un marker con el imag map-marker-2-512.png
+//     // establecer un marker con el imagen map-marker-2-512.png
 //     // var icono = {
 //     //     url: '../../assets/img/map-marker-2-512.png',
 //     //     scaledSize: new google.maps.Size(30, 30),
@@ -11,7 +11,7 @@
 //     // };
 //
 //     // Obtenemos la posicion de la publicacion
-//     var posicion = {lat: {{$publicacion->latitud_publicacion}}, lng: {{$publicacion->longitude_publicacion}}};
+//     var posicion = {lat: {{$publicacion->latitud_publicacion}}, lng: {{$publicacion->longitud_publicacion}}};
 //
 //     // Creamos el mapa
 //     var map = new google.maps.Map(document.getElementById('map'), {

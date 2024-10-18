@@ -1,13 +1,13 @@
-package com.unam.poo.services.City;
+package com.unam.poo.services.Ciudad;
 
 import com.unam.poo.models.City;
 
 import java.util.List;
 
-public interface CityService {
+public interface CiudadService {
     List<City> findAll();
-    void deleteCityById(Long id);
-    City getCityById(Long id);
-    City saveCity(City city);
+    void deleteCiudadById(Long id);
+    City getCiudadById(Long id);
+    City saveCiudad(City city);
 
 }

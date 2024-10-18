@@ -1,7 +1,7 @@
 # Trabajo en equipo
 El lider de la primera iteracion sera: Ariel Cristaldo
 
-La division de las Historias de User sera la siguiente:
+La division de las Historias de Usuario sera la siguiente:
 - Dar de baja una propiedad
     - **Encargados**: Marcela Stigelmeier y Matias Fernandez
 
@@ -16,13 +16,13 @@ La division de las Historias de User sera la siguiente:
 
 # Diseño OO
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/DC_ite_1-2.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/DC_ite_1-2.jpeg" width="800"/>
 
 # Wireframe y caso de uso
 
 ## Wireframe Dar de baja una propiedad
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/Baja_propiedad.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/Baja_propiedad.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**:   
@@ -90,7 +90,7 @@ La division de las Historias de User sera la siguiente:
 
 ## Wireframe Consultar propiedad(exclusivo para propietarios)
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/consultar_propiedad.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/consultar_propiedad.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**:
@@ -140,7 +140,7 @@ La division de las Historias de User sera la siguiente:
 
 ## Wireframe Ver detalles del alquiler(exclusivo para inquilinos)
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/ver_detalles_Alquiler_este.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/ver_detalles_Alquiler_este.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**:   
@@ -203,7 +203,7 @@ La division de las Historias de User sera la siguiente:
 
 ## Wireframe Consultar alquileres obtenidos
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/Alquileres_obtenidos.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/Alquileres_obtenidos.jpeg" width="800"/>
 
 <br><br>
 
@@ -276,7 +276,7 @@ La division de las Historias de User sera la siguiente:
 
 -
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
@@ -298,7 +298,7 @@ La division de las Historias de User sera la siguiente:
 
 -
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
@@ -321,7 +321,7 @@ La division de las Historias de User sera la siguiente:
 
 -
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
@@ -344,7 +344,7 @@ La division de las Historias de User sera la siguiente:
 
 -
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
@@ -363,10 +363,10 @@ Teniendo en cuenta lo realizado en la release 1 podemos decir que hubo un gran a
 cada uno cumpliendo con sus tareas asignadas y trabajando de manera correcta con el repositorio de github.
 Por otra parte se realizo 3 actividades (Crear un nuevo user, Ingresar user, Registrar propiedad) totalmente funcionales de las 4 planteadas 
 de las cuales 1(Modificar propiedad) solo se realizo la documentacion y se establecio entre los integrantes del equipo en moverla
-a alguna iteracion futura(Iteracion 4), ya que nos dimos cuenta que iba a ser complicado integrar la funcionalidad en esta height
-del desarrollo por no poseer el registro de propiedades de manera totalmente funcional (Ya que no se posee integrado el manejo de images y la integracion de la ubicacion)
+a alguna iteracion futura(Iteracion 4), ya que nos dimos cuenta que iba a ser complicado integrar la funcionalidad en esta altura
+del desarrollo por no poseer el registro de propiedades de manera totalmente funcional (Ya que no se posee integrado el manejo de imagenes y la integracion de la ubicacion)
 Ademas de esto se establecio el una forma de trabajo de a pares, siguiendo con esta metodologia para las siguientes iteraciones.
 
 Cambios en otros documentos realizados
 - Se realizo una actualizacion de la Hoja de ruta que se encuentra en la Iteracion 0
-    - Moviendo de iteracion la Historia de User "Modificar propiedad"
+    - Moviendo de iteracion la Historia de Usuario "Modificar propiedad"

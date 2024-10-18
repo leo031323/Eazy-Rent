@@ -64,15 +64,15 @@
                     </div>
                     <div class="card-body">
 
-                        <%--<jsp:useBean id="command" class="com.unam.poo.dto.UserDto" scope="request"></jsp:useBean>--%>
-                        <form:form role="form" action="${pageContext.request.contextPath}/register/newRegister" method="post" modelAttribute="UserDto">
+                        <%--<jsp:useBean id="command" class="com.unam.poo.dto.UsuarioDto" scope="request"></jsp:useBean>--%>
+                        <form:form role="form" action="${pageContext.request.contextPath}/register/newRegister" method="post" modelAttribute="UsuarioDto">
                             <div class="input-group input-group-outline my-3">
-                                <label class="form-label">Name</label>
-                                <input type="text" name="name" id="name" class="form-control">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" name="nombre" id="nombre" class="form-control">
                             </div>
                             <div class="input-group input-group-outline my-3">
-                                <label class="form-label">Lastname</label>
-                                <input type="text" name="lastname" id="lastname" class="form-control">
+                                <label class="form-label">Apellido</label>
+                                <input type="text" name="apellido" id="apellido" class="form-control">
                             </div>
                             <div class="input-group input-group-outline my-3">
                                 <label class="form-label">DNI</label>
@@ -83,47 +83,47 @@
                                 <input type="email" name="mail" id="mail" class="form-control">
                             </div>
                             <div class="input-group input-group-outline my-3">
-                                <label class="form-label">Numero de telephone</label>
-                                <input type="number" name="telephone" id="telephone" class="form-control">
+                                <label class="form-label">Numero de telefono</label>
+                                <input type="number" name="telefono" id="telefono" class="form-control">
                             </div>
                             
-                            <label class="form-label">City</label>
+                            <label class="form-label">Ciudad</label>
                             <div class="input-group input-group-outline mb-3">
                                 <select id="city" name="city" class="form-control">
                                     <option selected disabled value="">Seleccione una city</option>
-                                    <c:forEach items="${cities}" var="city">
+                                    <c:forEach items="${ciudades}" var="city">
                                         <option value="${city.id}">${city.city}</option>
                                     </c:forEach>
                                 </select>
                             </div>
 
                             <div class="input-group input-group-outline mb-3">
-                                <label class="form-label">Password</label>
-                                <input path="password" name="password" id="floatingPassword1" type="password" class="form-control is-invalid" oninput="verificarPasswords(); return false" required> 
+                                <label class="form-label">Contraseña</label>
+                                <input path="contraseña" name="contraseña" id="floatingPassword1" type="password" class="form-control is-invalid" oninput="verificarPasswords(); return false" required> 
                             </div>
                             <div class="input-group input-group-outline mb-3">
-                                <label class="form-label">Confirme su password</label>
+                                <label class="form-label">Confirme su contraseña</label>
                                 <input id="floatingPassword2" type="password" class="form-control is-invalid" oninput="verificarPasswords(); return false" required>
                             </div>
                             <div id="error816" class="text-danger d-none">
-                                La password debe ser mayor a 8 caracteres y menor a 16 caracteres
+                                La contraseña debe ser mayor a 8 caracteres y menor a 16 caracteres
                             </div>
                             <div id="error" class="text-danger d-none">
-                                Las passwords no coinciden
+                                Las contraseñas no coinciden
                             </div>
                             <div id="ok" class="text-success d-none">
-                                Las passwords coinciden
+                                Las contraseñas coinciden
                             </div>
                             <div class="text-center">
                                 <button id="btnRegistrar" type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Registrarme</button>
                             </div>
                             <div class="align-content-center text-center">
-                                <a class="mt-4 text-sm text-center" href="${pageContext.request.contextPath}/login">Ya has una cuenta? inicie sesion</a>
+                                <a class="mt-4 text-sm text-center" href="${pageContext.request.contextPath}/login">Ya tiene una cuenta? inicie sesion</a>
                             </div>
                         </form:form>                       
                         <script>
                             function verificarPasswords() { 
-                                // Obtenemos los valores de los campos de passwords 
+                                // Obtenemos los valores de los campos de contraseñas 
                                 clave1 = document.getElementById("floatingPassword1");
                                 clave2 = document.getElementById("floatingPassword2");
                                 //Verificamos si las constraseñas no coinciden 
@@ -139,10 +139,10 @@
                                                 document.getElementById("btnRegistrar").style = "border-color: grey !important; background-color: ghostwhite !important; color: grey !important;";
                                                 //return false;
                                             } else { 
-                                                // Si las passwords coinciden oculta el mensaje de error 
+                                                // Si las contraseñas coinciden oculta el mensaje de error 
                                                 document.getElementById("error").classList.add("d-none");
                                                 document.getElementById("error816").classList.add("d-none");
-                                                // Muestra un mensaje mencionando que las Passwords coinciden 
+                                                // Muestra un mensaje mencionando que las Contraseñas coinciden 
                                                 document.getElementById("ok").classList.remove("d-none"); 
                                                 // Habilita el botón de login 
                                                 document.getElementById("btnRegistrar").disabled = false;

@@ -1,15 +1,15 @@
 # Trabajo en equipo
 El lider de la cuarta iteracion sera: Emiliano Blazco
 
-La division de las Historias de User sera la siguiente:
+La division de las Historias de Usuario sera la siguiente:
 
 - Dar de baja un user (baja lógica)
     - **Encargados**: Marcela Stigelmeier y Matias Fernandez
   
-- Agregar un alquiler a Favorites
+- Agregar un alquiler a Favoritos
     - **Encargados**: Marcela Stigelmeier, Matias Fernandez, Emiliano Blazco, Ariel Cristaldo, Guillermo Quintana, Marcelo Kachuk
   
-- Eliminar un alquiler de Favorites
+- Eliminar un alquiler de Favoritos
     - **Encargados**: Emiliano Blazco y Ariel Cristaldo
   
 - Modificar propiedad(Implementacion de la funcionalidad faltante de la Iteracion 1)
@@ -17,21 +17,21 @@ La division de las Historias de User sera la siguiente:
 
 # Tablero de Proyecto
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/Tablero_4F.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/Tablero_4F.jpeg" width="800"/>
 
 # Diseño OO
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/DC_ite_4.png" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/DC_ite_4.png" width="800"/>
 
 # Wireframe y caso de uso
 
 ## Wireframe Dar de baja un user (baja lógica)
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/baja_user.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/baja_usuario.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**: Dar de baja un user <br>
-**Descripción**: El user ingresa a su profile y busca la opción para dar de baja su user, presiona sobre el botón "Dar de baja" y su user se desactiva <br>
+**Descripción**: El user ingresa a su perfil y busca la opción para dar de baja su user, presiona sobre el botón "Dar de baja" y su user se desactiva <br>
 **Precondición**:  Que el user se encuentre con la sesión iniciada <br>
 **Postcondición**:  Que el user se haya dado de baja<br> 
 
@@ -42,21 +42,21 @@ La division de las Historias de User sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>.  Este caso de uso comienza cuando el user una vez <br>en su profile, hace click en el boton “Dar de baja” <br>
+    <td><b>1</b>.  Este caso de uso comienza cuando el user una vez <br>en su perfil, hace click en el boton “Dar de baja” <br>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>2</b>. El sistema despliega el mensaje “Una vez confirmada <br> esta acción no has retroceso” y un formulario <br> con los siguientes campos:<br>
+    <td><b>2</b>. El sistema despliega el mensaje “Una vez confirmada <br> esta acción no tiene retroceso” y un formulario <br> con los siguientes campos:<br>
     - Campo 1: E-Mail<br>
-    - Campo 2: Password<br>
+    - Campo 2: Contraseña<br>
   </tr>
   <tr>
     <td><b>3</b>. El user selecciona el campo con la etiqueta <br>“E-Mail” y lo completa<br>
     <td></td>
   </tr>
   <tr>
-    <td><b>4</b>. El user selecciona el campo con la etiqueta <br>“Password” y lo completa<br>
+    <td><b>4</b>. El user selecciona el campo con la etiqueta <br>“Contraseña” y lo completa<br>
     <td></td>
   </tr>
   <tr>
@@ -73,15 +73,15 @@ La division de las Historias de User sera la siguiente:
 
 **Paso 6**:  El sistema detecta que un campo no fue cargado correctamente e indica cuál es el campo que no cumple con lo requerido.
 
-## Wireframe Agregar un alquiler a Favorites
+## Wireframe Agregar un alquiler a Favoritos
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/agregar_fav.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/agregar_fav.jpeg" width="800"/>
 
 <br><br>
-**Caso de uso**: Agregar un alquiler a Favorites<br>
-**Descripción**: El inquilino dentro de un alquiler seleccionado se dirige a la opción de agregar a favorites y el sistema agrega a la lista de favorites el alquiler seleccionado<br>
+**Caso de uso**: Agregar un alquiler a Favoritos<br>
+**Descripción**: El inquilino dentro de un alquiler seleccionado se dirige a la opción de agregar a favoritos y el sistema agrega a la lista de favoritos el alquiler seleccionado<br>
 **Precondición**:El user debe encontrarse dentro de una publicación<br>
-**Postcondición**:  Se agregó un alquiler a favorites<br>
+**Postcondición**:  Se agregó un alquiler a favoritos<br>
 
 **Flujo Típico de eventos**:
 <table>
@@ -94,31 +94,31 @@ La division de las Historias de User sera la siguiente:
     <td></td>
   </tr>
   <tr>
-    <td><b>2</b>. El inquilino selecciona la opción de agregar a favorites <br> con un icono de corazón asociado<br>
+    <td><b>2</b>. El inquilino selecciona la opción de agregar a favoritos <br> con un icono de corazón asociado<br>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>6</b>. El sistema cambia el state de la publicación a favorites <br>y guarda la publicación en la lista de favorites.<br>
+    <td><b>6</b>. El sistema cambia el estado de la publicación a favoritos <br>y guarda la publicación en la lista de favoritos.<br>
  </tr>
 </table>
 
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso**: El sistema no puede agregar a favorites la publicación. Pide que se vuelva a cargar la publicación
+**Paso**: El sistema no puede agregar a favoritos la publicación. Pide que se vuelva a cargar la publicación
 
 <br><br>
 
-## Wireframe Eliminar un alquiler de Favorites
+## Wireframe Eliminar un alquiler de Favoritos
 
-<img src="../../src/main/webapp/assets/img/images_iteraciones/quitar_fav.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/quitar_fav.jpeg" width="800"/>
 
 <br><br>
-**Caso de uso**: Eliminar un alquiler de favorites  <br>
+**Caso de uso**: Eliminar un alquiler de favoritos  <br>
 **Descripción**: Un user quiere eliminar una publicación de su lista de publicaciones favoritas.<br>
 **Precondición**: El user debe ingresar a su cuenta.<br>
-**Postcondición**: La publicación se elimina de la lista de favorites (base de datos). <br>
+**Postcondición**: La publicación se elimina de la lista de favoritos (base de datos). <br>
 
 **Flujo Típico de eventos**:
 <table>
@@ -127,12 +127,12 @@ La division de las Historias de User sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1.</b> Esta caso de uso comienza cuando un user ingresa a su profile y selecciona la opción de "Ver favorites".</td>
+    <td><b>1.</b> Esta caso de uso comienza cuando un user ingresa a su perfil y selecciona la opción de "Ver favoritos".</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>2.</b>El sistema despliega una ventana con las publicaciones etiquetadas como favorites por el user.</td>
+    <td><b>2.</b>El sistema despliega una ventana con las publicaciones etiquetadas como favoritos por el user.</td>
   </tr>
   <tr>
     <td><b>3.</b>El user hace click al botón de "Eliminar" al lado de la publicación.</td>
@@ -140,21 +140,21 @@ La division de las Historias de User sera la siguiente:
   </tr>
   <tr>
     <td></td>
-    <td><b>4.</b>El sistema recarga la lista y muestra los favorites actualizados.</td>
+    <td><b>4.</b>El sistema recarga la lista y muestra los favoritos actualizados.</td>
 </table>
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso 2.1**: El user no posee publicaciones en su lista de favorites, por tanto el sistema da aviso de ello.<br>
-**Paso 4.1**: El user eliminó el último favorite, por tanto el sistema avisa que ya no posee favorites.
+**Paso 2.1**: El user no posee publicaciones en su lista de favoritos, por tanto el sistema da aviso de ello.<br>
+**Paso 4.1**: El user eliminó el último favorito, por tanto el sistema avisa que ya no posee favoritos.
 
 <br></br>
 
 # Backlog de iteraciones
 **Iteracion 4**
 - Dar de baja un user (baja lógica)
-- Agregar un alquiler a Favorites
-- Eliminar un alquiler de Favorites
+- Agregar un alquiler a Favoritos
+- Eliminar un alquiler de Favoritos
 - Modificar propiedad
 
 # Tareas
@@ -163,17 +163,17 @@ La division de las Historias de User sera la siguiente:
 
 ## **Tareas para Dar de baja un user (baja lógica)**
 
-**Como**  User <br>
+**Como**  Usuario <br>
 **Quiero** dar de baja un user  <br>
 **Para** eliminar una cuenta registrada <br>
 
 <u>Criterios de aceptación</u>
 
-- El User debe ingresar al sistema con su user.<br>
+- El Usuario debe ingresar al sistema con su user.<br>
 - El user debe completar los campos requeridos correctamente.<br>
 
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
@@ -183,21 +183,21 @@ La division de las Historias de User sera la siguiente:
 - Validación de campos con sus respectivas alertas
 
 
-## **Tareas para Agregar un alquiler a Favorites**
+## **Tareas para Agregar un alquiler a Favoritos**
 
 **Como**  Inquilino <br>
-**Quiero**  agregar un alqu8iler a favorite <br>
+**Quiero**  agregar un alqu8iler a favorito <br>
 **Para** poder saber cuales son los alquileres que más me interesaron <br>
 
 <u>Criterios de aceptación</u>
 
 - Se debe poder ver una lista con las publicaciones favoritas de un inquilino
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
-        - Agregar un botón con un icono de un corazón para agregar a favorites
+        - Agregar un botón con un icono de un corazón para agregar a favoritos
 
 
 - Descripción del Uso del wireframe (Caso de Uso real)
@@ -206,16 +206,16 @@ La division de las Historias de User sera la siguiente:
 
 <br><br>
 
-## **Tareas para Eliminar un alquiler de Favorites**
+## **Tareas para Eliminar un alquiler de Favoritos**
 
 **Como** user del sistema<br> 
-**Quiero** eliminar un alquiler de favorites<br>
+**Quiero** eliminar un alquiler de favoritos<br>
 **Para** dejar de seguir una publicación que ya no le interesa.
 
 <u>Criterios de aceptación</u>
 - La lista se debe actualizar de inmediato.
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
 - Creación de wireframe
 - Descripción del Uso del wireframe (Caso de Uso real)
