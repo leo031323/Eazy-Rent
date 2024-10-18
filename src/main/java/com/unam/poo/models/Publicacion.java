@@ -1,9 +1,7 @@
 package com.unam.poo.models;
 
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -107,7 +105,7 @@ public class Publicacion {
     @JoinTable(name = "publicación_tiene_caracteristica",
             joinColumns = @JoinColumn(name = "id_publicacion"),
             inverseJoinColumns = @JoinColumn(name = "id_caracteristica"))
-    private List<CaracteristicaComodidad> caracteristicasComodidades;
+    private List<FeatureComfort> caracteristicasComodidades;
 
 //    lista de imagenes
     @OneToMany(mappedBy = "idPublicacion", cascade = CascadeType.ALL, orphanRemoval = true)

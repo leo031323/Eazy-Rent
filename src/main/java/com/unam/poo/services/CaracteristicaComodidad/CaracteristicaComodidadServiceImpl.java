@@ -1,7 +1,7 @@
 package com.unam.poo.services.CaracteristicaComodidad;
 
-import com.unam.poo.models.CaracteristicaComodidad;
-import com.unam.poo.repository.CaracteristicaComodidadRepository;
+import com.unam.poo.models.FeatureComfort;
+import com.unam.poo.repository.FeatureComfortRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +11,11 @@ import java.util.List;
 public class CaracteristicaComodidadServiceImpl implements CaracteristicaComodidadService {
 
     @Autowired
-    private CaracteristicaComodidadRepository caracteristicaComodidadRepository;
+    private FeatureComfortRepository featureComfortRepository;
 
     @Override
-    public List<CaracteristicaComodidad> findAll() {
-        return caracteristicaComodidadRepository.findAll();
+    public List<FeatureComfort> findAll() {
+        return featureComfortRepository.findAll();
     }
 
     @Override
@@ -24,12 +24,12 @@ public class CaracteristicaComodidadServiceImpl implements CaracteristicaComodid
     }
 
     @Override
-    public CaracteristicaComodidad getCaracteristicaComodidadById(Long id) {
-        return caracteristicaComodidadRepository.findById(id).get();
+    public FeatureComfort getCaracteristicaComodidadById(Long id) {
+        return featureComfortRepository.findById(id).get();
     }
 
     @Override
-    public CaracteristicaComodidad saveCaracteristicaComodidad(CaracteristicaComodidad caracteristicaComodidad) {
+    public FeatureComfort saveCaracteristicaComodidad(FeatureComfort featureComfort) {
         return null;
     }
 }

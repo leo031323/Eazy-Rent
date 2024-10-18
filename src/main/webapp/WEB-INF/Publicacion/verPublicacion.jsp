@@ -241,7 +241,7 @@
                                                     <div class="bg-primary
                                                         rounded-circle p-2 mr-3" style="width: 32px; height: 32px"><i class="fas fa-check text-white align-items-center"></i></div>
                                                     <div>
-                                                        <h6 class="font-weight-semi-bold ms-2 mb-0">${comodidad.nombreCaracteristica}</h6>
+                                                        <h6 class="font-weight-semi-bold ms-2 mb-0">${comodidad.featureName}</h6>
                                                     </div>
                                                 </div>
                                             </li>

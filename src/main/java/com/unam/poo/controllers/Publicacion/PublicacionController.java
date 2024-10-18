@@ -61,7 +61,7 @@ public class PublicacionController {
         List<Provincia> provincias = provinciaService.findAll();
         List<Ciudad> ciudades = ciudadService.findAll();
         List<Comodidad> comodidades = comodidadService.findAll();
-        List<CaracteristicaComodidad> caracteristicaComodidades = caracteristicaComodidadService.findAll();
+        List<FeatureComfort> caracteristicaComodidades = caracteristicaComodidadService.findAll();
 
 
         model.addAttribute("ciudades", ciudades);
@@ -83,7 +83,7 @@ public class PublicacionController {
         List<Provincia> provincias = provinciaService.findAll();
         List<Ciudad> ciudades = ciudadService.findAll();
         List<Comodidad> comodidades = comodidadService.findAll();
-        List<CaracteristicaComodidad> caracteristicaComodidades = caracteristicaComodidadService.findAll();
+        List<FeatureComfort> caracteristicaComodidades = caracteristicaComodidadService.findAll();
 
 
         model.addAttribute("tipos", tipos);
@@ -142,7 +142,7 @@ public class PublicacionController {
         List<Provincia> provincias = provinciaService.findAll();
         List<Ciudad> ciudades = ciudadService.findAll();
         List<Comodidad> comodidades = comodidadService.findAll();
-        List<CaracteristicaComodidad> caracteristicaComodidades = caracteristicaComodidadService.findAll();
+        List<FeatureComfort> caracteristicaComodidades = caracteristicaComodidadService.findAll();
 
         model.addAttribute("ciudades", ciudades);
         model.addAttribute("provincias", provincias);
@@ -209,7 +209,7 @@ public class PublicacionController {
 
         List<Publicacion> publicaciones = publicacionService.findAllByEstadoPublicacion("activo");
         publicaciones.addAll(publicacionService.findAllByEstadoPublicacion("Alquilado"));
-        List<CaracteristicaComodidad> caracteristicaComodidades = caracteristicaComodidadService.findAll();
+        List<FeatureComfort> caracteristicaComodidades = caracteristicaComodidadService.findAll();
 
         model.addAttribute("publicaciones", publicaciones);
         model.addAttribute("caracteristicaComodidades", caracteristicaComodidades);

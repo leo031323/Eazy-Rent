@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.unam.poo.dto.LoginDto;
 import com.unam.poo.dto.UsuarioDto;
-import com.unam.poo.models.CaracteristicaComodidad;
+import com.unam.poo.models.FeatureComfort;
 import com.unam.poo.models.Ciudad;
 import com.unam.poo.models.Foto;
 import com.unam.poo.models.Publicacion;
@@ -71,7 +71,7 @@ public class UserProfileController {
         List<Publicacion> publicaciones = publicacionService.findAllByEstadoPublicacion("activo");
         publicaciones.addAll(   publicacionService.findAllByEstadoPublicacion("Alquilado")   );
         publicaciones.addAll(   publicacionService.findAllByEstadoPublicacion("Desactivado")   );
-        List<CaracteristicaComodidad> caracteristicaComodidades = caracteristicaComodidadService.findAll();
+        List<FeatureComfort> caracteristicaComodidades = caracteristicaComodidadService.findAll();
 
         Long idUsuario = (Long) request.getSession().getAttribute("userId");
         model.addAttribute("usuario", usuarioService.getUsuarioById(idUsuario));
