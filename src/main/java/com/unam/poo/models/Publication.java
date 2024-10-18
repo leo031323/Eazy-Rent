@@ -102,9 +102,9 @@ public class Publication {
 
 
     @ManyToMany
-    @JoinTable(name = "publication_has_feature",
+    @JoinTable(name = "publication_has_characteristic",
             joinColumns = @JoinColumn(name = "id_publication"),
-            inverseJoinColumns = @JoinColumn(name = "id_feature"))
+            inverseJoinColumns = @JoinColumn(name = "id_characteristic"))
     private List<CharacteristicComfort> characteristicsComforts;
 
 //    list de images

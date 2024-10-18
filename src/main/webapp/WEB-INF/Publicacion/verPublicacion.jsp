@@ -222,7 +222,7 @@
             </div>
 
 <%--            Listado de     comforts de la base de datos--%>
-            <c:if test="${!publication.characteristics    Comforts.isEmpty()}">
+            <c:if test="${!publication.characteristicsComforts.isEmpty()}">
             <div class="row px-xl-5">
                 <div class="col">
                     <div class="card border-0 shadow-sm mb-4">
@@ -235,13 +235,13 @@
 <%--                                        crear una variable para contar las iteraciones--%>
 
 
-                                        <c:forEach items="${publication.characteristics    Comforts}" var="comfort">
+                                        <c:forEach items="${publication.characteristicsComforts}" var="comfort">
                                             <li class="mb-2">
                                                 <div class="d-flex align-items-center">
                                                     <div class="bg-primary
                                                         rounded-circle p-2 mr-3" style="width: 32px; height: 32px"><i class="fas fa-check text-white align-items-center"></i></div>
                                                     <div>
-                                                        <h6 class="font-weight-semi-bold ms-2 mb-0">${comfort.featureName}</h6>
+                                                        <h6 class="font-weight-semi-bold ms-2 mb-0">${comfort.characteristicName}</h6>
                                                     </div>
                                                 </div>
                                             </li>
