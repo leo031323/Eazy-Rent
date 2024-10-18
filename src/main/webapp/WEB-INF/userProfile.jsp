@@ -128,7 +128,7 @@ System.out.println("----------------------------------------------");
                         <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Name completo:</strong> &nbsp; ${user.name} ${user.lastname}</li>
                         <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Telephone:</strong> &nbsp; ${user.telephone}</li>
                         <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Email:</strong> &nbsp; ${user.mail}</li>
-                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Ubicacion:</strong> ${user.city.city}, ${user.city.idProvince.province}, ${user.city.idProvince.idPais.country}</li>
+                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Ubicacion:</strong> ${user.city.city}, ${user.city.idProvince.province}, ${user.city.idProvince.idCountry.country}</li>
                       </ul>
                     </div>
                     <div class="col card bg-gray-100 m-3">

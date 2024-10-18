@@ -1,4 +1,4 @@
-package com.unam.poo.services.  Comfort;
+package com.unam.poo.services.Comfort;
 
 import com.unam.poo.models.Comfort;
 import com.unam.poo.repository.ComfortRepository;
@@ -19,17 +19,17 @@ public class   ComfortServiceImpl implements   ComfortService {
     }
 
     @Override
-    public void delete  ComfortById(Long id) {
+    public void delete ComfortById(Long id) {
 
     }
 
     @Override
-    public Comfort get  ComfortById(Long id) {
+    public Comfort get ComfortById(Long id) {
         return comfortRepository.findById(id).get();
     }
 
     @Override
-    public Comfort save  Comfort(Comfort comfort) {
+    public Comfort save Comfort(Comfort comfort) {
         return null;
     }
 }

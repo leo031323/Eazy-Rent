@@ -20,7 +20,7 @@ import com.unam.poo.dto.LoginDto;
 import com.unam.poo.dto.UserDto;
 import com.unam.poo.models.City;
 import com.unam.poo.services.UserService;
-import com.unam.poo.services.Characteristic  Comfort.Characteristic  ComfortService;
+import com.unam.poo.services.Characteristic Comfort.Characteristic ComfortService;
 import com.unam.poo.services.City.CityService;
 import com.unam.poo.services.  Comfort.  ComfortService;
 import com.unam.poo.services.Photo.PhotoService;
@@ -51,7 +51,7 @@ public class UserProfileController {
       ComfortService   comfortService;
 
     @Autowired
-    Characteristic  ComfortService characteristic  ComfortService;
+    Characteristic ComfortService characteristic ComfortService;
 
     @Autowired
     CityService cityService;
@@ -68,7 +68,7 @@ public class UserProfileController {
         List<Publication> publicaciones = publicacionService.findAllByStatePublicacion("active");
         publicaciones.addAll(   publicacionService.findAllByStatePublicacion("Alquilado")   );
         publicaciones.addAll(   publicacionService.findAllByStatePublicacion("Desactivado")   );
-        List<FeatureComfort> characteristic    Comforts = characteristic  ComfortService.findAll();
+        List<FeatureComfort> characteristic    Comforts = characteristic ComfortService.findAll();
 
         Long idUser = (Long) request.getSession().getAttribute("userId");
         model.addAttribute("user", userService.getUserById(idUser));

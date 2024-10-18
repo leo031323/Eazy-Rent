@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 
 import com.unam.poo.security.enums.RoleName;
 import com.unam.poo.security.service.RolService;
-import com.unam.poo.services.Characteristic  Comfort.Characteristic  ComfortService;
+import com.unam.poo.services.Characteristic Comfort.Characteristic ComfortService;
 import com.unam.poo.services.City.CityService;
 import com.unam.poo.services.  Comfort.  ComfortService;
-import com.unam.poo.services.Pais.PaisService;
+import com.unam.poo.services.Country.CountryService;
 import com.unam.poo.services.Province.ProvinceService;
 import com.unam.poo.services.Tipo.TipoService;
 
@@ -24,7 +24,7 @@ public class StarterCommand implements CommandLineRunner {
     RolService rolService;
     
     @Autowired
-    PaisService paisService;
+    CountryService countryService;
 
     @Autowired
     ProvinceService provinceService;
@@ -39,7 +39,7 @@ public class StarterCommand implements CommandLineRunner {
       ComfortService   comfortService;
 
     @Autowired
-    Characteristic  ComfortService characteristic  ComfortService;
+    Characteristic ComfortService characteristic ComfortService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -53,7 +53,7 @@ public class StarterCommand implements CommandLineRunner {
         } 
 
         Boolean valor = false;
-        for (Country country : paisService.findAll()) {
+        for (Country country : countryService.findAll()) {
             if (country.getCountry().equals("Argentina")){
                 valor = true;
             }
@@ -62,7 +62,7 @@ public class StarterCommand implements CommandLineRunner {
             /* Carga de country */
             Country country = new Country();
             country.setCountry("Argentina");
-            paisService.savePais(country);
+            countryService.saveCountry(country);
             System.out.println("Country creado: " + country.getCountry());
 
             Boolean valor2 = false;

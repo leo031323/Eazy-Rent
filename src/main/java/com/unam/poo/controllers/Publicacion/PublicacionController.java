@@ -2,7 +2,7 @@ package com.unam.poo.controllers.Publicacion;
 
 import com.unam.poo.models.*;
 import com.unam.poo.services.*;
-import com.unam.poo.services.Characteristic  Comfort.Characteristic  ComfortService;
+import com.unam.poo.services.Characteristic Comfort.Characteristic ComfortService;
 import com.unam.poo.services.City.CityService;
 import com.unam.poo.services.  Comfort.  ComfortService;
 import com.unam.poo.services.Province.ProvinceService;
@@ -43,7 +43,7 @@ public class PublicacionController {
       ComfortService   comfortService;
 
     @Autowired
-    Characteristic  ComfortService characteristic  ComfortService;
+    Characteristic ComfortService characteristic ComfortService;
 
     @Autowired
     CityService cityService;
@@ -61,7 +61,7 @@ public class PublicacionController {
         List<Province> provinces = provinceService.findAll();
         List<City> cities = cityService.findAll();
         List<Comfort>     comforts =   comfortService.findAll();
-        List<FeatureComfort> characteristic    Comforts = characteristic  ComfortService.findAll();
+        List<FeatureComfort> characteristic    Comforts = characteristic ComfortService.findAll();
 
 
         model.addAttribute("cities", cities);
@@ -78,12 +78,12 @@ public class PublicacionController {
     public String crearPublicacion(@Validated @ModelAttribute ("publicacion") Publication publication, BindingResult result, Model model, @RequestParam("file[]") List<MultipartFile> imag) {
     if (result.hasErrors()) {
         //aca deberia ir una pagina de error o algo xd
-        // retornar y pasarle el objeto publication, tipo, province, city,   comfort, characteristic  Comfort;
+        // retornar y pasarle el objeto publication, tipo, province, city,   comfort, characteristic Comfort;
         List<Type> types = tipoService.findAll();
         List<Province> provinces = provinceService.findAll();
         List<City> cities = cityService.findAll();
         List<Comfort>     comforts =   comfortService.findAll();
-        List<FeatureComfort> characteristic    Comforts = characteristic  ComfortService.findAll();
+        List<FeatureComfort> characteristic    Comforts = characteristic ComfortService.findAll();
 
 
         model.addAttribute("tipos", types);
@@ -142,7 +142,7 @@ public class PublicacionController {
         List<Province> provinces = provinceService.findAll();
         List<City> cities = cityService.findAll();
         List<Comfort>     comforts =   comfortService.findAll();
-        List<FeatureComfort> characteristic    Comforts = characteristic  ComfortService.findAll();
+        List<FeatureComfort> characteristic    Comforts = characteristic ComfortService.findAll();
 
         model.addAttribute("cities", cities);
         model.addAttribute("provinces", provinces);
@@ -209,7 +209,7 @@ public class PublicacionController {
 
         List<Publication> publicaciones = publicacionService.findAllByStatePublicacion("active");
         publicaciones.addAll(publicacionService.findAllByStatePublicacion("Alquilado"));
-        List<FeatureComfort> characteristic    Comforts = characteristic  ComfortService.findAll();
+        List<FeatureComfort> characteristic    Comforts = characteristic ComfortService.findAll();
 
         model.addAttribute("publicaciones", publicaciones);
         model.addAttribute("characteristic    Comforts", characteristic    Comforts);

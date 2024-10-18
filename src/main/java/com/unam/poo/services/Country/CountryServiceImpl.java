@@ -1,4 +1,4 @@
-package com.unam.poo.services.Pais;
+package com.unam.poo.services.Country;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.unam.poo.repository.CountryRepository;
 
 @Service
-public class PaisServiceImpl implements PaisService{
+public class CountryServiceImpl implements CountryService{
 
     @Autowired
     CountryRepository countryRepository;
@@ -20,17 +20,17 @@ public class PaisServiceImpl implements PaisService{
     }
 
     @Override
-    public void deletePaisById(Long id) {
+    public void deleteCountryById(Long id) {
         countryRepository.deleteById(id);
     }
 
     @Override
-    public Country getPaisById(Long id) {
+    public Country getCountryById(Long id) {
         return countryRepository.findById(id).get();
     }
 
     @Override
-    public Country savePais(Country country) {
+    public Country saveCountry(Country country) {
         return countryRepository.save(country);
     } 
 }
