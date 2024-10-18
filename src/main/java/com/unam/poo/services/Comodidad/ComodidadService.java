@@ -1,14 +1,14 @@
-package com.unam.poo.services.Comodidad;
+package com.unam.poo.services.  Comfort;
 
 import com.unam.poo.models.Comfort;
 
 import java.util.List;
 
-public interface ComodidadService {
+public interface   ComfortService {
 
     List<Comfort> findAll();
-    void deleteComodidadById(Long id);
-    Comfort getComodidadById(Long id);
-    Comfort saveComodidad(Comfort comfort);
+    void delete  ComfortById(Long id);
+    Comfort get  ComfortById(Long id);
+    Comfort save  Comfort(Comfort comfort);
 
 }

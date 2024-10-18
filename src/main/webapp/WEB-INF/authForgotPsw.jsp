@@ -11,7 +11,7 @@
             <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 
             <head>
-              <title>Olvido su contraseña?</title>
+              <title>Olvido su password?</title>
               <!-- Favicon -->
               <link rel="icon" type="image/x-icon" href="../static/img/favicon/favicon.ico" />
 
@@ -105,22 +105,22 @@
                               <span class="app-brand-text demo text-body fw-bolder">Easy Rent</span>
                             </a>
                           </div>
-                          <h4 class="mb-2">Olvido su contraseña? 🔒</h4>
+                          <h4 class="mb-2">Olvido su password? 🔒</h4>
                           <p class="mb-4">Ingrese su mail y le enviaremos instrucciones para recuperar su cuenta</p>
                          
                           
                           <form:form id="formAuthentication" role="multipart/form-data"
-                            action="${pageContext.request.contextPath}/forgotpsw/enviarCodigo" method="post">
+                            action="${pageContext.request.contextPath}/forgotpsw/enviarCode" method="post">
                             <div class="input-group input-group-outline mb-3">
                               <label for="email" class="form-label">Ingrese su mail</label>
                               <input #mail id="mail" name="mail" type="email" class="form-control"
                               autofocus />
                             </div>
-                            <button type="submit" class="btn btn-primary d-grid w-100">Enviar codigo de
+                            <button type="submit" class="btn btn-primary d-grid w-100">Enviar code de
                               recuperacion</button>
                           </form:form>
                           <div class="container">
-                            <p class="mt-4 mb-4">Luego de solicitar su codigo proceda a rellenar y enviar el siguiente formulario: </p>
+                            <p class="mt-4 mb-4">Luego de solicitar su code proceda a rellenar y enviar el siguiente formulario: </p>
                           </div>
                           <form:form id="formReestablecerPass" role="multipart/form-data"
                             action="${pageContext.request.contextPath}/forgotpsw/reestablecerPassword" method="post">
@@ -130,34 +130,34 @@
                               autofocus />
                             </div>
                             <div class="input-group input-group-outline mb-3">
-                              <label for="codigo" class="form-label">Codigo de recuperacion</label>
-                              <input #codigo id="codigo" name="codigo" type="text" class="form-control"
+                              <label for="code" class="form-label">Code de recuperacion</label>
+                              <input #code id="code" name="code" type="text" class="form-control"
                               autofocus/>
                             </div>
                             <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Nueva Contraseña</label>
+                              <label class="form-label">Nueva Password</label>
                               <input #password path="password" name="password" id="floatingPassword1" type="password"
                                 class="form-control is-invalid" oninput="verificarPasswords(); return false" required>
                             </div>
                             <div class="input-group input-group-outline mb-3">
-                              <label class="form-label">Confirme su contraseña</label>
+                              <label class="form-label">Confirme su password</label>
                               <input id="floatingPassword2" type="password" class="form-control is-invalid"
                                 oninput="verificarPasswords(); return false" required>
                             </div>
                             <div id="error816" class="text-danger d-none">
-                              La contraseña debe ser mayor a 8 caracteres y menor a 16 caracteres
+                              La password debe ser mayor a 8 caracteres y menor a 16 caracteres
                             </div>
                             <div id="error" class="text-danger d-none">
-                              Las contraseñas no coinciden
+                              Las passwords no coinciden
                             </div>
                             <div id="ok" class="text-success d-none">
-                              Las contraseñas coinciden
+                              Las passwords coinciden
                             </div>
-                            <button type="submit" class="btn btn-primary d-grid w-100">Reestablecer contraseña</button>
+                            <button type="submit" class="btn btn-primary d-grid w-100">Reestablecer password</button>
                           </form:form>
                           <script>
                             function verificarPasswords() {
-                              // Obtenemos los valores de los campos de contraseñas 
+                              // Obtenemos los valores de los campos de passwords 
                               clave1 = document.getElementById("floatingPassword1");
                               clave2 = document.getElementById("floatingPassword2");
                               //Verificamos si las constraseñas no coinciden 
@@ -173,10 +173,10 @@
                                       document.getElementById("btnRegistrar").style = "border-color: grey !important; background-color: ghostwhite !important; color: grey !important;";
                                       //return false;
                                     } else {
-                                      // Si las contraseñas coinciden oculta el mensaje de error 
+                                      // Si las passwords coinciden oculta el mensaje de error 
                                       document.getElementById("error").classList.add("d-none");
                                       document.getElementById("error816").classList.add("d-none");
-                                      // Muestra un mensaje mencionando que las Contraseñas coinciden 
+                                      // Muestra un mensaje mencionando que las Passwords coinciden 
                                       document.getElementById("ok").classList.remove("d-none");
                                       // Habilita el botón de login 
                                       document.getElementById("btnRegistrar").disabled = false;

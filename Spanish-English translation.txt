@@ -1,40 +1,29 @@
-ciudad  city
-provincia province
-comodidad  comfort
-caracteristica feature
-correo mail
-codigo code
-usuario user
-nombre name
-foto photo
-perfil profile
-portada front
-publication publication
-imagen image
-country country
-type type
-estado state
-activo active
-fecha date
-hora time
-calle street
-altura height
-dormitorios bedrooms
-banios baths
-cochera garage
-ambientes environments
-superficie surface
-cubierta deck
-casa home
-terreno land
-precio price
-titulo qualification
-descripcion description
-longitud length
-latitud latitude
-tiene has
-telefono phone
-apellido lastname
-role role
-contraseña password
-favoritos favorites
+caracteristica characteristic
+longitud longitude
+telephone telephone
+
+publication publication?
+country country?
+type type?
+role role?
+
+fecha date 没找到
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

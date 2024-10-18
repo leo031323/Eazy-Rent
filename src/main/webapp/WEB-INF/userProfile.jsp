@@ -9,7 +9,7 @@
 <%@taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@page import="com.unam.poo.models.Ciudad"%>
+<%@page import="com.unam.poo.models.City"%>
 <%@page session='true'%> 
 <%
 System.out.println("----------------------------------------------");
@@ -25,7 +25,7 @@ System.out.println("----------------------------------------------");
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title>Perfil</title>
+    <title>Profile</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <tags:css_imports/>
@@ -55,8 +55,8 @@ System.out.println("----------------------------------------------");
 <body class="container bg-gray-200">
 <%@include file="common/navBar2.jsp"%>
 <div class="container-fluid px-2 px-md-4 mt-8">
-  <div class="page-header min-height-300 border-radius-xl mt-4 align-items-center" style="background-image: url('${user.photo.portada}');">
-    <h2 class="text-white z-index-1 ms-5 bg-gradient-faded-dark border-radius-xl shadow-dark " style="padding-left: 10px; padding-right: 10px"> Perfil personal </h2>
+  <div class="page-header min-height-300 border-radius-xl mt-4 align-items-center" style="background-image: url('${user.photo.front}');">
+    <h2 class="text-white z-index-1 ms-5 bg-gradient-faded-dark border-radius-xl shadow-dark " style="padding-left: 10px; padding-right: 10px"> Profile personal </h2>
     <span class="mask  bg-gradient-primary  opacity-0">
     </span>
   </div>
@@ -64,14 +64,14 @@ System.out.println("----------------------------------------------");
     <div class="row gx-4 mb-2">
       <div class="col-auto">
         <div class="avatar avatar-xl position-relative">
-          <img src="${user.photo.perfil}" alt="profile_image" class="w-100 border-radius-lg shadow-xl">
+          <img src="${user.photo.profile}" alt="profile_image" class="w-100 border-radius-lg shadow-xl">
         </div>
       </div> 
 
       <div class="col-auto my-auto">
         <div class="h-100">
           <h5 class="mb-1">
-            ${user.nombre}
+            ${user.name}
           </h5>
           <p class="mb-0 font-weight-normal text-sm">
             <i class="fas fa-map-marker-alt text-sm me-1 text-primary"></i>  ${user.city.city}, ${user.city.idProvince.province}
@@ -87,7 +87,7 @@ System.out.println("----------------------------------------------");
           <ul class="nav nav-pills nav-fill p-1" role="tablist">
             <li class="nav-item ps-3 pe-3">
               <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#profile-tab" role="tab" aria-controls="profile" aria-selected="true">
-               <i class="fas fa-circle-user text-primary me-3"></i> Perfil
+               <i class="fas fa-circle-user text-primary me-3"></i> Profile
               </a>
             </li>
             <li class="nav-item ps-3 pe-3">
@@ -97,7 +97,7 @@ System.out.println("----------------------------------------------");
             </li>
             <li class="nav-item ps-3 pe-3">
               <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#favorites-tab" role="tab" aria-controls="dashboard" aria-selected="false">
-                <i class="fas fa-heart text-primary me-3"></i> Mis favoritos
+                <i class="fas fa-heart text-primary me-3"></i> Mis favorites
               </a>
             </li>
             <li class="nav-item ps-3 pe-3">
@@ -125,17 +125,17 @@ System.out.println("----------------------------------------------");
                   <div class="row">
                     <div class="col card bg-gray-100 m-3">
                       <ul class="list-group">
-                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Nombre completo:</strong> &nbsp; ${user.nombre} ${user.apellido}</li>
-                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Telefono:</strong> &nbsp; ${user.telefono}</li>
+                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Name completo:</strong> &nbsp; ${user.name} ${user.lastname}</li>
+                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Telephone:</strong> &nbsp; ${user.telephone}</li>
                         <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Email:</strong> &nbsp; ${user.mail}</li>
                         <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Ubicacion:</strong> ${user.city.city}, ${user.city.idProvince.province}, ${user.city.idProvince.idPais.country}</li>
                       </ul>
                     </div>
                     <div class="col card bg-gray-100 m-3">
-                      <strong class="text-dark">Descripcion:</strong>
+                      <strong class="text-dark">Description:</strong>
                       <p>
-                        <!--Doctor, atronauta, bombero, policia, ingeniero, plomero, electricista, repartidor de pizza... Y ahora tambien cliente de <strong>EASY-RENT</strong>! Con mas de 20 años de experiencia en el rubro, me considero un experto en el tema. Siempre estoy dispuesto a ayudar a los demas y a compartir mis conocimientos.-->
-                        ${user.descripcion}
+                        <!--Doctor, atronauta, bombero, policia, ingeniero, plomero, electricista, repartidor de pizza... Y atime tambien cliente de <strong>EASY-RENT</strong>! Con mas de 20 años de experiencia en el rubro, me considero un experto en el tema. Siempre estoy dispuesto a ayudar a los demas y a compartir mis conocimientos.-->
+                        ${user.description}
                       </p>
                     </div>
                   </div>
@@ -164,9 +164,9 @@ System.out.println("----------------------------------------------");
                     <table class="table align-items-center mb-0">
                       <thead>
                       <tr>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Publicacion   <i id="imagen1" class="fa-solid fa-chevron-down"></i> </th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Publicacion   <i id="imag1" class="fa-solid fa-chevron-down"></i> </th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2" data-order="desc">Tipo</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Estado</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">State</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Visualizaciones</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Fecha de publication</th>
                         <th class="text-secondary opacity-7"></th>
@@ -190,7 +190,7 @@ System.out.println("----------------------------------------------");
                             <p class="text-xs text-secondary mb-0">${propiedad.idType.type}</p>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="badge bg-gradient-<c:if test="${propiedad.statePublication == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.statePublication == \"activo\"}">success</c:if>" href="www.google.com">${propiedad.statePublication}</span>
+                            <span class="badge bg-gradient-<c:if test="${propiedad.statePublication == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.statePublication == \"active\"}">success</c:if>" href="www.google.com">${propiedad.statePublication}</span>
                           </td>
 
                           <td class="align-middle text-center">
@@ -241,7 +241,7 @@ System.out.println("----------------------------------------------");
                       <tr>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Publicacion   <i class="fa-solid fa-sort fa-lg"></i> </th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2" data-order="desc">Tipo</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Estado</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">State</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Visualizaciones</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Fecha de publication</th>
                         <th class="text-secondary opacity-7"></th>
@@ -250,7 +250,7 @@ System.out.println("----------------------------------------------");
                       <tbody id="myTable2">
                       <c:forEach items="${publicaciones}" var="propiedad">
 
-                        <c:if test="${user.favoritos.contains(propiedad)}">
+                        <c:if test="${user.favorites.contains(propiedad)}">
 <%--                          <%System.out.println("PRUEBAAAAA");%>--%>
 
                         <tr style="height:100px">
@@ -269,7 +269,7 @@ System.out.println("----------------------------------------------");
                             <p class="text-xs text-secondary mb-0">${propiedad.idType.type}</p>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="badge bg-gradient-<c:if test="${propiedad.statePublication == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.statePublication == \"activo\"}">success</c:if>" href="www.google.com">${propiedad.statePublication}</span>
+                            <span class="badge bg-gradient-<c:if test="${propiedad.statePublication == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.statePublication == \"active\"}">success</c:if>" href="www.google.com">${propiedad.statePublication}</span>
                           </td>
 
                           <td class="align-middle text-center">
@@ -312,7 +312,7 @@ System.out.println("----------------------------------------------");
                     <li class="list-group-item border-0 px-0">
                       <div class="form-check form-switch ps-0">
                         <input class="form-check-input ms-auto form-control-color" type="checkbox" id="flexSwitchCheckDefault9" checked="">
-                        <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" for="flexSwitchCheckDefault9">Cuando alquien guarda en favoritos una publicación</label>
+                        <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" for="flexSwitchCheckDefault9">Cuando alquien guarda en favorites una publicación</label>
                       </div>
                     </li>
                     <li class="list-group-item border-0 px-0">
@@ -339,7 +339,7 @@ System.out.println("----------------------------------------------");
                     </li>
                     <li class="list-group-item border-0 px-0">
                       <div class="text-center">
-                        <button type="button" class="btn btn-outline-dark btn-sm mb-0 w-100" data-bs-toggle="modal" data-bs-target="#pwdModal"><i class="fas fa-key me-3"></i>Cambiar contraseña</button>
+                        <button type="button" class="btn btn-outline-dark btn-sm mb-0 w-100" data-bs-toggle="modal" data-bs-target="#pwdModal"><i class="fas fa-key me-3"></i>Cambiar password</button>
                       </div>
                     </li>
                     <li class="list-group-item border-0 px-0">
@@ -375,19 +375,19 @@ System.out.println("----------------------------------------------");
             <div class="row">
               <div class="col mx-auto d-flex justify-content-center flex-column">
 
-                <form:form id="updateForm" role="form" action="${pageContext.request.contextPath}/user/update" method="post" modelAttribute="UsuarioDto">
+                <form:form id="updateForm" role="form" action="${pageContext.request.contextPath}/user/update" method="post" modelAttribute="UserDto">
                   <div class="card-body">
                     <div class="row">
                       <div class="col">
                         <div class="input-group input-group-dynamic m-4">
-                          <label class="form-label">Nombre</label>
-                          <input type="text" name="nombre" id="nombre" class="inputs form-control" value="${user.nombre}">
+                          <label class="form-label">Name</label>
+                          <input type="text" name="name" id="name" class="inputs form-control" value="${user.name}">
                         </div>
                       </div>
                       <div class="col">
                         <div class="input-group input-group-dynamic m-4">
-                          <label class="form-label">Apellido</label>
-                          <input type="text" name="apellido" id="apellido" class="inputs form-control" value="${user.apellido}">
+                          <label class="form-label">Lastname</label>
+                          <input type="text" name="lastname" id="lastname" class="inputs form-control" value="${user.lastname}">
                         </div>
                       </div>
                     </div>
@@ -400,8 +400,8 @@ System.out.println("----------------------------------------------");
                       </div>
                       <div class="col">
                         <div class="input-group input-group-dynamic m-4">
-                          <label class="form-label">Numero de telefono</label>
-                          <input type="number" name="telefono" id="telefono" class="inputs form-control" value="${user.telefono}">
+                          <label class="form-label">Numero de telephone</label>
+                          <input type="number" name="telephone" id="telephone" class="inputs form-control" value="${user.telephone}">
                         </div>
                       </div>
                     </div>
@@ -410,7 +410,7 @@ System.out.println("----------------------------------------------");
                             <div class="input-group input-group-dynamic m-4">
                               <select id="city" name="city" class="form-control">
                                 <option disabled value="">Seleccione una city</option>
-                                <c:forEach items="${ciudades}" var="city">
+                                <c:forEach items="${cities}" var="city">
                                   <c:choose>
                                     <c:when test="${user.city == city}"><option selected value="${city.id}">${city.city}</option></c:when>
                                     <c:otherwise><option value="${city.id}">${city.city}</option></c:otherwise>
@@ -421,18 +421,18 @@ System.out.println("----------------------------------------------");
                         </div>
                     <div class="input-group input-group-static m-2 mt-4 row">
                       <label><i class="fas fa-circle-info me-3"></i>Informacion</label>
-                      <textarea name="descripcion" class="inputs form-control" id="descripcion" rows="4">${user.descripcion}</textarea>
+                      <textarea name="description" class="inputs form-control" id="description" rows="4">${user.description}</textarea>
                     </div>
                     <div class="row">
                       <ul class="list-group">
                         <li class="list-group-item border-0 px-0">
                           <div class="text-center">
-                            <button type="button" class="btn btn-outline-dark btn-sm mb-0 w-100" data-bs-toggle="modal" data-bs-target="#fotoModal"><i class="fas fa-user me-3"></i>Actualizar photo perfil</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm mb-0 w-100" data-bs-toggle="modal" data-bs-target="#photoModal"><i class="fas fa-user me-3"></i>Actualizar photo profile</button>
                           </div>
                         </li>
                         <li class="list-group-item border-0 px-0">
                           <div class="text-center">
-                            <button type="button" class="btn btn-outline-dark btn-sm mb-0 w-100" data-bs-toggle="modal" data-bs-target="#portadaModal"><i class="fas fa-key me-3"></i>Actualizar photo portada</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm mb-0 w-100" data-bs-toggle="modal" data-bs-target="#frontModal"><i class="fas fa-key me-3"></i>Actualizar photo front</button>
                           </div>
                         </li>
                       </ul>
@@ -458,7 +458,7 @@ System.out.println("----------------------------------------------");
   <div class=" modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header align-content-center">
-        <h3 class="text-center w-100">Cambie su contraseña</h3>
+        <h3 class="text-center w-100">Cambie su password</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -471,7 +471,7 @@ System.out.println("----------------------------------------------");
                     <div class="row">
                       <div class="col">
                         <div class="input-group input-group-dynamic m-4">
-                          <label class="form-label"><i class="fas fa-key me-3"></i>Contraseña actual</label>
+                          <label class="form-label"><i class="fas fa-key me-3"></i>Password actual</label>
                             <input type="password" class="form-control">
                         </div>
                         </div>
@@ -479,7 +479,7 @@ System.out.println("----------------------------------------------");
                         <div class="row">
                         <div class="col">
                         <div class="input-group input-group-dynamic m-4">
-                          <label class="form-label"><i class="fas fa-key me-3"></i>Nueva contraseña</label>
+                          <label class="form-label"><i class="fas fa-key me-3"></i>Nueva password</label>
                             <input type="password" class="form-control" placeholder="" aria-label="Last Name..." >
                         </div>
                         </div>
@@ -487,7 +487,7 @@ System.out.println("----------------------------------------------");
                         <div class="row">
                         <div class="col">
                         <div class="input-group input-group-dynamic m-4">
-                          <label class="form-label"><i class="fas fa-key me-3"></i>Confirmar contraseña</label>
+                          <label class="form-label"><i class="fas fa-key me-3"></i>Confirmar password</label>
                             <input type="password" class="form-control" placeholder="" aria-label="Last Name..." >
                           <%--                          TODO no se puede hacer click al ojo para mostrar la pwd --%>
                           <div class="input-group-append">
@@ -513,12 +513,12 @@ System.out.println("----------------------------------------------");
     </div>
   </div>
 </div>
-<%-- modal para cambiar la photo de perfil --%>
-<div class="modal fade" id="fotoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<%-- modal para cambiar la photo de profile --%>
+<div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class=" modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header align-content-center">
-        <h3 class="text-center w-100">Actualice su photo de perfil</h3>
+        <h3 class="text-center w-100">Actualice su photo de profile</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -527,13 +527,13 @@ System.out.println("----------------------------------------------");
             <div class="row">
               <div class="col mx-auto d-flex justify-content-center flex-column">
 
-                <form role="form" action="${pageContext.request.contextPath}/user/cambiarPerfil" method="post">
+                <form role="form" action="${pageContext.request.contextPath}/user/cambiarProfile" method="post">
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <label class="form-label"><i class="fas fa-image me-3 text-primary"></i>Foto de perfil</label>
+                      <label class="form-label"><i class="fas fa-image me-3 text-primary"></i>Photo de profile</label>
                       <div class="input-group input-group-dynamic m-4"> 
-                          <input id="imagen" name="imagen" #imagen type="text" class="form-control" placeholder="" aria-label="Last Name..." >
+                          <input id="imag" name="imag" #imag type="text" class="form-control" placeholder="" aria-label="Last Name..." >
                       </div>
                       </div>
                       </div>
@@ -551,7 +551,7 @@ System.out.println("----------------------------------------------");
     </div>
   </div>
 </div>
-<%-- modal para desactivar la cuenta pidiendo mail y contraseña para confirmar--%>
+<%-- modal para desactivar la cuenta pidiendo mail y password para confirmar--%>
 <div class="modal fade" id="desactivarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class=" modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -569,10 +569,10 @@ System.out.println("----------------------------------------------");
                   <div class="card-body">
                     <div class="row">
                       <h5><i class="fas fa-warning text-3xl text-danger me-3"></i>Esta accion no puede deshacerse</h5>
-                      <h6 class="text-body ms-5 text-xxs">Para confirmar ingrese su mail y contraseña</h6>
+                      <h6 class="text-body ms-5 text-xxs">Para confirmar ingrese su mail y password</h6>
                       <div class="col">
                         <div class="input-group input-group-dynamic m-4">
-                          <label class="form-label"><i class="fas fa-user me-3"></i>Correo</label>
+                          <label class="form-label"><i class="fas fa-user me-3"></i>Mail</label>
                           <input #mail type="email" name="mail" id="mail" class="form-control">
                         </div>
                       </div>
@@ -580,8 +580,8 @@ System.out.println("----------------------------------------------");
                     <div class="row">
                       <div class="col">
                         <div class="input-group input-group-dynamic m-4">
-                          <label class="form-label"><i class="fas fa-key me-3"></i>Contraseña</label>
-                          <input #contraseña path="contraseña" name="contraseña" type="password" class="form-control is-invalid" required> 
+                          <label class="form-label"><i class="fas fa-key me-3"></i>Password</label>
+                          <input #password path="password" name="password" type="password" class="form-control is-invalid" required> 
                         </div>
                       </div>
                     </div>
@@ -601,12 +601,12 @@ System.out.println("----------------------------------------------");
   </div>
 </div>
 
-<%-- modal para cambiar la photo de portada--%>
-<div class="modal fade" id="portadaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<%-- modal para cambiar la photo de front--%>
+<div class="modal fade" id="frontModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class=" modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header align-content-center">
-        <h3 class="text-center w-100">Actualice su photo de portada</h3>
+        <h3 class="text-center w-100">Actualice su photo de front</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -614,13 +614,13 @@ System.out.println("----------------------------------------------");
           <div class="container py-4">
             <div class="row">
               <div class="col mx-auto d-flex justify-content-center flex-column">
-                <form role="form" action="${pageContext.request.contextPath}/user/cambiarPortada" method="post">
+                <form role="form" action="${pageContext.request.contextPath}/user/cambiarFront" method="post">
                   <div class="card-body">
                     <div class="row">
                       <div class="col">
-                        <label class="form-label"><i class="fas fa-image me-3 text-primary"></i>Foto de portada</label>
+                        <label class="form-label"><i class="fas fa-image me-3 text-primary"></i>Photo de front</label>
                         <div class="input-group input-group-dynamic m-4">
-                          <input id="portada" name="portada" #portada type="text" class="form-control" aria-label="Last Name..." >
+                          <input id="front" name="front" #front type="text" class="form-control" aria-label="Last Name..." >
                         </div>
                       </div>
                     </div>
@@ -681,7 +681,7 @@ System.out.println("----------------------------------------------");
           var order = $(this).data('order')
 
           if(order == 'desc'){
-            document.getElementById("imagen1").className = "fa-solid fa-chevron-up"
+            document.getElementById("imag1").className = "fa-solid fa-chevron-up"
             $(this).data('order', "asc")
             $("#myTable").find("tr").sort(function (a, b) {
               var keyA = $(a).find("td").eq(0).text().toUpperCase();
@@ -693,7 +693,7 @@ System.out.println("----------------------------------------------");
               return 0;
             }).appendTo("#myTable");
           }else{
-            document.getElementById("imagen1").className = "fa-solid fa-chevron-down"
+            document.getElementById("imag1").className = "fa-solid fa-chevron-down"
             $(this).data('order', "desc")
             $("#myTable").find("tr").sort(function (a, b) {
               var keyA = $(a).find("td").eq(0).text().toUpperCase();

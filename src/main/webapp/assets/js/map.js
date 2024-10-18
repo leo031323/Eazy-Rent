@@ -24,11 +24,11 @@ map.on('dblclick', e => {
 navigator.geolocation.getCurrentPosition(
   (pos) => {
     const { coords } = pos
-    const { latitude, longitude } = coords
-    L.marker([latitude, longitude], { icon: iconMarker }).addTo(map)
+    const { latitude, longitudee } = coords
+    L.marker([latitude, longitudee], { icon: iconMarker }).addTo(map)
 
     setTimeout(() => {
-      map.panTo(new L.LatLng(latitude, longitude))
+      map.panTo(new L.LatLng(latitude, longitudee))
     }, 5000)
   },
   (error) => {

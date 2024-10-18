@@ -1,4 +1,4 @@
-package com.unam.poo.services.CaracteristicaComodidad;
+package com.unam.poo.services.Characteristic  Comfort;
 
 import com.unam.poo.models.FeatureComfort;
 import com.unam.poo.repository.FeatureComfortRepository;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CaracteristicaComodidadServiceImpl implements CaracteristicaComodidadService {
+public class Characteristic  ComfortServiceImpl implements Characteristic  ComfortService {
 
     @Autowired
     private FeatureComfortRepository featureComfortRepository;
@@ -19,17 +19,17 @@ public class CaracteristicaComodidadServiceImpl implements CaracteristicaComodid
     }
 
     @Override
-    public void deleteCaracteristicaComodidadById(Long id) {
+    public void deleteCharacteristic  ComfortById(Long id) {
 
     }
 
     @Override
-    public FeatureComfort getCaracteristicaComodidadById(Long id) {
+    public FeatureComfort getCharacteristic  ComfortById(Long id) {
         return featureComfortRepository.findById(id).get();
     }
 
     @Override
-    public FeatureComfort saveCaracteristicaComodidad(FeatureComfort featureComfort) {
+    public FeatureComfort saveCharacteristic  Comfort(FeatureComfort featureComfort) {
         return null;
     }
 }

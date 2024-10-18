@@ -1,7 +1,7 @@
 # Trabajo en equipo
 El lider de la primera iteracion sera: Matias Fernandez
 
-La division de las Historias de Usuario sera la siguiente:
+La division de las Historias de User sera la siguiente:
 - Crear un nuevo user
     - Encargados: Marcela Stigelmeier y Matias Fernandez
 
@@ -16,17 +16,17 @@ La division de las Historias de Usuario sera la siguiente:
 
 # Diseño OO
 
-<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/DC_ite_1-2.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/images_iteraciones/DC_ite_1-2.jpeg" width="800"/>
 
 # Wireframe y caso de uso
 
-## Wireframe Registrar Usuario
+## Wireframe Registrar User
 
-<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/Registrar_usuario.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/images_iteraciones/Registrar_user.jpeg" width="800"/>
 
 <br><br>
-**Caso de uso**: Registrar Usuario  
-**Descripción**:  El user quiere crear un nombre de user y contraseña para poder ingresar al sistema, se dirige a la sección  “Iniciar sesión” luego a la parte inferior en “cree una cuenta” donde deberá completar los campos requeridos (E-Mail, DNI, Nombre, Apellido, Contraseña) de esta manera podrá generar su user y contraseña.  
+**Caso de uso**: Registrar User  
+**Descripción**:  El user quiere crear un name de user y password para poder ingresar al sistema, se dirige a la sección  “Iniciar sesión” luego a la parte inferior en “cree una cuenta” donde deberá completar los campos requeridos (E-Mail, DNI, Name, Lastname, Password) de esta manera podrá generar su user y password.  
 **Precondición**: Disponer de un E-Mail válido   
 **Postcondición**: El user fué registrado   
 
@@ -45,10 +45,10 @@ La division de las Historias de Usuario sera la siguiente:
     <td><b>2</b>. El sistema despliega un formulario de Identificación con seis campos:
     <br>Campo-1: E-mail
     <br>Campo-2: DNI
-    <br>Campo-3: Nombre
-    <br>Campo-4. Apellido
-    <br>Campo-5: Contraseña
-    <br>Campo-6: Confirme su contraseña
+    <br>Campo-3: Name
+    <br>Campo-4. Lastname
+    <br>Campo-5: Password
+    <br>Campo-6: Confirme su password
   </tr>
   <tr>
     <td><b>3</b>. El user selecciona el campo con la etiqueta asociada “ E-mail” y lo completa</td>
@@ -59,26 +59,26 @@ La division de las Historias de Usuario sera la siguiente:
     <td></td>
   </tr>
   <tr>
-    <td><b>5</b>. El user selecciona el campo con la etiqueta asociada “Nombre” y lo completa</td>
+    <td><b>5</b>. El user selecciona el campo con la etiqueta asociada “Name” y lo completa</td>
     <td></td>
   </tr>
   <tr>
-    <td><b>6</b>. El user selecciona el campo con la etiqueta asociada “Apellido” y lo completa</td>
+    <td><b>6</b>. El user selecciona el campo con la etiqueta asociada “Lastname” y lo completa</td>
     <td></td>
   </tr>
   <tr>
-    <td><b>7</b>. El user selecciona el campo con la etiqueta asociada “Contraseña” y lo completa</td>
+    <td><b>7</b>. El user selecciona el campo con la etiqueta asociada “Password” y lo completa</td>
     <td></td>
   </tr>
   <tr>
-    <td><b>8</b>. El user selecciona el campo con la <br>etiqueta asociada “Confirme su contraseña” y lo <br>completa</td>
+    <td><b>8</b>. El user selecciona el campo con la <br>etiqueta asociada “Confirme su password” y lo <br>completa</td>
     <td></td>
   <tr>
     <td><b>9</b>. El user presiona sobre el botón con la etiqueta “REGISTRARME”</td>
     <td></td>
   <tr>
     <td></td>
-    <td><b>10</b>. El sistema valida los campos cargados <br>y muestra el mensaje "Registro exitoso" <br> el cual contiene un boton con la etiqueta "OK"</td>
+    <td><b>10</b>. El sistema valida los campos cargados <br>y muestra el mensaje "Registro exitoso" <br> el cual conHas un boton con la etiqueta "OK"</td>
  </tr>
    <tr>
     <td><b>11</b>. El user presiona el boton con la <br>etiqueta  “OK”</td>
@@ -92,14 +92,14 @@ La division de las Historias de Usuario sera la siguiente:
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso 8**:  El sistema detecta que la contraseña ingresada en el campo “Confirme su contraseña”no coincide con la del campo “Contraseña”. Muestra un mensaje de error y remarca con color rojo el cuadro con la contraseña errónea.
+**Paso 8**:  El sistema detecta que la password ingresada en el campo “Confirme su password”no coincide con la del campo “Password”. Muestra un mensaje de error y remarca con color rojo el cuadro con la password errónea.
 
-## Wireframe Ingresar Usuario
+## Wireframe Ingresar User
 
-<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/Login.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/images_iteraciones/Login.jpeg" width="800"/>
 
 <br><br>
-**Caso de uso**: Ingresar Usuario  
+**Caso de uso**: Ingresar User  
 **Descripción**: El user quiere ingresar a su cuenta ya creada en la plataforma, se dirige al apartado de Inicio de Sesión e ingresa los datos de su cuenta.  
 **Precondición**:
 - Tener una cuenta registrada   
@@ -118,16 +118,16 @@ La division de las Historias de Usuario sera la siguiente:
   </tr>
   <tr>
     <td></td>
-    <td><b>2</b>. El sistema despliega un formulario de <br>Identificación con dos campos los <br>cuales tienen asociado la etiqueta de
-    <br>Campo-1: Usuario o E-mail
-    <br>Campo-2: Contraseña</td>
+    <td><b>2</b>. El sistema despliega un formulario de <br>Identificación con dos campos los <br>cuales have asociado la etiqueta de
+    <br>Campo-1: User o E-mail
+    <br>Campo-2: Password</td>
   </tr>
   <tr>
-    <td><b>3</b>. El user selecciona el campo con la etiqueta asociada “Usuario o E-mail” <br>y lo completa</td>
+    <td><b>3</b>. El user selecciona el campo con la etiqueta asociada “User o E-mail” <br>y lo completa</td>
     <td></td>
   </tr>
   <tr>
-    <td><b>4</b>. El user selecciona el campo con la <br>etiqueta asociada “Contraseña” y lo <br>completa</td>
+    <td><b>4</b>. El user selecciona el campo con la <br>etiqueta asociada “Password” y lo <br>completa</td>
     <td></td>
   <tr>
     <td><b>5</b>. El user presiona sobre el botón con la etiqueta “Iniciar Sesión”</td>
@@ -144,18 +144,18 @@ La division de las Historias de Usuario sera la siguiente:
 <u>**Flujo Alternativo de Eventos**.</u>  
 
 **Paso 2**: El sistema no logra cargar los campos. Se reinicia la interfaz  
-**Paso 4.1**: El sistema detecta que se cargó un user erróneo en el campo “Usuario o E-mail”. Muestra un mensaje de error y remarca con color rojo el cuadro con el user erróneo  
-**Paso 4.2**: El sistema detecta que la contraseña ingresada no coincide con el user . Muestra un mensaje de error y remarca con color rojo el cuadro con la contraseña errónea
+**Paso 4.1**: El sistema detecta que se cargó un user erróneo en el campo “User o E-mail”. Muestra un mensaje de error y remarca con color rojo el cuadro con el user erróneo  
+**Paso 4.2**: El sistema detecta que la password ingresada no coincide con el user . Muestra un mensaje de error y remarca con color rojo el cuadro con la password errónea
 
 <br><br>
 
 ## Wireframe Registrar Propiedad
 
-<img src="../../src/main/webapp/assets/img/imagenes_iteraciones/Registrar_Propiedad.jpeg" width="800"/>
+<img src="../../src/main/webapp/assets/img/images_iteraciones/Registrar_Propiedad.jpeg" width="800"/>
 
 <br><br>
 **Caso de uso**: Registrar Propiedad  
-**Descripción**: El propietario ingresa en el apartado de propiedades y carga información relacionada a la propiedad a alquilar como ser la localidad/province donde se encuentra la propiedad, dirección de la propiedad, type de propiedad (casa, local, habitación única), precio, Imagen del lugar y confirma los datos cargados.  
+**Descripción**: El propietario ingresa en el apartado de propiedades y carga información relacionada a la propiedad a alquilar como ser la localidad/province donde se encuentra la propiedad, dirección de la propiedad, type de propiedad (home, local, habitación única), price, Imag del lugar y confirma los datos cargados.  
 **Precondición**: 
 - Poseer una cuenta creada. Que el user se encuentre con su sesión iniciada.  
 
@@ -175,30 +175,30 @@ La division de las Historias de Usuario sera la siguiente:
   </tr>
   <tr>
     <td></td>
-    <td><b>2</b>. El sistema despliega un formulario de 5 pasos que contiene distintos campos
+    <td><b>2</b>. El sistema despliega un formulario de 5 pasos que conHas distintos campos
 Paso 1: <br> Campo-1: Tipo de propiedad</td>
   </tr>
   <tr>
-    <td><b>3</b>. El propietario selecciona el type de propiedad utilizando la lista desplegable que tiene la etiqueta asociada “Tipo de propiedad” y presiona en el botón de siguiente para avanzar en el formulario.</td>
+    <td><b>3</b>. El propietario selecciona el type de propiedad utilizando la lista desplegable que has la etiqueta asociada “Tipo de propiedad” y presiona en el botón de siguiente para avanzar en el formulario.</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>4</b>. El sistema despliega el segundo paso del formulario con los campos Paso 2: <br> Campo-1: Calle <br> Campo-2: Altura <br> Campo-3: Provincia <br> Campo-4: Ciudad <br> Campo-5: Ubicación</td>
+    <td><b>4</b>. El sistema despliega el segundo paso del formulario con los campos Paso 2: <br> Campo-1: Street <br> Campo-2: Height <br> Campo-3: Province <br> Campo-4: City <br> Campo-5: Ubicación</td>
   <tr>
-    <td><b>5</b>. El propietario selecciona el campo con la etiqueta asociada “Calle” y lo completa.</td>
+    <td><b>5</b>. El propietario selecciona el campo con la etiqueta asociada “Street” y lo completa.</td>
     <td></td>
   </tr>
   <tr>
-    <td><b>6</b>. El propietario selecciona el campo con la etiqueta asociada “Altura” y lo completa.</td>
+    <td><b>6</b>. El propietario selecciona el campo con la etiqueta asociada “Height” y lo completa.</td>
     <td></td>
  </tr>
  <tr>
-    <td><b>7</b>. El propietario selecciona una de las opciones de la lista desplegable con la etiqueta asociada “Provincia” y lo completa.</td>
+    <td><b>7</b>. El propietario selecciona una de las opciones de la lista desplegable con la etiqueta asociada “Province” y lo completa.</td>
     <td></td>
  </tr>
  <tr>
-    <td><b>8</b>. El propietario selecciona una de las opciones de la lista desplegable con la etiqueta asociada “Ciudad” y lo completa.</td>
+    <td><b>8</b>. El propietario selecciona una de las opciones de la lista desplegable con la etiqueta asociada “City” y lo completa.</td>
     <td></td>
  </tr>
  <tr>
@@ -207,15 +207,15 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
  </tr>
  <tr>
     <td></td>
-    <td><b>10</b>. El sistema despliega el tercer paso del formulario con los campos Paso 3: <br> Campo-1: Ambientes <br> Campo-2: Dormitorios <br> Campo-3: Baños <br> Campo-4: Cochera <br> Campo-5: Superficie cubierta <br> Campo-6: Superficie total <br> Campo-7: Precio
+    <td><b>10</b>. El sistema despliega el tercer paso del formulario con los campos Paso 3: <br> Campo-1: Environments <br> Campo-2: Bedrooms <br> Campo-3: Baños <br> Campo-4: Garage <br> Campo-5: Surface deck <br> Campo-6: Surface total <br> Campo-7: Price
 </td>
  </tr>
  <tr>
-    <td><b>11</b>. El propietario selecciona el campo con la etiqueta asociada “Ambientes” y lo completa.</td>
+    <td><b>11</b>. El propietario selecciona el campo con la etiqueta asociada “Environments” y lo completa.</td>
     <td></td>
  </tr>
  <tr>
-    <td><b>12</b>. El propietario selecciona el campo con la etiqueta asociada “Dormitorios” y lo completa.</td>
+    <td><b>12</b>. El propietario selecciona el campo con la etiqueta asociada “Bedrooms” y lo completa.</td>
     <td></td>
  </tr>
  <tr>
@@ -223,24 +223,24 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
     <td></td>
  </tr>
  <tr>
-    <td><b>14</b>. El propietario selecciona el campo con la etiqueta asociada “Cochera” y lo completa.</td>
+    <td><b>14</b>. El propietario selecciona el campo con la etiqueta asociada “Garage” y lo completa.</td>
     <td></td>
  </tr>
  <tr>
-    <td><b>15</b>. El propietario selecciona el campo con la etiqueta asociada “Superficie cubierta” y lo completa.</td>
+    <td><b>15</b>. El propietario selecciona el campo con la etiqueta asociada “Surface deck” y lo completa.</td>
     <td></td>
  </tr>
  <tr>
-    <td><b>16</b>. El propietario selecciona el campo con la etiqueta asociada “Superficie total” y lo completa.</td>
+    <td><b>16</b>. El propietario selecciona el campo con la etiqueta asociada “Surface total” y lo completa.</td>
     <td></td>
  </tr>
  <tr>
-    <td><b>17</b>. El propietario selecciona el campo con la etiqueta asociada “Precio”, lo completa y presiona en el botón de siguiente para avanzar en el formulario.</td>
+    <td><b>17</b>. El propietario selecciona el campo con la etiqueta asociada “Price”, lo completa y presiona en el botón de siguiente para avanzar en el formulario.</td>
     <td></td>
  </tr>
  <tr>
     <td></td>
-    <td><b>18</b>. El sistema despliega el cuarto paso del formulario con los campos Paso 4: <br> Campo-1: Título de la Publicación <br> Campo-2: Descripción <br> Campo-3: Foto de la propiedad
+    <td><b>18</b>. El sistema despliega el cuarto paso del formulario con los campos Paso 4: <br> Campo-1: Título de la Publicación <br> Campo-2: Descripción <br> Campo-3: Photo de la propiedad
 </td>
  </tr>
  <tr>
@@ -252,12 +252,12 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
     <td></td>
  </tr>
  <tr>
-    <td><b>21</b>. El propietario selecciona el campo con la etiqueta asociada “Foto de la propiedad” y carga de una a tres fotos relacionadas a las propiedad y presiona en el botón de siguiente para avanzar en el formulario.</td>
+    <td><b>21</b>. El propietario selecciona el campo con la etiqueta asociada “Photo de la propiedad” y carga de una a tres photos relacionadas a las propiedad y presiona en el botón de siguiente para avanzar en el formulario.</td>
     <td></td>
  </tr>
  <tr>
     <td></td>
-    <td><b>22</b>. El sistema despliega el quinto paso del formulario con los campos Paso 5: <br> Sección-1: Características específicas  <br>Sección-2: Equipamientos <br> Sección-3: Servicios <br> Sección-4: Ambientes
+    <td><b>22</b>. El sistema despliega el quinto paso del formulario con los campos Paso 5: <br> Sección-1: Características específicas  <br>Sección-2: Equipamientos <br> Sección-3: Servicios <br> Sección-4: Environments
 </td>
  </tr>
  <tr>
@@ -273,7 +273,7 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
     <td></td>
  </tr>
  <tr>
-    <td><b>26</b>. El propietario selecciona mediante el uso de checkbox opciones en la sección con la etiqueta”Ambientes”.</td>
+    <td><b>26</b>. El propietario selecciona mediante el uso de checkbox opciones en la sección con la etiqueta”Environments”.</td>
     <td></td>
  </tr>
  <tr>
@@ -300,7 +300,7 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 
 ## Wireframe Modificar Propiedad
 
-<img src="C:\Users\emili\Desktop\Facultad\Tercer Año\Segundo cuatri\POO2\IntegradorIntegro\src\main\webapp\assets\img\imagenes_iteraciones\modif_prop.jpeg" width="800"/>
+<img src="C:\Users\emili\Desktop\Facultad\Tercer Año\Segundo cuatri\POO2\IntegradorIntegro\src\main\webapp\assets\img\images_iteraciones\modif_prop.jpeg" width="800"/>
 
 <br><br>
 
@@ -378,19 +378,19 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 <u>Criterios de aceptación</u>
 
 -  Cuando el user intente ingresar a una URL o pantalla en la que no tenga permiso, entonces el sistema se direccionará a la pantalla de registro del sistema.
--  La contraseña del user debe tener como mínimo 8 dígitos y como máximo 1
--  El nombre de user no debe contener caracteres especiales
+-  La password del user debe tener como mínimo 8 dígitos y como máximo 1
+-  El name de user no debe contener caracteres especiales
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
         - Posicionamiento de campo de texto para completar “E-Mail”
         - Posicionamiento de campo de texto para completar “DNI”
-        - Posicionamiento de campo de texto para completar “Nombre”
-        - Posicionamiento de campo de texto para completar “Apellido”
-        - Posicionamiento de campo de texto para completar “Contraseña”
-        - Posicionamiento de campo de texto para completar “Confirme su contraseña”
+        - Posicionamiento de campo de texto para completar “Name”
+        - Posicionamiento de campo de texto para completar “Lastname”
+        - Posicionamiento de campo de texto para completar “Password”
+        - Posicionamiento de campo de texto para completar “Confirme su password”
         - Boton de accion de “REGISTRARME” para enviar el formulario
 
 
@@ -403,21 +403,21 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 ## **Tareas para Ingresar user**
 
 **Como** Inquilino/Propietario/Administrador  
-**Quiero** poder ingresar mi nombre de user y contraseña  
+**Quiero** poder ingresar mi name de user y password  
 **Para** poder hacer uso de las funcionalidades del sistema e ingresar a las características relacionadas a mi cuenta
 
 <u>Criterios de aceptación</u>
 
-- El nombre de user debe existir dentro de la base de datos  
-- Cuando el ingreso del user y contraseña son correctos, entonces el sistema permitirá el ingreso  
-- Si el user ingresa una contraseña incorrecta, el sistema mostrara la opcion de restablecer contraseña
+- El name de user debe existir dentro de la base de datos  
+- Cuando el ingreso del user y password son correctos, entonces el sistema permitirá el ingreso  
+- Si el user ingresa una password incorrecta, el sistema mostrara la opcion de restablecer password
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
-        - Posicionamiento de campo de texto para completar “Usuario”
-        - Posicionamiento de campo de texto para completar “Contraseña”
+        - Posicionamiento de campo de texto para completar “User”
+        - Posicionamiento de campo de texto para completar “Password”
         - Boton de accion de “Iniciar Sesión” para enviar el formulario
 - Descripción del Uso del wireframe (Caso de Uso real)
 - Creación del modelo de datos(Entidad/es de Base de datos)
@@ -434,28 +434,28 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 
 <u>Criterios de aceptacion</u>
 
- - Se debe poder cargar Direccion/Ubicacion, Caracteristicas generales y Imagenes del lugar
+ - Se debe poder cargar Direccion/Ubicacion, Characteristics generales y Images del lugar
  - Una propiedad está registrada cuando todos los campos obligatorios que posea hayan sido cargados y enviados.
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
 
 - Creación de wireframe
     - Creación del formulario multipasos donde contendrán los siguientes elementos:
         - Posicionamiento de lista desplegable para completar “Tipo de propiedad”
-        - Posicionamiento de campo de texto para completar “Calle”
-        - Posicionamiento de campo de texto para completar “Altura”
-        - Posicionamiento de lista desplegable para completar “Provincia”
-        - Posicionamiento de lista desplegable para completar “Ciudad”
-        - Posicionamiento de campo de texto para completar “Ambientes”
-        - Posicionamiento de campo de texto para completar “Dormitorios”
+        - Posicionamiento de campo de texto para completar “Street”
+        - Posicionamiento de campo de texto para completar “Height”
+        - Posicionamiento de lista desplegable para completar “Province”
+        - Posicionamiento de lista desplegable para completar “City”
+        - Posicionamiento de campo de texto para completar “Environments”
+        - Posicionamiento de campo de texto para completar “Bedrooms”
         - Posicionamiento de campo de texto para completar “Baños”
-        - Posicionamiento de campo de texto para completar “Cochera”
-        - Posicionamiento de campo de texto para completar “Superficie cubierta”
-        - Posicionamiento de campo de texto para completar “Superficie total”
-        - Posicionamiento de campo de texto para completar “Precio”
+        - Posicionamiento de campo de texto para completar “Garage”
+        - Posicionamiento de campo de texto para completar “Surface deck”
+        - Posicionamiento de campo de texto para completar “Surface total”
+        - Posicionamiento de campo de texto para completar “Price”
         - Posicionamiento de campo de texto para completar “Título de la Publicación”
         - Posicionamiento de campo de texto para completar “Descripción”
-        - Posicionamiento de campo de inserción de imágenes para completar “Foto de la propiedad”
+        - Posicionamiento de campo de inserción de imágenes para completar “Photo de la propiedad”
         - Posicionamiento de sección que posea los siguientes checkbox “Características específicas”
             - Acceso para personas con discapacidad
             - Permiten mascotas
@@ -472,7 +472,7 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
             - Internet/Wifi
             - Lavandería
             - Servicio de limpieza
-        - Posicionamiento de sección que posea los siguientes checkbox  “Ambientes”
+        - Posicionamiento de sección que posea los siguientes checkbox  “Environments”
             - Balcón
             - Cocina
             - Comedor
@@ -506,7 +506,7 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 - La publicación debe estar activa y en curso (para que no hayan modificaciones una vez confirmado un alquiler).
 - Se deben validar los nuevos datos.
 
-<u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
+<u>Las siguientes tareas comprenderán el desarrollo de la Historia de User:</u>
 
 - Descripción del Uso del wireframe (Caso de Uso real)
 - Validación de campos con sus respectivas alertas

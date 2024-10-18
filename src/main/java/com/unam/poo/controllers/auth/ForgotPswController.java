@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.unam.poo.services.UsuarioService;
-import com.unam.poo.services.Correo.MailServiceImpl;
+import com.unam.poo.services.UserService;
+import com.unam.poo.services.Mail.MailServiceImpl;
 import com.unam.poo.services.SpringMailSender.MailSenderService;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -29,7 +29,7 @@ public class ForgotPswController {
     MailSenderService emailSender;
     
     @Autowired
-    UsuarioService uService;
+    UserService uService;
 
     @Autowired
     MailServiceImpl mailService;
@@ -43,26 +43,26 @@ public class ForgotPswController {
         return "authForgotPsw";
     } 
 
-    @PostMapping("/enviarCodigo")
-    public String enviarCodigo(Model model, @RequestBody String correo, HttpServletRequest request, HttpServletResponse response){
+    @PostMapping("/enviarCode")
+    public String enviarCode(Model model, @RequestBody String mail, HttpServletRequest request, HttpServletResponse response){
         try {
-            correo = correo.replace("%40", "@");
-            String arr[] = correo.split("=");
-            correo = arr[1];
-            System.out.println(correo); 
+            mail = mail.replace("%40", "@");
+            String arr[] = mail.split("=");
+            mail = arr[1];
+            System.out.println(mail); 
             
-            String codigo = UUID.randomUUID().toString();
+            String code = UUID.randomUUID().toString();
 
-            String toInternetAdress = correo;
-            String subject = "Codigo para reestablecer contraseña";
-            String body = codigo;
+            String toInternetAdress = mail;
+            String subject = "Code para reestablecer password";
+            String body = code;
 
             emailSender.sendCustomMail(toInternetAdress, subject, body);
 
-            Mail aux = mailService.getCorreoByMail(correo);
-            aux.setCode(codigo);
-            mailService.saveCorreo(aux);
-            System.out.println("Codigo: " + codigo);
+            Mail aux = mailService.getMailByMail(mail);
+            aux.setCode(code);
+            mailService.saveMail(aux);
+            System.out.println("Code: " + code);
             response.sendRedirect(request.getContextPath() + "/forgotpsw/");
             return "authForgotPsw";
         } catch (Exception e) {
@@ -74,40 +74,40 @@ public class ForgotPswController {
     }
    
     @PostMapping("/reestablecerPassword")
-    public String reestablecerPassword(Model model, @RequestBody String correo, @RequestBody String codigo, @RequestBody String password, HttpServletRequest request, HttpServletResponse response){
+    public String reestablecerPassword(Model model, @RequestBody String mail, @RequestBody String code, @RequestBody String password, HttpServletRequest request, HttpServletResponse response){
         try { 
-            correo = correo.replace("%40", "@");
-            String arr[] = correo.split("=");
-            correo = arr[1]; //correo@gmail.com&codigo
-            correo = correo.replace("&codigo", "");
+            mail = mail.replace("%40", "@");
+            String arr[] = mail.split("=");
+            mail = arr[1]; //mail@gmail.com&code
+            mail = mail.replace("&code", "");
 
-            codigo = arr[2]; //codigo&password
-            codigo = codigo.replace("&password", "");
+            code = arr[2]; //code&password
+            code = code.replace("&password", "");
 
             password = arr[3];
 
-            System.out.println("Mail: " + correo);
-            System.out.println("Codigo: " + codigo);
-            System.out.println("Contraseña: " + password); 
-            if (uService.getUsuarioByCorreo(correo) != null){
+            System.out.println("Mail: " + mail);
+            System.out.println("Code: " + code);
+            System.out.println("Password: " + password); 
+            if (uService.getUserByMail(mail) != null){
                 System.out.println("USUARIO ENCONTRADO");
-                User user = uService.getUsuarioByCorreo(correo);
-                if (user.getPost().getCode().equals(codigo)){
+                User user = uService.getUserByMail(mail);
+                if (user.getPost().getCode().equals(code)){
                     user.setPassword(passwordEncoder.encode(password));
-                    uService.saveUsuario(user);
-                    Mail mail = mailService.getCorreoByMail(correo);
+                    uService.saveUser(user);
+                    Mail mail = mailService.getMailByMail(mail);
                     mail.setCode("");
-                    mailService.saveCorreo(mail);
-                    System.out.println("Cambio de contraseña exitoso");
+                    mailService.saveMail(mail);
+                    System.out.println("Cambio de password exitoso");
                     response.sendRedirect(request.getContextPath() + "/");
                 }else{
-                    System.out.println("Codigo incorrecto");
-                    model.addAttribute("mensaje", "Codigo incorrecto");
+                    System.out.println("Code incorrecto");
+                    model.addAttribute("mensaje", "Code incorrecto");
                     return "error";
                 }
             }else{
-                System.out.println("El correo no se encuentra registrado");
-                model.addAttribute("mensaje", "El correo no se encuentra registrado");
+                System.out.println("El mail no se encuentra registrado");
+                model.addAttribute("mensaje", "El mail no se encuentra registrado");
                 return "error";
             }           
             return "welcome";

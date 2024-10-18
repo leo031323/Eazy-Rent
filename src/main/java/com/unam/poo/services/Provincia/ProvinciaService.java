@@ -1,13 +1,13 @@
-package com.unam.poo.services.Provincia;
+package com.unam.poo.services.Province;
 
 import com.unam.poo.models.Province;
 
 import java.util.List;
 
-public interface ProvinciaService {
+public interface ProvinceService {
     List<Province> findAll();
-    void deleteProvinciaById(Long id);
-    Province getProvinciaById(Long id);
-    Province saveProvincia(Province province);
+    void deleteProvinceById(Long id);
+    Province getProvinceById(Long id);
+    Province saveProvince(Province province);
 
 }

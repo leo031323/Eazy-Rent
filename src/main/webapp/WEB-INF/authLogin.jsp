@@ -83,8 +83,8 @@
                                 <input #mail type="email" name="mail" id="mail" class="form-control">
                             </div>
                             <div class="input-group input-group-outline o mb-3 is-focused">
-                                <label class="form-label">Contraseña</label>
-                                <input #contraseña path="contraseña" name="contraseña" type="password" class="form-control is-invalid" required> 
+                                <label class="form-label">Password</label>
+                                <input #password path="password" name="password" type="password" class="form-control is-invalid" required> 
                             </div> 
 
                             <div class="form-check form-switch d-flex align-items-center mb-3">
@@ -92,13 +92,13 @@
                                 <label class="form-check-label mb-0 ms-3" for="rememberMe">Recuerdame</label>
                             </div>
                             <div class="text-center">
-                                <a href="/forgotpsw/" class="text-body text-decoration-none">¿Olvidaste tu contraseña?</a>
+                                <a href="/forgotpsw/" class="text-body text-decoration-none">¿Olvidaste tu password?</a>
                             </div> 
                             <div class="text-center">
                                 <button id="btnLogin" type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Iniciar sesión</button>
                             </div>
                            <div class="align-content-center text-center">
-                               <a class="mt-4 text-sm text-center" href="/register/authRegister">Aun no tiene una cuenta?</a>
+                               <a class="mt-4 text-sm text-center" href="/register/authRegister">Aun no has una cuenta?</a>
                            </div>
                         </form>
                     </div>
