@@ -46,7 +46,7 @@
                 </li>
                 <li><label>Permiten mascotas<input type="checkbox" value="val" name="name2"></label></li>
 
-                <h5>Caracteristicas</h5>
+                <h5>Characteristics</h5>
 
                 <li><label>Aire acondicionado<input type="checkbox" value="val" name="name"></label></li>
                 <li><label>Amoblado<input type="checkbox" value="Amoblado" name="Amoblado"></label></li>
@@ -65,7 +65,7 @@
                 <li> <label>Lavanderia<input type="checkbox" value="val" name="name2"></label></li>
                 <li><label>Servicio de limpieza<input type="checkbox" value="val" name="name"></label></li>
 
-                <h5>Ambientes</h5>
+                <h5>Environments</h5>
 
                 <li><label>Balcon<input type="checkbox" value="val" name="name2"></label></li>
                 <li><label>Cocina<input type="checkbox" value="val" name="name"></label></li>

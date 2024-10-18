@@ -1,4 +1,4 @@
-# Plan Tentativo de las Historias de Usuario
+# Plan Tentativo de las Historias de User
 
 **Iteracion 1**
 - Crear un nuevo user
@@ -18,12 +18,12 @@
 
 **Iteracion 4**
 - Dar de baja un user (baja lógica)
-- Agregar un alquiler a Favoritos
-- Eliminar un alquiler de Favoritos
+- Agregar un alquiler a Favorites
+- Eliminar un alquiler de Favorites
 - Modificar propiedad
 
 **Iteracion 5**
-- Consultar alquileres Favoritos
-- Restablecer contraseña
+- Consultar alquileres Favorites
+- Restablecer password
 - Testing
 

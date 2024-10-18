@@ -1,4 +1,4 @@
-package com.unam.poo.services.Provincia;
+package com.unam.poo.services.Province;
 
 import com.unam.poo.models.Province;
 import com.unam.poo.repository.ProvinceRepository;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ProvinciaServiceImpl implements ProvinciaService {
+public class ProvinceServiceImpl implements ProvinceService {
 
     @Autowired
     private ProvinceRepository provinceRepository;
@@ -19,17 +19,17 @@ public class ProvinciaServiceImpl implements ProvinciaService {
     }
 
     @Override
-    public void deleteProvinciaById(Long id) {
+    public void deleteProvinceById(Long id) {
 
     }
 
     @Override
-    public Province getProvinciaById(Long id) {
+    public Province getProvinceById(Long id) {
         return provinceRepository.findById(id).get();
     }
 
     @Override
-    public Province saveProvincia(Province province) {
+    public Province saveProvince(Province province) {
         return provinceRepository.save(province);
     }
 }

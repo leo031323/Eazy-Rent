@@ -9,7 +9,7 @@ import com.unam.poo.repository.PublicationRepository;
 import com.unam.poo.repository.UserRepository;
 
 @Service
-public class UsuarioServiceImpl implements UsuarioService {
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
@@ -23,27 +23,27 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public void deleteUsuarioById(Long id) {
+    public void deleteUserById(Long id) {
         userRepository.deleteById(id);
     }
 
     @Override
-    public User getUsuarioById(Long id) {
+    public User getUserById(Long id) {
         return userRepository.findById(id).get();
     }
 
     @Override
-    public User saveUsuario(User user) {
+    public User saveUser(User user) {
         return userRepository.save(user);
     }
     
     @Override
-    public User getUsuarioByCorreo(String correo){
+    public User getUserByMail(String mail){
         List<User> users = userRepository.findAll();
         User aux = new User();
         aux.setId(-1); 
         for (int i = 0; i < users.size(); i++) {
-            if (correo.equals(users.get(i).getMail())){
+            if (mail.equals(users.get(i).getMail())){
                 System.out.println("Encontrado: " + users.get(i).getMail());
                 aux = users.get(i);
             }
@@ -56,14 +56,14 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public void agregarFavoritos(Long idPublicacion, Long id) {
+    public void agregarFavorites(Long idPublicacion, Long id) {
         User user = userRepository.findById(id).get();
         user.getFavorites().add(publicationRepository.findById(idPublicacion).get());
         userRepository.save(user);
     }
 
     @Override
-    public void quitarFavoritos(Long idPublicacion, Long id) {
+    public void quitarFavorites(Long idPublicacion, Long id) {
         User user = userRepository.findById(id).get();
         user.getFavorites().remove(publicationRepository.findById(idPublicacion).get());
         userRepository.save(user);

@@ -1,4 +1,4 @@
-package com.unam.poo.services.Ciudad;
+package com.unam.poo.services.City;
 
 import com.unam.poo.models.City;
 import com.unam.poo.repository.CityRepository;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CiudadServiceImpl implements CiudadService {
+public class CityServiceImpl implements CityService {
 
     @Autowired
     private CityRepository cityRepository;
@@ -19,17 +19,17 @@ public class CiudadServiceImpl implements CiudadService {
     }
 
     @Override
-    public void deleteCiudadById(Long id) {
+    public void deleteCityById(Long id) {
 
     }
 
     @Override
-    public City getCiudadById(Long id) {
+    public City getCityById(Long id) {
         return cityRepository.findById(id).get();
     }
 
     @Override
-    public City saveCiudad(City city) {
+    public City saveCity(City city) {
         return cityRepository.save(city);
     }
 }

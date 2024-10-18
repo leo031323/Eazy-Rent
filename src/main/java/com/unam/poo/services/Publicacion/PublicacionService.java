@@ -14,9 +14,9 @@ public interface PublicacionService {
 //    metodo para actualizar una publication
     void updatePublicacion(Publication publication, Long id);
 
-    List<Publication> findAllByEstadoPublicacion(String estadoPublicacion);
+    List<Publication> findAllByStatePublicacion(String statePublicacion);
 
-//    metodo de busqueda publicaciones por id o titulo
-    List<Publication> findByTituloPublicacionContaining(String titulo);
+//    metodo de busqueda publicaciones por id o qualification
+    List<Publication> findByQualificationPublicacionContaining(String qualification);
 
 }

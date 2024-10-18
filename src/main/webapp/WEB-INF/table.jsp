@@ -9,7 +9,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-    <title>Usuarios</title>
+    <title>Users</title>
 <%--  css_imports--%>
     <tags:css_imports/>
 </head>
@@ -24,15 +24,15 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Usuarios</h3>
+                            <h3 class="card-title">Users</h3>
                         </div>
                         <div class="card-body">
                             <table class="table table-striped table-hover">
                                 <thead>
                                 <tr>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Correo</th>
+                                    <th>Name</th>
+                                    <th>Lastname</th>
+                                    <th>Mail</th>
 
                                     <th>Acciones</th>
                                 </tr>
@@ -40,8 +40,8 @@
                                 <tbody>
                                 <c:forEach items="${users}" var="user">
                                     <tr>
-                                        <td>${user.nombre}</td>
-                                        <td>${user.apellido}</td>
+                                        <td>${user.name}</td>
+                                        <td>${user.lastname}</td>
                                         <td>${user.mail}</td>
                                         <td>
                                             <a href="editar.jsp?id=${user.id}">Editar</a>

@@ -16,7 +16,7 @@ input.addEventListener("change", (e) => {
 });
 
 function showFiles(files) {
-    // borrar las imagenes anteriores
+    // borrar las images anteriores
     document.querySelector("#preview").innerHTML = "";
     if(files.length === undefined) {
         processFile(files);

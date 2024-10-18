@@ -4,13 +4,13 @@ import com.unam.poo.models.User;
 import java.util.List;
 
 
-public interface UsuarioService {
+public interface UserService {
     List<User> findAll();
-    void deleteUsuarioById(Long id);
-    User getUsuarioById(Long id);
-    User saveUsuario(User user);
-    User getUsuarioByCorreo(String correo);
+    void deleteUserById(Long id);
+    User getUserById(Long id);
+    User saveUser(User user);
+    User getUserByMail(String mail);
 
-    void agregarFavoritos(Long idPublicacion,Long id);
-    void quitarFavoritos(Long idPublicacion,Long id);
+    void agregarFavorites(Long idPublicacion,Long id);
+    void quitarFavorites(Long idPublicacion,Long id);
 }
