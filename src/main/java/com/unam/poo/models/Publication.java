@@ -75,10 +75,10 @@ public class Publication {
     @Column(name = "description_publication", length = 500)
     private String descriptionPublication;
 
-//   create longitudee and latitude for location on map
+//   create longitude and latitude for location on map
     @Basic
-    @Column(name = "length_publication")
-    private Double lengthPublication;
+    @Column(name = "longitude_publication")
+    private Double longitudePublication;
 
     @Basic
     @Column(name = "latitude_publication")
@@ -105,7 +105,7 @@ public class Publication {
     @JoinTable(name = "publication_has_feature",
             joinColumns = @JoinColumn(name = "id_publication"),
             inverseJoinColumns = @JoinColumn(name = "id_feature"))
-    private List<FeatureComfort> characteristics    Comforts;
+    private List<CharacteristicComfort> characteristicsComforts;
 
 //    list de images
     @OneToMany(mappedBy = "idPublication", cascade = CascadeType.ALL, orphanRemoval = true)

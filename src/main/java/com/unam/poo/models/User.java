@@ -46,9 +46,9 @@ public class User {
     private String mail;
 
     @Basic
-    @Column(name = "phone")
+    @Column(name = "telephone")
     @NotBlank(message = "The phone cannot be empty")
-    private String phone;
+    private String telephone;
 
     @Basic
     @Column(name = "description")

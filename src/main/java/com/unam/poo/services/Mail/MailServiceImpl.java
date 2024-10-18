@@ -36,9 +36,9 @@ public class MailServiceImpl implements MailService {
 
     @Override
     public Mail getMailByMail(String mail) {
-        for (Mail mail : mailRepository.findAll()) {
-            if (mail.getUser().getMail().equals(mail)){
-                return mail;
+        for (Mail post : mailRepository.findAll()) {
+            if (post.getUser().getMail().equals(mail)){
+                return post;
             }
         }
         return null;

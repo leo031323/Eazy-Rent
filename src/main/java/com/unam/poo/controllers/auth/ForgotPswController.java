@@ -95,9 +95,9 @@ public class ForgotPswController {
                 if (user.getPost().getCode().equals(code)){
                     user.setPassword(passwordEncoder.encode(password));
                     uService.saveUser(user);
-                    Mail mail = mailService.getMailByMail(mail);
-                    mail.setCode("");
-                    mailService.saveMail(mail);
+                    Mail post = mailService.getMailByMail(mail);
+                    post.setCode("");
+                    mailService.saveMail(post);
                     System.out.println("Cambio de password exitoso");
                     response.sendRedirect(request.getContextPath() + "/");
                 }else{

@@ -19,17 +19,17 @@ public class   ComfortServiceImpl implements   ComfortService {
     }
 
     @Override
-    public void delete ComfortById(Long id) {
+    public void deleteComfortById(Long id) {
 
     }
 
     @Override
-    public Comfort get ComfortById(Long id) {
+    public Comfort getComfortById(Long id) {
         return comfortRepository.findById(id).get();
     }
 
     @Override
-    public Comfort save Comfort(Comfort comfort) {
+    public Comfort saveComfort(Comfort comfort) {
         return null;
     }
 }

@@ -9,8 +9,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.unam.poo.security.enums.RoleName;
-import com.unam.poo.security.service.RolService;
-import com.unam.poo.services.Characteristic Comfort.Characteristic ComfortService;
+import com.unam.poo.security.service.RoleService;
+import com.unam.poo.services.CharacteristicComfort.CharacteristicComfortService;
 import com.unam.poo.services.City.CityService;
 import com.unam.poo.services.  Comfort.  ComfortService;
 import com.unam.poo.services.Country.CountryService;
@@ -21,7 +21,7 @@ import com.unam.poo.services.Tipo.TipoService;
 public class StarterCommand implements CommandLineRunner {
 
     @Autowired
-    RolService rolService;
+    RoleService roleService;
     
     @Autowired
     CountryService countryService;
@@ -39,14 +39,14 @@ public class StarterCommand implements CommandLineRunner {
       ComfortService   comfortService;
 
     @Autowired
-    Characteristic ComfortService characteristic ComfortService;
+    CharacteristicComfortService characteristicComfortService;
 
     @Override
     public void run(String... args) throws Exception {
 
-        if (!(rolService.getByRolName(RoleName.ROL_USER).isPresent())) {
+        if (!(roleService.getByRolName(RoleName.ROL_USER).isPresent())) {
             Role roleAdmin = new Role(RoleName.ROL_USER);
-            rolService.save(roleAdmin);
+            roleService.save(roleAdmin);
             System.out.println("ROL_USUARIO CREADO");
         }else{
             System.out.println("ROL_USUARIO EXISTENTE");

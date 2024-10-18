@@ -7,7 +7,7 @@ import com.unam.poo.models.Photo;
 import com.unam.poo.models.User;
 import com.unam.poo.security.enums.RoleName;
 import com.unam.poo.security.modelo.Role;
-import com.unam.poo.security.service.RolService;
+import com.unam.poo.security.service.RoleService;
 import com.unam.poo.services.UserService;
 import com.unam.poo.services.City.CityService;
 import com.unam.poo.services.Mail.MailService;
@@ -47,7 +47,7 @@ public class RegisterController {
     PasswordEncoder passwordEncoder;
 
     @Autowired
-    RolService rolService;
+    RoleService roleService;
 
     @Autowired
     CityService cityService;
@@ -81,14 +81,14 @@ public class RegisterController {
                         user.setCity(city);
                         user.setName(userDto.getName());
                         user.setLastName(userDto.getLastname());
-                        user.setPhone(userDto.getTelephone());
+                        user.setTelephone(userDto.getTelephone());
                         user.setDescription("¡Ingrese una description!");
                         user.setMail(userDto.getMail());
                         user.setDni(userDto.getDni());
                         user.setPassword(passwordEncoder.encode(userDto.getPassword()));
                         
                         Set<Role> roles = new HashSet<>();
-                        roles.add(rolService.getByRolName(RoleName.ROL_USER).get());
+                        roles.add(roleService.getByRolName(RoleName.ROL_USER).get());
                         user.setRoles(roles); 
                         
                         Photo photo = new Photo();

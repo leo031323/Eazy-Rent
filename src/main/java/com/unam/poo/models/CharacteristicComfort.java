@@ -9,17 +9,17 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "feature_comfort", schema = "public", catalog = "playground")
+@Table(name = "characteristic_comfort", schema = "public", catalog = "playground")
 
-public class FeatureComfort {
+public class CharacteristicComfort {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id_feature")
-    private Integer idFeature;
+    @Column(name = "id_characteristic")
+    private Integer idCharacteristic;
     @Basic
-    @Column(name = "feature_name")
-    private String featureName;
+    @Column(name = "characteristic_name")
+    private String characteristicName;
 
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

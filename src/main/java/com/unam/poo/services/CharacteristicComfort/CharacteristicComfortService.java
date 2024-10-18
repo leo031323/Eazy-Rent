@@ -1,14 +1,14 @@
 package com.unam.poo.services.CharacteristicComfort;
 
-import com.unam.poo.models.FeatureComfort;
+import com.unam.poo.models.CharacteristicComfort;
 
 import java.util.List;
 
-public interface Characteristic ComfortService {
+public interface CharacteristicComfortService {
 
-    List<FeatureComfort> findAll();
-    void deleteCharacteristic ComfortById(Long id);
-    FeatureComfort getCharacteristic ComfortById(Long id);
-    FeatureComfort saveCharacteristic Comfort(FeatureComfort featureComfort);
+    List<CharacteristicComfort> findAll();
+    void deleteCharacteristicComfortById(Long id);
+    CharacteristicComfort getCharacteristicComfortById(Long id);
+    CharacteristicComfort saveCharacteristicComfort(CharacteristicComfort characteristicComfort);
 
 }

@@ -7,8 +7,8 @@ import java.util.List;
 public interface   ComfortService {
 
     List<Comfort> findAll();
-    void delete ComfortById(Long id);
-    Comfort get ComfortById(Long id);
-    Comfort save Comfort(Comfort comfort);
+    void deleteComfortById(Long id);
+    Comfort getComfortById(Long id);
+    Comfort saveComfort(Comfort comfort);
 
 }

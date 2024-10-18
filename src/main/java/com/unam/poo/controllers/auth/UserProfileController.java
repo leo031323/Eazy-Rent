@@ -20,7 +20,7 @@ import com.unam.poo.dto.LoginDto;
 import com.unam.poo.dto.UserDto;
 import com.unam.poo.models.City;
 import com.unam.poo.services.UserService;
-import com.unam.poo.services.Characteristic Comfort.Characteristic ComfortService;
+import com.unam.poo.services.CharacteristicComfort.CharacteristicComfortService;
 import com.unam.poo.services.City.CityService;
 import com.unam.poo.services.  Comfort.  ComfortService;
 import com.unam.poo.services.Photo.PhotoService;
@@ -51,7 +51,7 @@ public class UserProfileController {
       ComfortService   comfortService;
 
     @Autowired
-    Characteristic ComfortService characteristic ComfortService;
+    CharacteristicComfortService characteristicComfortService;
 
     @Autowired
     CityService cityService;
@@ -68,12 +68,12 @@ public class UserProfileController {
         List<Publication> publicaciones = publicacionService.findAllByStatePublicacion("active");
         publicaciones.addAll(   publicacionService.findAllByStatePublicacion("Alquilado")   );
         publicaciones.addAll(   publicacionService.findAllByStatePublicacion("Desactivado")   );
-        List<FeatureComfort> characteristic    Comforts = characteristic ComfortService.findAll();
+        List<CharacteristicComfort> characteristicComforts = characteristicComfortService.findAll();
 
         Long idUser = (Long) request.getSession().getAttribute("userId");
         model.addAttribute("user", userService.getUserById(idUser));
         model.addAttribute("publicaciones", publicaciones);
-        model.addAttribute("characteristic    Comforts", characteristic    Comforts);
+        model.addAttribute("characteristic    Comforts", characteristicComforts);
 
         List<City> cities = cityService.findAll();
         model.addAttribute("cities", cities);
@@ -107,7 +107,7 @@ public class UserProfileController {
             System.out.println("Setting lastname");
             user.setLastName(userDto.getLastname());
             System.out.println("Setting telephone");
-            user.setPhone(userDto.getTelephone());
+            user.setTelephone(userDto.getTelephone());
             System.out.println("Setting description");
             user.setDescription(userDto.getDescription());
             System.out.println("Setting mail");
