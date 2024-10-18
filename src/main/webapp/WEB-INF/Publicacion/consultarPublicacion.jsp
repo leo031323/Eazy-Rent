@@ -85,11 +85,11 @@
                             </td>
                             <td class="align-middle text-center">
                                 <c:choose>
-                                    <c:when test="${propiedad.statePublicacion == \"activo\" }">
-                                        <span class="badge bg-gradient-success">${propiedad.statePublicacion}</span>
+                                    <c:when test="${propiedad.statePublication == \"activo\" }">
+                                        <span class="badge bg-gradient-success">${propiedad.statePublication}</span>
                                     </c:when>
                                     <c:otherwise>
-                                        <span class="badge bg-gradient-warning">${propiedad.statePublicacion}</span>
+                                        <span class="badge bg-gradient-warning">${propiedad.statePublication}</span>
                                     </c:otherwise>
                                 </c:choose>
                             </td>

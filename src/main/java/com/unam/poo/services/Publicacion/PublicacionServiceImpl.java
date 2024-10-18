@@ -45,7 +45,7 @@ public class PublicacionServiceImpl implements PublicacionService{
     @Override
     public void deletePublicacionById(Long id) {
         Publication publication = publicationRepository.findById(id).get();
-        publication.setStatePublicacion("eliminado");
+        publication.setStatePublication("eliminado");
         publicationRepository.save(publication);
     }
 

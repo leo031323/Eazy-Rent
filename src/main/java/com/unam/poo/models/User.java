@@ -33,7 +33,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name="usuario")
+@Table(name="user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -94,7 +94,7 @@ public class User {
     private Set<Publication> favorites = new HashSet<>();
 
     @OneToOne(mappedBy = "user")
-    private Mail mails;
+    private Mail post;
 
     @OneToOne(mappedBy = "user")
     private Photo photo;

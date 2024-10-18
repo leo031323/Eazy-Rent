@@ -15,7 +15,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "publicacion")
+@Table(name = "publication")
 
 public class Publication {
 
@@ -26,7 +26,7 @@ public class Publication {
 
     @Basic
     @Column(name = "state_publication", length = 20)
-    private String statePublicacion = "active";
+    private String statePublication = "active";
     @Basic
     @Column(name = "date_time_publication")
     private LocalDateTime DateTimePublication = LocalDateTime.now();
@@ -91,7 +91,7 @@ public class Publication {
 
 //    validate the idType
 //    @NotEmpty(groups = {Publication.class}, message = "The Type field is required")
-    @NotNull(message = "El campo Type es obligatorio")
+    @NotNull(message = "The type field is mandatory")
     @ManyToOne(optional = false)
     @JoinColumn(name = "id_type", nullable = false)
     private Type idType;
@@ -102,7 +102,7 @@ public class Publication {
 
 
     @ManyToMany
-    @JoinTable(name = "publicatión_has_feature",
+    @JoinTable(name = "publication_has_feature",
             joinColumns = @JoinColumn(name = "id_publication"),
             inverseJoinColumns = @JoinColumn(name = "id_feature"))
     private List<FeatureComfort> caracteristicasComodidades;

@@ -76,7 +76,7 @@
                     <p class="text-xs text-secondary mb-0">${propiedad.idType.type}</p>
                   </td>
                   <td class="align-middle text-center">
-                    <span class="badge bg-gradient-warning" >${propiedad.statePublicacion}</span>
+                    <span class="badge bg-gradient-warning" >${propiedad.statePublication}</span>
                   </td>
                   <td class="align-middle text-center">
                     <span class="text-secondary text-xs font-weight-normal">${propiedad.dateTimePublication.toLocalDate()}</span>

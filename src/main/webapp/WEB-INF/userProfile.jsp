@@ -190,7 +190,7 @@ System.out.println("----------------------------------------------");
                             <p class="text-xs text-secondary mb-0">${propiedad.idType.type}</p>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="badge bg-gradient-<c:if test="${propiedad.statePublicacion == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.statePublicacion == \"activo\"}">success</c:if>" href="www.google.com">${propiedad.statePublicacion}</span>
+                            <span class="badge bg-gradient-<c:if test="${propiedad.statePublication == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.statePublication == \"activo\"}">success</c:if>" href="www.google.com">${propiedad.statePublication}</span>
                           </td>
 
                           <td class="align-middle text-center">
@@ -269,7 +269,7 @@ System.out.println("----------------------------------------------");
                             <p class="text-xs text-secondary mb-0">${propiedad.idType.type}</p>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="badge bg-gradient-<c:if test="${propiedad.statePublicacion == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.statePublicacion == \"activo\"}">success</c:if>" href="www.google.com">${propiedad.statePublicacion}</span>
+                            <span class="badge bg-gradient-<c:if test="${propiedad.statePublication == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.statePublication == \"activo\"}">success</c:if>" href="www.google.com">${propiedad.statePublication}</span>
                           </td>
 
                           <td class="align-middle text-center">

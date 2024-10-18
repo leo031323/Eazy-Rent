@@ -92,7 +92,7 @@ public class ForgotPswController {
             if (uService.getUsuarioByCorreo(correo) != null){
                 System.out.println("USUARIO ENCONTRADO");
                 User user = uService.getUsuarioByCorreo(correo);
-                if (user.getMail().getCode().equals(codigo)){
+                if (user.getPost().getCode().equals(codigo)){
                     user.setPassword(passwordEncoder.encode(password));
                     uService.saveUsuario(user);
                     Mail mail = mailService.getCorreoByMail(correo);
