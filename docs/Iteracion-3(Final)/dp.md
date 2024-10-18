@@ -2,10 +2,10 @@
 El lider de la primera iteracion sera: Guillermo Quintana
 
 La division de las Historias de Usuario sera la siguiente:
-- Modificar datos de usuario
+- Modificar datos de user
     - **Encargados**: Marcela Stigelmeier y Matias Fernandez
 
-- Consultar usuario
+- Consultar user
     - **Encargados**: Emiliano Blazco y Ariel Cristaldo
 
 - Consultar ubicación
@@ -18,13 +18,13 @@ La division de las Historias de Usuario sera la siguiente:
 
 # Wireframe y caso de uso
 
-## Wireframe Modificar datos de usuario
+## Wireframe Modificar datos de user
 
 <img src="../../src/main/webapp/assets/img/imagenes_iteraciones/modificar_datos_usuarios.jpeg" width="800"/>
 
 <br><br>
-**Caso de uso**:  Modificar datos de usuario <br>
-**Descripción**:   El usuario desea modificar los datos de su cuenta <br>
+**Caso de uso**:  Modificar datos de user <br>
+**Descripción**:   El user desea modificar los datos de su cuenta <br>
 **Precondición**:  Tener una cuenta registrada<br>
 **Postcondición**:   -- <br>
 
@@ -35,12 +35,12 @@ La division de las Historias de Usuario sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando el usuario está <br>en su perfil y presiona sobre la etiqueta “Modificar datos”
+    <td><b>1</b>. Este caso de uso comienza cuando el user está <br>en su perfil y presiona sobre la etiqueta “Modificar datos”
     <td></td>
   </tr> 
   <tr>
     <td></td>
-    <td><b>2</b>. El sistema despliega un formulario con los datos <br> del usuario ya cargados 
+    <td><b>2</b>. El sistema despliega un formulario con los datos <br> del user ya cargados 
   </tr>
       <tr>
     <td><b>3</b>. El Usuario busca el dato a cambiar, lo modifica <br>y presiona en el botón con la etiqueta <br> “Guardar Modificación”
@@ -56,16 +56,16 @@ La division de las Historias de Usuario sera la siguiente:
 
 **Paso 2**: El sistema no logra cargar el formulario. Pide que cargue de nuevo el sitio<br>
 **Paso 4**: El sistema detecta que un campo obligatorio no fue cargado. Indica cuál es el campo que no cumple con lo requerido.<br>
-**Paso 4**:Paso 4: El sistema detecta un dato no válido, Se le informa al usuario y vuelve a ingresar la información<br>
+**Paso 4**:Paso 4: El sistema detecta un dato no válido, Se le informa al user y vuelve a ingresar la información<br>
 
 
-## Wireframe Consultar usuario
+## Wireframe Consultar user
 
 <img src="../../src/main/webapp/assets/img/imagenes_iteraciones/consultar_usuario.jpeg" width="800"/>
 
 <br><br>
-**Caso de uso**: Consultar usuario  
-**Descripción**: Un usuario (inquilino/propietario/administrador) desea consultar la información asociada a un perfil dentro del sistema.  
+**Caso de uso**: Consultar user  
+**Descripción**: Un user (inquilino/propietario/administrador) desea consultar la información asociada a un perfil dentro del sistema.  
 **Precondición**:  
 **Postcondición**:  
 
@@ -77,7 +77,7 @@ La division de las Historias de Usuario sera la siguiente:
   </tr>
   <tr>
     <td><b>1.</b> Este caso de uso comienza cuando<br> 
-    un usuario ingresa a una publicación<br> 
+    un user ingresa a una publicación<br> 
     y hace click en el nombre del propietario.</td>
     <td></td>
   </tr>
@@ -85,7 +85,7 @@ La division de las Historias de Usuario sera la siguiente:
     <td></td>
     <td><b>2.</b> El sistema despliega un cuadro<br> con toda la información pública<br> 
     (nombre, localidad, etc) asociada<br>
-     a ese usuario.
+     a ese user.
   </tr>
   <tr>
     <td></td>
@@ -96,7 +96,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso 1**: El usuario hace click en el nombre de un comentario de la publicación. El sistema responde igual.  
+**Paso 1**: El user hace click en el nombre de un comentario de la publicación. El sistema responde igual.  
 
 <br><br>
 
@@ -106,8 +106,8 @@ La division de las Historias de Usuario sera la siguiente:
 
 <br><br>
 **Caso de uso**:  Consultar Ubicación 
-**Descripción**:  El usuario ingresa en una publicación y se dirige a la ubicación  asociada a la propiedad pudiendo consultar cual es el lugar donde queda la propiedad mediante el uso de un mapa que indica la ubicación asociada<br>
-**Precondición**: El usuario debe encontrarse dentro de una publicación<br>
+**Descripción**:  El user ingresa en una publicación y se dirige a la ubicación  asociada a la propiedad pudiendo consultar cual es el lugar donde queda la propiedad mediante el uso de un mapa que indica la ubicación asociada<br>
+**Precondición**: El user debe encontrarse dentro de una publicación<br>
 **Postcondición**: -- <br>
 
 **Flujo Típico de eventos**:
@@ -117,7 +117,7 @@ La division de las Historias de Usuario sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando el usuario ingresa <br> en una publicación presionando sobre el nombre de <br>la publicación.
+    <td><b>1</b>. Este caso de uso comienza cuando el user ingresa <br> en una publicación presionando sobre el nombre de <br>la publicación.
     <td></td>
   </tr> 
   <tr>
@@ -129,14 +129,14 @@ La division de las Historias de Usuario sera la siguiente:
     -Mapa con la ubicación especificada<br>
   </tr>
       <tr>
-    <td><b>3</b>. El usuario scrollea la pantalla hasta encontrar <br>el apartado de Ubicación, pudiendo consultar<br> la ubicación donde se encuentra la propiedad y <br>viendo la ubicación exacta en el mapa.<br>
+    <td><b>3</b>. El user scrollea la pantalla hasta encontrar <br>el apartado de Ubicación, pudiendo consultar<br> la ubicación donde se encuentra la propiedad y <br>viendo la ubicación exacta en el mapa.<br>
     <td></td>
   </tr> 
 </table>
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso 2**:El sistema no logra cargar la información asociada a la publicación. Se genera un mensaje de error y pide al usuario que se vuelva a ingresar a la publicación
+**Paso 2**:El sistema no logra cargar la información asociada a la publicación. Se genera un mensaje de error y pide al user que se vuelva a ingresar a la publicación
 
 
 <br></br>
@@ -144,8 +144,8 @@ La division de las Historias de Usuario sera la siguiente:
 # Backlog de iteraciones
 **Iteracion 3**
 - Consultar ubicación
-- Modificar datos de usuario
-- Consultar usuario
+- Modificar datos de user
+- Consultar user
 
 
 # Tareas
@@ -174,16 +174,16 @@ La division de las Historias de Usuario sera la siguiente:
 - Validación de campos con sus respectivas alertas
 
 
-## **Tareas para Modificar datos de usuario**
+## **Tareas para Modificar datos de user**
 
-**Como**  usuario <br>
-**Quiero**  modificar los datos de usuario<br>
+**Como**  user <br>
+**Quiero**  modificar los datos de user<br>
 **Para** actualizar o corregir algún dato cargado<br>
  
 
 <u>Criterios de aceptación</u>
 
--El usuario debe tener una cuenta creada
+-El user debe tener una cuenta creada
 -Los datos modificados deben ser validos 
 
 
@@ -200,15 +200,15 @@ La division de las Historias de Usuario sera la siguiente:
 
 <br>
 
-## **Tareas para Consultar usuario**
+## **Tareas para Consultar user**
 
 **Como** inquilino/propietario/administrador<br>
-**Quiero** consultar datos de un usuario registrado<br> 
+**Quiero** consultar datos de un user registrado<br> 
 **Para** obtener información vinculada a la persona y/o empresa.
 
 <u>Criterios de aceptación</u>
 
-- El sistema debe informar de la inexistencia (si así fuese) del usuario consultado.
+- El sistema debe informar de la inexistencia (si así fuese) del user consultado.
 - El inquilino/propietario debe haber ingresado al sistema.
 - Solo el perfil de propietario puede ser visto de manera pública (sin haber ingresado al sistema).
 

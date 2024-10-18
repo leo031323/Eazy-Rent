@@ -1,7 +1,7 @@
 package com.unam.poo.controllers.auth;
 import com.unam.poo.controllers.PanelUsrController;
 import com.unam.poo.dto.LoginDto;
-import com.unam.poo.models.Usuario;
+import com.unam.poo.models.User;
 import com.unam.poo.services.UsuarioService;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -54,10 +54,10 @@ public class LoginController {
           return "Error";
         }  
         try { 
-            Usuario user = usuarioService.getUsuarioByCorreo(loginDto.getCorreo().toString()); 
+            User user = usuarioService.getUsuarioByCorreo(loginDto.getCorreo().toString());
             if (user != null){  
-                if (user.getActivo()){
-                    if (passwordEncoder.matches(loginDto.getContraseña(), user.getContraseña())){
+                if (user.getActive()){
+                    if (passwordEncoder.matches(loginDto.getContraseña(), user.getPassword())){
                         //Coinciden entonces:
                         System.out.println("AUTENTICADO: Redireccionando...");
                        
@@ -72,22 +72,22 @@ public class LoginController {
     
                         System.out.println("HTTP SESSION USER (Objeto): " + httpSession.getAttribute("usuario"));
     
-                        System.out.println("Para mapear como un objeto Usuario de nuestro modelo:");
+                        System.out.println("Para mapear como un objeto User de nuestro modelo:");
                         ObjectMapper mapper = new ObjectMapper();
     
                         System.out.println("Se transforma el objeto generico de la session storage en Json");
                         String usuarioJson = mapper.writeValueAsString(httpSession.getAttribute("usuario"));
                         request.getSession().removeAttribute("usuario"); 
     
-                        System.out.println("Se transforma el Json en un objeto Usuario de nuestro modelo");
-                        Usuario userMapped = mapper.readValue(usuarioJson, Usuario.class);
+                        System.out.println("Se transforma el Json en un objeto User de nuestro modelo");
+                        User userMapped = mapper.readValue(usuarioJson, User.class);
                         
                         System.out.println("Se realiza el mapping con exito, los datos son: ");
                         System.out.println("ID: " + userMapped.getId());
-                        System.out.println("Nombre: " + userMapped.getNombre());
-                        System.out.println("Apellido: " + userMapped.getApellido());
+                        System.out.println("Nombre: " + userMapped.getName());
+                        System.out.println("Apellido: " + userMapped.getLastName());
                         System.out.println("DNI: " + userMapped.getDni());
-                        System.out.println("Correo: " + userMapped.getCorreo());  
+                        System.out.println("Mail: " + userMapped.getMail());
     
                         System.out.println("Mediante controladores podemos usar el dato de ID de este usuario para obtener publicaciones, etc.");
                         
@@ -105,13 +105,13 @@ public class LoginController {
                         //return "authLogin";
                     }
                 }else{
-                    System.out.println("ERROR: Usuario inactivo");
-                    model.addAttribute("mensaje", "Usuario inactivo");
+                    System.out.println("ERROR: User inactivo");
+                    model.addAttribute("mensaje", "User inactivo");
                     return "error";
                 }
             }else{
-                System.out.println("ERROR: Usuario no registrado");
-                model.addAttribute("mensaje", "Usuario no registrado");
+                System.out.println("ERROR: User no registrado");
+                model.addAttribute("mensaje", "User no registrado");
                 return "error";
             } 
         } catch (Exception e) {

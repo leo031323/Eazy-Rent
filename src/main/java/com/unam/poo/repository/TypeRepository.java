@@ -1,11 +1,11 @@
 package com.unam.poo.repository;
 
+import com.unam.poo.models.Type;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.unam.poo.models.Pais;
-
 @Repository
-public interface PaisRepository extends JpaRepository<Pais, Long>{
-    
+public interface TypeRepository extends JpaRepository<Type, Long> {
+
 }
+

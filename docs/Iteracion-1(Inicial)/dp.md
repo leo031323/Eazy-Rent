@@ -2,10 +2,10 @@
 El lider de la primera iteracion sera: Matias Fernandez
 
 La division de las Historias de Usuario sera la siguiente:
-- Crear un nuevo usuario
+- Crear un nuevo user
     - Encargados: Marcela Stigelmeier y Matias Fernandez
 
-- Ingresar usuario
+- Ingresar user
     - Encargados: Emiliano Blazco y Ariel Cristaldo
 
 - Registrar propiedad
@@ -26,9 +26,9 @@ La division de las Historias de Usuario sera la siguiente:
 
 <br><br>
 **Caso de uso**: Registrar Usuario  
-**Descripción**:  El usuario quiere crear un nombre de usuario y contraseña para poder ingresar al sistema, se dirige a la sección  “Iniciar sesión” luego a la parte inferior en “cree una cuenta” donde deberá completar los campos requeridos (E-Mail, DNI, Nombre, Apellido, Contraseña) de esta manera podrá generar su usuario y contraseña.  
+**Descripción**:  El user quiere crear un nombre de user y contraseña para poder ingresar al sistema, se dirige a la sección  “Iniciar sesión” luego a la parte inferior en “cree una cuenta” donde deberá completar los campos requeridos (E-Mail, DNI, Nombre, Apellido, Contraseña) de esta manera podrá generar su user y contraseña.  
 **Precondición**: Disponer de un E-Mail válido   
-**Postcondición**: El usuario fué registrado   
+**Postcondición**: El user fué registrado   
 
 **Flujo Típico de eventos**:
 <table>
@@ -37,7 +37,7 @@ La division de las Historias de Usuario sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando <br>el usuario se dirige al apartado de <br>“Cree una cuenta”</td>
+    <td><b>1</b>. Este caso de uso comienza cuando <br>el user se dirige al apartado de <br>“Cree una cuenta”</td>
     <td></td>
   </tr>
   <tr>
@@ -51,42 +51,42 @@ La division de las Historias de Usuario sera la siguiente:
     <br>Campo-6: Confirme su contraseña
   </tr>
   <tr>
-    <td><b>3</b>. El usuario selecciona el campo con la etiqueta asociada “ E-mail” y lo completa</td>
+    <td><b>3</b>. El user selecciona el campo con la etiqueta asociada “ E-mail” y lo completa</td>
     <td></td>
   </tr>
   <tr>
-    <td><b>4</b>. El usuario selecciona el campo con la etiqueta asociada “DNI” y lo completa</td>
+    <td><b>4</b>. El user selecciona el campo con la etiqueta asociada “DNI” y lo completa</td>
     <td></td>
   </tr>
   <tr>
-    <td><b>5</b>. El usuario selecciona el campo con la etiqueta asociada “Nombre” y lo completa</td>
+    <td><b>5</b>. El user selecciona el campo con la etiqueta asociada “Nombre” y lo completa</td>
     <td></td>
   </tr>
   <tr>
-    <td><b>6</b>. El usuario selecciona el campo con la etiqueta asociada “Apellido” y lo completa</td>
+    <td><b>6</b>. El user selecciona el campo con la etiqueta asociada “Apellido” y lo completa</td>
     <td></td>
   </tr>
   <tr>
-    <td><b>7</b>. El usuario selecciona el campo con la etiqueta asociada “Contraseña” y lo completa</td>
+    <td><b>7</b>. El user selecciona el campo con la etiqueta asociada “Contraseña” y lo completa</td>
     <td></td>
   </tr>
   <tr>
-    <td><b>8</b>. El usuario selecciona el campo con la <br>etiqueta asociada “Confirme su contraseña” y lo <br>completa</td>
+    <td><b>8</b>. El user selecciona el campo con la <br>etiqueta asociada “Confirme su contraseña” y lo <br>completa</td>
     <td></td>
   <tr>
-    <td><b>9</b>. El usuario presiona sobre el botón con la etiqueta “REGISTRARME”</td>
+    <td><b>9</b>. El user presiona sobre el botón con la etiqueta “REGISTRARME”</td>
     <td></td>
   <tr>
     <td></td>
     <td><b>10</b>. El sistema valida los campos cargados <br>y muestra el mensaje "Registro exitoso" <br> el cual contiene un boton con la etiqueta "OK"</td>
  </tr>
    <tr>
-    <td><b>11</b>. El usuario presiona el boton con la <br>etiqueta  “OK”</td>
+    <td><b>11</b>. El user presiona el boton con la <br>etiqueta  “OK”</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>12</b>. El sistema redirecciona al usuario a la pantalla del apartado “Iniciar sesión” <br> (Al login) </td>
+    <td><b>12</b>. El sistema redirecciona al user a la pantalla del apartado “Iniciar sesión” <br> (Al login) </td>
  </tr>
 </table>
 
@@ -100,7 +100,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 <br><br>
 **Caso de uso**: Ingresar Usuario  
-**Descripción**: El usuario quiere ingresar a su cuenta ya creada en la plataforma, se dirige al apartado de Inicio de Sesión e ingresa los datos de su cuenta.  
+**Descripción**: El user quiere ingresar a su cuenta ya creada en la plataforma, se dirige al apartado de Inicio de Sesión e ingresa los datos de su cuenta.  
 **Precondición**:
 - Tener una cuenta registrada   
 
@@ -113,7 +113,7 @@ La division de las Historias de Usuario sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando <br>el usuario se dirige al apartado de <br>“Inicio de  Sesion”</td>
+    <td><b>1</b>. Este caso de uso comienza cuando <br>el user se dirige al apartado de <br>“Inicio de  Sesion”</td>
     <td></td>
   </tr>
   <tr>
@@ -123,20 +123,20 @@ La division de las Historias de Usuario sera la siguiente:
     <br>Campo-2: Contraseña</td>
   </tr>
   <tr>
-    <td><b>3</b>. El usuario selecciona el campo con la etiqueta asociada “Usuario o E-mail” <br>y lo completa</td>
+    <td><b>3</b>. El user selecciona el campo con la etiqueta asociada “Usuario o E-mail” <br>y lo completa</td>
     <td></td>
   </tr>
   <tr>
-    <td><b>4</b>. El usuario selecciona el campo con la <br>etiqueta asociada “Contraseña” y lo <br>completa</td>
+    <td><b>4</b>. El user selecciona el campo con la <br>etiqueta asociada “Contraseña” y lo <br>completa</td>
     <td></td>
   <tr>
-    <td><b>5</b>. El usuario presiona sobre el botón con la etiqueta “Iniciar Sesión”</td>
+    <td><b>5</b>. El user presiona sobre el botón con la etiqueta “Iniciar Sesión”</td>
     <td></td>
     
   </tr>
   <tr>
     <td></td>
-    <td><b>6</b>. El sistema valida los campos cargados <br>y redirecciona al usuario a la pantalla principal con su cuenta cargada</td>
+    <td><b>6</b>. El sistema valida los campos cargados <br>y redirecciona al user a la pantalla principal con su cuenta cargada</td>
  </tr>
 </table>
 
@@ -144,8 +144,8 @@ La division de las Historias de Usuario sera la siguiente:
 <u>**Flujo Alternativo de Eventos**.</u>  
 
 **Paso 2**: El sistema no logra cargar los campos. Se reinicia la interfaz  
-**Paso 4.1**: El sistema detecta que se cargó un usuario erróneo en el campo “Usuario o E-mail”. Muestra un mensaje de error y remarca con color rojo el cuadro con el usuario erróneo  
-**Paso 4.2**: El sistema detecta que la contraseña ingresada no coincide con el usuario . Muestra un mensaje de error y remarca con color rojo el cuadro con la contraseña errónea
+**Paso 4.1**: El sistema detecta que se cargó un user erróneo en el campo “Usuario o E-mail”. Muestra un mensaje de error y remarca con color rojo el cuadro con el user erróneo  
+**Paso 4.2**: El sistema detecta que la contraseña ingresada no coincide con el user . Muestra un mensaje de error y remarca con color rojo el cuadro con la contraseña errónea
 
 <br><br>
 
@@ -155,9 +155,9 @@ La division de las Historias de Usuario sera la siguiente:
 
 <br><br>
 **Caso de uso**: Registrar Propiedad  
-**Descripción**: El propietario ingresa en el apartado de propiedades y carga información relacionada a la propiedad a alquilar como ser la localidad/provincia donde se encuentra la propiedad, dirección de la propiedad, tipo de propiedad (casa, local, habitación única), precio, Imagen del lugar y confirma los datos cargados.  
+**Descripción**: El propietario ingresa en el apartado de propiedades y carga información relacionada a la propiedad a alquilar como ser la localidad/province donde se encuentra la propiedad, dirección de la propiedad, type de propiedad (casa, local, habitación única), precio, Imagen del lugar y confirma los datos cargados.  
 **Precondición**: 
-- Poseer una cuenta creada. Que el usuario se encuentre con su sesión iniciada.  
+- Poseer una cuenta creada. Que el user se encuentre con su sesión iniciada.  
 
 **Postcondición**: 
 - Se registró de manera exitosa la propiedad
@@ -179,7 +179,7 @@ La division de las Historias de Usuario sera la siguiente:
 Paso 1: <br> Campo-1: Tipo de propiedad</td>
   </tr>
   <tr>
-    <td><b>3</b>. El propietario selecciona el tipo de propiedad utilizando la lista desplegable que tiene la etiqueta asociada “Tipo de propiedad” y presiona en el botón de siguiente para avanzar en el formulario.</td>
+    <td><b>3</b>. El propietario selecciona el type de propiedad utilizando la lista desplegable que tiene la etiqueta asociada “Tipo de propiedad” y presiona en el botón de siguiente para avanzar en el formulario.</td>
     <td></td>
   </tr>
   <tr>
@@ -282,7 +282,7 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
  </tr>
  <tr>
     <td></td>
-    <td><b>28</b>. El sistema valida los campos cargados y muestra el mensaje  “Registro exitoso” . y redirecciona al usuario a sus publicaciones realizadas.</td>
+    <td><b>28</b>. El sistema valida los campos cargados y muestra el mensaje  “Registro exitoso” . y redirecciona al user a sus publicaciones realizadas.</td>
  </tr>
 </table>
 
@@ -294,7 +294,7 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 **Paso 18**: El sistema no logra cargar el formulario. Muestra un mensaje de error y pide que se actualice la página  
 **Paso 22**: El sistema no logra cargar el formulario. Muestra un mensaje de error y pide que se actualice la página  
 **Paso 28**: El sistema detecta que un campo obligatorio no fue cargado. Indica cuál es el campo que no cumple con lo requerido.  
-**Paso 28**: El sistema detecta un dato no válido, Se le informa al usuario y vuelve a ingresar la información.
+**Paso 28**: El sistema detecta un dato no válido, Se le informa al user y vuelve a ingresar la información.
 
 <br></br>
 
@@ -307,7 +307,7 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 **Caso de uso**: Modificar Propiedad  
 **Descripción**: El propietario ingresa en una propiedad propia publicada y busca la información a modificar, una vez encontrada la selecciona y realiza los cambios pertinentes confirmando los cambios realizados.  
 **Precondición**:  
-- Poseer una cuenta creada.Que el usuario se encuentre con su sesión iniciada.
+- Poseer una cuenta creada.Que el user se encuentre con su sesión iniciada.
 - Que la propiedad se encuentre registrada.  
   
 **Postcondición**: 
@@ -321,12 +321,12 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando el usuario ingresa en el apartado de propiedades y selecciona una de las propiedades que se encuentran registradas a su cuenta y presiona en el botón con la etiqueta “modificar”</td>
+    <td><b>1</b>. Este caso de uso comienza cuando el user ingresa en el apartado de propiedades y selecciona una de las propiedades que se encuentran registradas a su cuenta y presiona en el botón con la etiqueta “modificar”</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>2</b>. El sistema deshabilita la publicación referente a la propiedad impidiendo interactuar a otro usuario (Inquilino)</td>
+    <td><b>2</b>. El sistema deshabilita la publicación referente a la propiedad impidiendo interactuar a otro user (Inquilino)</td>
   </tr>
   <tr>
     <td></td>
@@ -348,10 +348,10 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso 2**: El sistema no logra deshabilitar la publicación y pide al usuario que vuelva a ingresar en la publicación.  
+**Paso 2**: El sistema no logra deshabilitar la publicación y pide al user que vuelva a ingresar en la publicación.  
 **Paso 3**: El sistema no logra cargar el formulario. Pide que se vuelva ingresar en el sitio.  
 **Paso 5**: El sistema detecta que un campo obligatorio no fue cargado. Indica cual es el campo que no cumple con lo requerido.  
-**Paso 5**: El sistema detecta un dato no válido, Se le informa al usuario y vuelve a ingresar la información
+**Paso 5**: El sistema detecta un dato no válido, Se le informa al user y vuelve a ingresar la información
 
 
 
@@ -359,8 +359,8 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 
 # Backlog de iteraciones
 **Iteracion 1**
-- Crear un nuevo usuario
-- Ingresar usuario
+- Crear un nuevo user
+- Ingresar user
 - Registrar propiedad
 - Modificar propiedad
 
@@ -369,7 +369,7 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 
 <br><br>
 
-## **Tareas para Registrar usuario**
+## **Tareas para Registrar user**
 
 **Como** Inquilino/Propietario/Administrador  
 **Quiero**  crear una nueva cuenta  
@@ -377,9 +377,9 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 
 <u>Criterios de aceptación</u>
 
--  Cuando el usuario intente ingresar a una URL o pantalla en la que no tenga permiso, entonces el sistema se direccionará a la pantalla de registro del sistema.
--  La contraseña del usuario debe tener como mínimo 8 dígitos y como máximo 1
--  El nombre de usuario no debe contener caracteres especiales
+-  Cuando el user intente ingresar a una URL o pantalla en la que no tenga permiso, entonces el sistema se direccionará a la pantalla de registro del sistema.
+-  La contraseña del user debe tener como mínimo 8 dígitos y como máximo 1
+-  El nombre de user no debe contener caracteres especiales
 
 <u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
@@ -400,17 +400,17 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
 - Validación de campos con sus respectivas alertas
 
 
-## **Tareas para Ingresar usuario**
+## **Tareas para Ingresar user**
 
 **Como** Inquilino/Propietario/Administrador  
-**Quiero** poder ingresar mi nombre de usuario y contraseña  
+**Quiero** poder ingresar mi nombre de user y contraseña  
 **Para** poder hacer uso de las funcionalidades del sistema e ingresar a las características relacionadas a mi cuenta
 
 <u>Criterios de aceptación</u>
 
-- El nombre de usuario debe existir dentro de la base de datos  
-- Cuando el ingreso del usuario y contraseña son correctos, entonces el sistema permitirá el ingreso  
-- Si el usuario ingresa una contraseña incorrecta, el sistema mostrara la opcion de restablecer contraseña
+- El nombre de user debe existir dentro de la base de datos  
+- Cuando el ingreso del user y contraseña son correctos, entonces el sistema permitirá el ingreso  
+- Si el user ingresa una contraseña incorrecta, el sistema mostrara la opcion de restablecer contraseña
 
 <u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
@@ -501,7 +501,7 @@ Paso 1: <br> Campo-1: Tipo de propiedad</td>
  
 <u>Criterios de aceptación:</u>
 
-- El propietario debe ingresar al sistema con su usuario.
+- El propietario debe ingresar al sistema con su user.
 - La publicación debe existir.
 - La publicación debe estar activa y en curso (para que no hayan modificaciones una vez confirmado un alquiler).
 - Se deben validar los nuevos datos.

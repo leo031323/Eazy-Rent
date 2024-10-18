@@ -1,8 +1,8 @@
 # Plan Tentativo de las Historias de Usuario
 
 **Iteracion 1**
-- Crear un nuevo usuario
-- Ingresar usuario
+- Crear un nuevo user
+- Ingresar user
 - Registrar propiedad
 
 **Iteracion 2**
@@ -13,11 +13,11 @@
 
 **Iteracion 3**
 - Consultar ubicación
-- Modificar datos de usuario
-- Consultar usuario
+- Modificar datos de user
+- Consultar user
 
 **Iteracion 4**
-- Dar de baja un usuario (baja lógica)
+- Dar de baja un user (baja lógica)
 - Agregar un alquiler a Favoritos
 - Eliminar un alquiler de Favoritos
 - Modificar propiedad

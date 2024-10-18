@@ -3,6 +3,7 @@ package com.unam.poo.controllers.auth;
 import java.net.URLDecoder;
 import java.util.List;
 
+import com.unam.poo.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -17,11 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.unam.poo.dto.LoginDto;
 import com.unam.poo.dto.UsuarioDto;
-import com.unam.poo.models.FeatureComfort;
-import com.unam.poo.models.Ciudad;
-import com.unam.poo.models.Foto;
-import com.unam.poo.models.Publicacion;
-import com.unam.poo.models.Usuario;
+import com.unam.poo.models.City;
 import com.unam.poo.services.UsuarioService;
 import com.unam.poo.services.CaracteristicaComodidad.CaracteristicaComodidadService;
 import com.unam.poo.services.Ciudad.CiudadService;
@@ -68,7 +65,7 @@ public class UserProfileController {
     @GetMapping("/profile")
     public String userProfile(Model model, HttpServletRequest request)
     {
-        List<Publicacion> publicaciones = publicacionService.findAllByEstadoPublicacion("activo");
+        List<Publication> publicaciones = publicacionService.findAllByEstadoPublicacion("activo");
         publicaciones.addAll(   publicacionService.findAllByEstadoPublicacion("Alquilado")   );
         publicaciones.addAll(   publicacionService.findAllByEstadoPublicacion("Desactivado")   );
         List<FeatureComfort> caracteristicaComodidades = caracteristicaComodidadService.findAll();
@@ -78,7 +75,7 @@ public class UserProfileController {
         model.addAttribute("publicaciones", publicaciones);
         model.addAttribute("caracteristicaComodidades", caracteristicaComodidades);
 
-        List<Ciudad> ciudades = ciudadService.findAll();
+        List<City> ciudades = ciudadService.findAll();
         model.addAttribute("ciudades", ciudades);
         
         return "userProfile";
@@ -90,31 +87,31 @@ public class UserProfileController {
             System.out.println("DATOS A ACTUALIZAR: ");
             System.out.println("Nombre: " + usuarioDto.getNombre());
             System.out.println("Apellido: " + usuarioDto.getApellido());
-            System.out.println("Correo: " + usuarioDto.getCorreo());
+            System.out.println("Mail: " + usuarioDto.getCorreo());
             System.out.println("Telefono: " + usuarioDto.getTelefono());
-            System.out.println("Ciudad ID: " + usuarioDto.getCiudad());
+            System.out.println("City ID: " + usuarioDto.getCiudad());
             System.out.println("Descripcion: " + usuarioDto.getDescripcion());
 
 
             Long idUsuario = (Long) request.getSession().getAttribute("userId");
-            Usuario user = usuarioService.getUsuarioById(idUsuario);
-            System.out.println("Usuario objetivo: " + user);
+            User user = usuarioService.getUsuarioById(idUsuario);
+            System.out.println("User objetivo: " + user);
             
-            Ciudad ciudad = ciudadService.getCiudadById(usuarioDto.getCiudad());
-            System.out.println("Ciudad objetivo: " + ciudad);
+            City city = ciudadService.getCiudadById(usuarioDto.getCiudad());
+            System.out.println("City objetivo: " + city);
 
-            System.out.println("Setting ciudad");
-            user.setCiudad(ciudad);
+            System.out.println("Setting city");
+            user.setCity(city);
             System.out.println("Setting nombre");
-            user.setNombre(usuarioDto.getNombre());
+            user.setName(usuarioDto.getNombre());
             System.out.println("Setting apellido");
-            user.setApellido(usuarioDto.getApellido());
+            user.setLastName(usuarioDto.getApellido());
             System.out.println("Setting telefono");
-            user.setTelefono(usuarioDto.getTelefono());
+            user.setPhone(usuarioDto.getTelefono());
             System.out.println("Setting descripcion");
-            user.setDescripcion(usuarioDto.getDescripcion());
+            user.setDescription(usuarioDto.getDescripcion());
             System.out.println("Setting correo");
-            user.setCorreo(usuarioDto.getCorreo()); 
+            user.setMail(usuarioDto.getCorreo());
             System.out.println("Guardando...");
             usuarioService.saveUsuario(user);
             System.out.println("Actualizado con exito.");
@@ -135,14 +132,14 @@ public class UserProfileController {
         }  
         try {    
             Long idUsuario = (Long) request.getSession().getAttribute("userId");
-            Usuario user = usuarioService.getUsuarioById(idUsuario);
+            User user = usuarioService.getUsuarioById(idUsuario);
             if ( user != null){
-                Foto foto = user.getFoto(); 
+                Photo photo = user.getPhoto();
                 String str = body.replace("imagen=", ""); 
                 str = URLDecoder.decode(str, "UTF-8");
                 System.out.println(str);
-                foto.setPerfil(str);
-                fotoService.saveFoto(foto);
+                photo.setProfile(str);
+                fotoService.saveFoto(photo);
             } 
             response.sendRedirect(request.getContextPath() + "/user/profile");
             return "userProfile";             
@@ -161,14 +158,14 @@ public class UserProfileController {
         }  
         try {   
             Long idUsuario = (Long) request.getSession().getAttribute("userId");
-            Usuario user = usuarioService.getUsuarioById(idUsuario);
+            User user = usuarioService.getUsuarioById(idUsuario);
             if ( user != null){
-                Foto foto = user.getFoto(); 
+                Photo photo = user.getPhoto();
                 String str = body.replace("portada=", ""); 
                 str = URLDecoder.decode(str, "UTF-8");
                 System.out.println(str);
-                foto.setPortada(str);
-                fotoService.saveFoto(foto);
+                photo.setFront(str);
+                fotoService.saveFoto(photo);
             } 
             response.sendRedirect(request.getContextPath() + "/user/profile");
             return "userProfile";            
@@ -186,15 +183,15 @@ public class UserProfileController {
         }  
         try { 
             System.out.println("Buscando usuario");
-            Usuario user = usuarioService.getUsuarioByCorreo(loginDto.getCorreo().toString()); 
+            User user = usuarioService.getUsuarioByCorreo(loginDto.getCorreo().toString());
             System.out.println("Encontrado");
             if (user != null){  
                 System.out.println("Mail correcto, verificando contraseña");
-                if (passwordEncoder.matches(loginDto.getContraseña(), user.getContraseña())){
+                if (passwordEncoder.matches(loginDto.getContraseña(), user.getPassword())){
                     //Coinciden entonces:
                     System.out.println("AUTENTICADO: Dando de baja la cuenta...");
                    
-                    user.setActivo(false);
+                    user.setActive(false);
                     usuarioService.saveUsuario(user);
                     
                     /* Como en el logout -> */ 

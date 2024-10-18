@@ -1,14 +1,14 @@
 package com.unam.poo.services.Tipo;
 
-import com.unam.poo.models.Tipo;
+import com.unam.poo.models.Type;
 
 import java.util.List;
 
 public interface TipoService {
 
-    List<Tipo> findAll();
+    List<Type> findAll();
     void deleteTipoById(Long id);
-    Tipo getTipoById(Long id);
-    Tipo saveTipo(Tipo tipo);
+    Type getTipoById(Long id);
+    Type saveTipo(Type type);
 
 }

@@ -1,7 +1,7 @@
 package com.unam.poo.services.Tipo;
 
-import com.unam.poo.models.Tipo;
-import com.unam.poo.repository.TipoRepository;
+import com.unam.poo.models.Type;
+import com.unam.poo.repository.TypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +11,11 @@ import java.util.List;
 public class TipoServiceImpl implements TipoService {
 
     @Autowired
-    private TipoRepository tipoRepository;
+    private TypeRepository typeRepository;
 
     @Override
-    public List<Tipo> findAll() {
-        return tipoRepository.findAll();
+    public List<Type> findAll() {
+        return typeRepository.findAll();
     }
 
     @Override
@@ -24,13 +24,13 @@ public class TipoServiceImpl implements TipoService {
     }
 
     @Override
-    public Tipo getTipoById(Long id) {
-        return tipoRepository.findById(id).get();
+    public Type getTipoById(Long id) {
+        return typeRepository.findById(id).get();
     }
 
     @Override
-    public Tipo saveTipo(Tipo tipo) {
-        return tipoRepository.save(tipo);
+    public Type saveTipo(Type type) {
+        return typeRepository.save(type);
     }
 }
 

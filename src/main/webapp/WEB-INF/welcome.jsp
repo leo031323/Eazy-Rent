@@ -48,7 +48,7 @@
                 <div class="col-lg-8 text-center mx-auto my-auto">
                     <h1 class=" text-white" >Easy-Rent</h1>
                     <p class="lead mb-4 text-white opacity-8">Tu proximo lugar esta aca</p>
-                    <a class="btn bg-gradient-primary text-white border-radius-lg" href="${pageContext.request.contextPath}/publicacion/verPublicaciones"> Quiero buscar un alquiler </a>
+                    <a class="btn bg-gradient-primary text-white border-radius-lg" href="${pageContext.request.contextPath}/publication/verPublicaciones"> Quiero buscar un alquiler </a>
                     <span>ㅤㅤ</span>
                     <%
                         if (session.getAttribute("autenticado") != "true"){
@@ -60,13 +60,13 @@
                     <%
                         if (session.getAttribute("autenticado") == "true"){
                     %>
-                    <a class="btn bg-gradient-primary text-white border-radius-lg" href="${pageContext.request.contextPath}/publicacion/crearPublicacion">Quiero publicar un alquiler</a>
+                    <a class="btn bg-gradient-primary text-white border-radius-lg" href="${pageContext.request.contextPath}/publication/crearPublicacion">Quiero publicar un alquiler</a>
                     <%
                         }
                     %>
 
 
-<%--                    <a class="btn bg-gradient-primary text-white border-radius-lg" href="${pageContext.request.contextPath}/publicacion/crearPublicacion">Quiero publicar un alquiler</a>--%>
+<%--                    <a class="btn bg-gradient-primary text-white border-radius-lg" href="${pageContext.request.contextPath}/publication/crearPublicacion">Quiero publicar un alquiler</a>--%>
                 </div>
             </div>
         </div>
@@ -144,7 +144,7 @@
                     </div>
 <%--                    <h2 class="card-text"> $ 10.000 <i class="far fa-heart text-primary"></i></h2>--%>
                     <p class="card-text">
-                        Departamento con todos los servicios incluidos, internet agua y luz, con una vista increible a la ciudad.
+                        Departamento con todos los servicios incluidos, internet agua y luz, con una vista increible a la city.
                     </p>
                 </div>
             </div>

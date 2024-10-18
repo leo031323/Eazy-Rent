@@ -38,7 +38,7 @@ La division de las Historias de Usuario sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando el inquilino ingresa <br>en su perfil utilizando el botón con el icono de su <br>foto de perfil
+    <td><b>1</b>. Este caso de uso comienza cuando el inquilino ingresa <br>en su perfil utilizando el botón con el icono de su <br>photo de perfil
     <td></td>
   </tr>
   <tr>
@@ -51,7 +51,7 @@ La division de las Historias de Usuario sera la siguiente:
   </tr>
   <tr>
     <td></td>
-    <td><b>4</b>. El sistema despliega la lista de alquileres que se encuentran<br> seleccionados como favoritos por el usuario <br>
+    <td><b>4</b>. El sistema despliega la lista de alquileres que se encuentran<br> seleccionados como favoritos por el user <br>
   </tr>
 </table>
 
@@ -65,8 +65,8 @@ La division de las Historias de Usuario sera la siguiente:
 
 <br><br>
 **Caso de uso**:Restablecer contraseña<br>
-**Descripción**: El usuario desde  el login se dirige a la opción “restablecer contraseña” el cual lo dirige a una pantalla donde debe ingresar su correo y el código de verificación (que se envía a su correo). una vez validada su identidad completa los campos con su nueva contraseña y presiona el boton “restablecer contraseña” <br>
-**Precondición**: que el usuario tenga una cuenta registrada<br>
+**Descripción**: El user desde  el login se dirige a la opción “restablecer contraseña” el cual lo dirige a una pantalla donde debe ingresar su mail y el código de verificación (que se envía a su mail). una vez validada su identidad completa los campos con su nueva contraseña y presiona el boton “restablecer contraseña” <br>
+**Precondición**: que el user tenga una cuenta registrada<br>
 **Postcondición**: -- 
 
 **Flujo Típico de eventos**:
@@ -76,56 +76,56 @@ La division de las Historias de Usuario sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando el usuario desde<br> el login hace clic en “restablecer contraseña”
+    <td><b>1</b>. Este caso de uso comienza cuando el user desde<br> el login hace clic en “restablecer contraseña”
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>2</b>. El sistema dirige al usuario a la una pantalla con el <br>siguiente formulario:<br>
-        - Ingrese su correo<br> 
+    <td><b>2</b>. El sistema dirige al user a la una pantalla con el <br>siguiente formulario:<br>
+        - Ingrese su mail<br> 
         - Código de recuperación<br>
         - Nueva contraseña<br>
         - Confirme su contraseña<br>
   </tr>
   <tr>
-    <td><b>3</b>. El usuario selecciona el campo con la etiqueta “Ingrese<br> su correo” y lo completa
+    <td><b>3</b>. El user selecciona el campo con la etiqueta “Ingrese<br> su mail” y lo completa
     <td></td>
   </tr>
   <tr>
-    <td><b>4</b>. Una vez completo el campo con su correo el usuario <br>selecciona el botón “Enviar código de recuperación”
+    <td><b>4</b>. Una vez completo el campo con su mail el user <br>selecciona el botón “Enviar código de recuperación”
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>5</b>. El sistema valida si el correo ingresado es correcto <br>y envía un código a dicho correo
+    <td><b>5</b>. El sistema valida si el mail ingresado es correcto <br>y envía un código a dicho mail
     </tr>
   <tr>
-    <td><b>6</b>. El usuario selecciona el campo con la etiqueta “Ingrese<br> su correo” y lo completa
+    <td><b>6</b>. El user selecciona el campo con la etiqueta “Ingrese<br> su mail” y lo completa
     <td></td>
     </tr>
   <tr>
-    <td><b>7</b>. El usuario selecciona el campo con la etiqueta “Código <br>de recuperación” y lo completa con el código que <br>recibió en su correo
+    <td><b>7</b>. El user selecciona el campo con la etiqueta “Código <br>de recuperación” y lo completa con el código que <br>recibió en su mail
     <td></td></tr>
   <tr>
-    <td><b>8</b>. El usuario selecciona el campo con la etiqueta<br> “Nueva contraseña” y lo completa
+    <td><b>8</b>. El user selecciona el campo con la etiqueta<br> “Nueva contraseña” y lo completa
     <td></td></tr>
   <tr>
-    <td><b>9</b>. El usuario selecciona el campo con la etiqueta<br> ”Confirme su contraseña” y lo completa
+    <td><b>9</b>. El user selecciona el campo con la etiqueta<br> ”Confirme su contraseña” y lo completa
     <td></td></tr>
   <tr>
-    <td><b>10</b>. Una vez completos los campos el usuario selecciona <br>el botón “Restablecer contraseña”
+    <td><b>10</b>. Una vez completos los campos el user selecciona <br>el botón “Restablecer contraseña”
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>11</b>. El sistema valida los campos cargados, alerta al<br> usuario que su contraseña fue restablecida exitosamente<br> y lo redirige al login.
+    <td><b>11</b>. El sistema valida los campos cargados, alerta al<br> user que su contraseña fue restablecida exitosamente<br> y lo redirige al login.
 </table>
 
 
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso 5**: El sistema detecta que el correo no es el correspondiente e indica al usuario que vuelva a ingresarlo <br>
+**Paso 5**: El sistema detecta que el mail no es el correspondiente e indica al user que vuelva a ingresarlo <br>
 **Paso 11**: El sistema detecta que un campo no fue cargado correctamente e indica cuál es el campo que no cumple con lo requerido. <br>
 
 <br><br>
@@ -165,7 +165,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 ## **Tareas para Restablecer contraseña**
 
-**Como** usuario <br>
+**Como** user <br>
 **Quiero** restablecer mi contraseña<br>
 **Para** actualizar mis credenciales<br>
 
@@ -177,7 +177,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 - Creación de wireframe
     - Creación del formulario donde contendrán los siguientes elementos
-        - Posicionamiento de campo de texto para completar “Ingrese su correo”
+        - Posicionamiento de campo de texto para completar “Ingrese su mail”
         - Botón de acción de “ENVIAR CÓDIGO DE RECUPERACIÓN”
         - Posicionamiento de campo de texto para completar “Ingrese su Correo”
         - Posicionamiento de campo de texto para completar “Código de Recuperación”

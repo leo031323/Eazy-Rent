@@ -1,7 +1,7 @@
 package com.unam.poo.services.Provincia;
 
-import com.unam.poo.models.Provincia;
-import com.unam.poo.repository.ProvinciaRepository;
+import com.unam.poo.models.Province;
+import com.unam.poo.repository.ProvinceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +11,11 @@ import java.util.List;
 public class ProvinciaServiceImpl implements ProvinciaService {
 
     @Autowired
-    private ProvinciaRepository provinciaRepository;
+    private ProvinceRepository provinceRepository;
 
     @Override
-    public List<Provincia> findAll() {
-        return provinciaRepository.findAll();
+    public List<Province> findAll() {
+        return provinceRepository.findAll();
     }
 
     @Override
@@ -24,13 +24,13 @@ public class ProvinciaServiceImpl implements ProvinciaService {
     }
 
     @Override
-    public Provincia getProvinciaById(Long id) {
-        return provinciaRepository.findById(id).get();
+    public Province getProvinciaById(Long id) {
+        return provinceRepository.findById(id).get();
     }
 
     @Override
-    public Provincia saveProvincia(Provincia provincia) {
-        return provinciaRepository.save(provincia);
+    public Province saveProvincia(Province province) {
+        return provinceRepository.save(province);
     }
 }
 

@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<%--create and center a table that shows the usuarios in the database--%>
+<%--create and center a table that shows the users in the database--%>
 
 <div class="content-wrapper">
     <div class="content">
@@ -38,14 +38,14 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach items="${usuarios}" var="usuario">
+                                <c:forEach items="${users}" var="user">
                                     <tr>
-                                        <td>${usuario.nombre}</td>
-                                        <td>${usuario.apellido}</td>
-                                        <td>${usuario.correo}</td>
+                                        <td>${user.nombre}</td>
+                                        <td>${user.apellido}</td>
+                                        <td>${user.mail}</td>
                                         <td>
-                                            <a href="editar.jsp?id=${usuario.id}">Editar</a>
-                                            <a href="eliminar.jsp?id=${usuario.id}">Eliminar</a>
+                                            <a href="editar.jsp?id=${user.id}">Editar</a>
+                                            <a href="eliminar.jsp?id=${user.id}">Eliminar</a>
                                         </td>
                                     </tr>
                                 </c:forEach>

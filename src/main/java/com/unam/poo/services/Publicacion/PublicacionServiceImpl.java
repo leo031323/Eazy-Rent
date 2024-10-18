@@ -1,8 +1,8 @@
 package com.unam.poo.services.Publicacion;
 
 
-import com.unam.poo.models.Publicacion;
-import com.unam.poo.repository.PublicacionRepository;
+import com.unam.poo.models.Publication;
+import com.unam.poo.repository.PublicationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,47 +12,47 @@ import java.util.List;
 public class PublicacionServiceImpl implements PublicacionService{
 
     @Autowired
-    private PublicacionRepository publicacionRepository;
+    private PublicationRepository publicationRepository;
 
 
     @Override
-    public Publicacion getPublicacionById(Long id) {
-        return publicacionRepository.findById(id).get();
+    public Publication getPublicacionById(Long id) {
+        return publicationRepository.findById(id).get();
     }
 
     @Override
-    public Publicacion savePublicacion(Publicacion publicacion) {
-        return publicacionRepository.save(publicacion);
+    public Publication savePublicacion(Publication publication) {
+        return publicationRepository.save(publication);
     }
 
     @Override
-    public List<Publicacion> findAll() {
-        return publicacionRepository.findAll();
+    public List<Publication> findAll() {
+        return publicationRepository.findAll();
     }
 
     @Override
-    public void updatePublicacion(Publicacion publicacion, Long id) {
+    public void updatePublicacion(Publication publication, Long id) {
 
-        publicacionRepository.save(publicacion);
+        publicationRepository.save(publication);
     }
 
     @Override
-    public List<Publicacion> findAllByEstadoPublicacion(String estadoPublicacion) {
-        return publicacionRepository.findAllByEstadoPublicacion(estadoPublicacion);
+    public List<Publication> findAllByEstadoPublicacion(String estadoPublicacion) {
+        return publicationRepository.findAllByStatePublication(estadoPublicacion);
     }
 
     //    borrado logico de publicacion
     @Override
     public void deletePublicacionById(Long id) {
-        Publicacion publicacion = publicacionRepository.findById(id).get();
-        publicacion.setEstadoPublicacion("eliminado");
-        publicacionRepository.save(publicacion);
+        Publication publication = publicationRepository.findById(id).get();
+        publication.setStatePublicacion("eliminado");
+        publicationRepository.save(publication);
     }
 
     //    metodo de busqueda publicaciones por id o titulo
     @Override
-    public List<Publicacion> findByTituloPublicacionContaining(String titulo) {
-        return publicacionRepository.findByTituloPublicacionContaining(titulo);
+    public List<Publication> findByTituloPublicacionContaining(String titulo) {
+        return publicationRepository.findByQualificationPublicationContaining(titulo);
     }
 
 

@@ -2,12 +2,12 @@ package com.unam.poo.security.service;
 
 import java.util.Optional;
 
+import com.unam.poo.security.modelo.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.unam.poo.security.enums.RolNombre;
-import com.unam.poo.security.modelo.Rol;
-import com.unam.poo.security.repository.RolRepository;
+import com.unam.poo.security.enums.RoleName;
+import com.unam.poo.security.repository.RoleRepository;
 
 import jakarta.transaction.Transactional;
 
@@ -15,13 +15,13 @@ import jakarta.transaction.Transactional;
 @Transactional
 public class RolService {
     @Autowired
-    RolRepository rolRepository;
+    RoleRepository roleRepository;
     
-    public Optional<Rol> getByRolNombre(RolNombre rolNombre){
-        return rolRepository.findByRolNombre(rolNombre);
+    public Optional<Role> getByRolNombre(RoleName roleName){
+        return roleRepository.findByRoleName(roleName);
     }
     
-    public void save(Rol rol){
-        rolRepository.save(rol);
+    public void save(Role role){
+        roleRepository.save(role);
     }
 }

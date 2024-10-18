@@ -115,10 +115,10 @@
               <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
                 Publicaciones
               </h6>
-              <a href="${pageContext.request.contextPath}/publicacion/crearPublicacion" class="dropdown-item border-radius-md">
+              <a href="${pageContext.request.contextPath}/publication/crearPublicacion" class="dropdown-item border-radius-md">
                 <span>Crear nueva publicación</span>
               </a>
-              <a href="${pageContext.request.contextPath}/publicacion/consultarPublicacion" class="dropdown-item border-radius-md">
+              <a href="${pageContext.request.contextPath}/publication/consultarPublicacion" class="dropdown-item border-radius-md">
                 <span>Mis publicaciones</span>
               </a>
             </div>

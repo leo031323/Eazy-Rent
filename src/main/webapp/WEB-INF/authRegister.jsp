@@ -2,7 +2,7 @@
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
-<%@page import="com.unam.poo.models.Ciudad"%>
+<%@page import="com.unam.poo.models.City"%>
 
 
 <%--
@@ -80,7 +80,7 @@
                             </div>
                             <div class="input-group input-group-outline my-3">
                                 <label class="form-label">Email</label>
-                                <input type="email" name="correo" id="correo" class="form-control">
+                                <input type="email" name="mail" id="mail" class="form-control">
                             </div>
                             <div class="input-group input-group-outline my-3">
                                 <label class="form-label">Numero de telefono</label>
@@ -89,10 +89,10 @@
                             
                             <label class="form-label">Ciudad</label>
                             <div class="input-group input-group-outline mb-3">
-                                <select id="ciudad" name="ciudad" class="form-control">
-                                    <option selected disabled value="">Seleccione una ciudad</option> 
+                                <select id="city" name="city" class="form-control">
+                                    <option selected disabled value="">Seleccione una city</option>
                                     <c:forEach items="${ciudades}" var="city">
-                                        <option value="${city.id}">${city.ciudad}</option>
+                                        <option value="${city.id}">${city.city}</option>
                                     </c:forEach>
                                 </select>
                             </div>

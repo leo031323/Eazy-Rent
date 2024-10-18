@@ -61,7 +61,7 @@
           </div>
           <!-- Dimensiones end -->
 
-            <!-- Tipo de propiedad start -->
+            <!-- Type de propiedad start -->
             <div class="border-bottom mb-4 pb-4">
               <h5 class="font-weight-semi-bold mb-4"><i class="fas fa-home text-primary me-3"></i>Tipo de propiedad</h5>
               <form>
@@ -104,7 +104,7 @@
                 </form>
             </div>
 
-            <!-- Tipo de propiedad end -->
+            <!-- Type de propiedad end -->
 
             <!-- Ubicacion start -->
             <div class="border-bottom mb-4 pb-4">
@@ -113,7 +113,7 @@
                 <div class="form-group">
                   <label class="form-label">Provincia</label>
                   <select class="form-select" aria-label="Default select example">
-                    <option selected>Seleccione una provincia</option>
+                    <option selected>Seleccione una province</option>
                     <option value="1">Buenos Aires</option>
                     <option value="2">CABA</option>
                     <option value="3">Catamarca</option>
@@ -240,14 +240,14 @@
 <%--        Publicaciones start--%>
         <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
 
-          <c:forEach items="${publicaciones}" var="publicacion">
+          <c:forEach items="${publicaciones}" var="publication">
           <div class="col">
             <div class="card" style="--bs-btn-hover-bg:100">
-              <a href="${pageContext.request.contextPath}/publicacion/verPublicacion/${publicacion.id}" class="position-relative overflow-hidden" target="_blank">
+              <a href="${pageContext.request.contextPath}/publication/verPublicacion/${publication.id}" class="position-relative overflow-hidden" target="_blank">
                 <div class="ratio ratio-1x1">
                   <div id="carousel-12" class="carousel slide" data-bs-ride="false">
                     <div class="carousel-inner">
-                      <div class="carousel-item active ratio ratio-1x1"><img class="w-100 d-block card-img-top" style="object-fit:cover; height:100%; width: 100%;" src="../../assets/img/rents/${publicacion.imagenes.get(0).url}" alt="Slide Image"/></div>
+                      <div class="carousel-item active ratio ratio-1x1"><img class="w-100 d-block card-img-top" style="object-fit:cover; height:100%; width: 100%;" src="../../assets/img/rents/${publication.imagenes.get(0).url}" alt="Slide Image"/></div>
 
                       <div class="carousel-item ratio ratio-1x1"><img class="w-100 d-block card-img-top" style="object-fit:cover; height:100%; width: 100%;" src="../../assets/img/rents/2.webp" alt="Slide Image" /></div>
                       <div class="carousel-item ratio ratio-1x1"><img class="w-100 d-block card-img-top" style="object-fit:cover; height:100%; width: 100%;" src="../../assets/img/rents/3.webp" alt="Slide Image" /></div>
@@ -262,10 +262,10 @@
                 </div>
               </a>
               <div class="card-body">
-                <h5 class="card-title">${publicacion.tituloPublicacion}</h5>
-                <h2 class="card-text"> $ ${publicacion.precioPublicacion.intValue()}</h2>
+                <h5 class="card-title">${publication.qualificationPublication}</h5>
+                <h2 class="card-text"> $ ${publication.pricePublication.intValue()}</h2>
                 <p class="card-text">
-                    ${publicacion.descripcionPublicacion}
+                    ${publication.descriptionPublication}
                 </p>
               </div>
             </div>

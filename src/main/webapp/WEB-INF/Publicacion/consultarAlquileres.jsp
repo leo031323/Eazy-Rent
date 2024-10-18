@@ -49,7 +49,7 @@
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Publicacion</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tipo</th>
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Estado</th>
-                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Fecha de publicacion</th>
+                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Fecha de publication</th>
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Descripcion</th>
                 <th class="text-secondary opacity-7"></th>
               </tr>
@@ -66,23 +66,23 @@
                         <img src="../../assets/img/rents/1.webp" class="avatar avatar-xl me-3" alt="logo">
                       </div>
                       <div class="d-flex flex-column justify-content-center">
-                        <a class="mb-0 h6" href="${pageContext.request.contextPath}/publicacion/verPublicacion/${propiedad.id}">${propiedad.tituloPublicacion}</a>
-                        <p class="text-xs text-secondary mb-0">${propiedad.precioPublicacion}</p>
+                        <a class="mb-0 h6" href="${pageContext.request.contextPath}/publication/verPublicacion/${propiedad.id}">${propiedad.qualificationPublication}</a>
+                        <p class="text-xs text-secondary mb-0">${propiedad.pricePublication}</p>
                       </div>
                     </div>
                   </td>
                   <td>
                       <%--                                <p class="font-weight-bold mb-0"></p>--%>
-                    <p class="text-xs text-secondary mb-0">${propiedad.idTipo.tipo}</p>
+                    <p class="text-xs text-secondary mb-0">${propiedad.idType.type}</p>
                   </td>
                   <td class="align-middle text-center">
-                    <span class="badge bg-gradient-warning" >${propiedad.estadoPublicacion}</span>
+                    <span class="badge bg-gradient-warning" >${propiedad.statePublicacion}</span>
                   </td>
                   <td class="align-middle text-center">
-                    <span class="text-secondary text-xs font-weight-normal">${propiedad.fechaHoraPublicacion.toLocalDate()}</span>
+                    <span class="text-secondary text-xs font-weight-normal">${propiedad.dateTimePublication.toLocalDate()}</span>
                   </td>
                   <td class="align-middle">
-                    <span class="text-secondary text-xs font-weight-normal">${propiedad.descripcionPublicacion}</span>
+                    <span class="text-secondary text-xs font-weight-normal">${propiedad.descriptionPublication}</span>
                   </td>
                 </tr>
               </c:forEach>

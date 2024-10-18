@@ -1,25 +1,27 @@
 package com.unam.poo.models;
 
 import jakarta.persistence.*;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Setter; 
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-public class FotoPublicacion {
+public class Image {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_foto_publicacion")
-    private Long id;
+    @Column(name = "id_image")
+    private Integer idImage;
 
-    @Column(name = "url_foto")
-    private String url;
+    @Basic
+    @Column(name = "url_image")
+    private String urlImage;
+
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_publicacion", nullable = false)
-    private Publicacion idPublicacion;
+    @JoinColumn(name = "id_publication", nullable = false)
+    private Publication idPublication;
 }

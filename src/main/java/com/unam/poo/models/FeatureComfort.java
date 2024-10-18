@@ -24,7 +24,7 @@ public class FeatureComfort {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id_comfort", nullable = false)
-    private Comodidad idComfort;
+    private Comfort idComfort;
 
 
 }

@@ -106,14 +106,14 @@
                             </a>
                           </div>
                           <h4 class="mb-2">Olvido su contraseña? 🔒</h4>
-                          <p class="mb-4">Ingrese su correo y le enviaremos instrucciones para recuperar su cuenta</p>
+                          <p class="mb-4">Ingrese su mail y le enviaremos instrucciones para recuperar su cuenta</p>
                          
                           
                           <form:form id="formAuthentication" role="multipart/form-data"
                             action="${pageContext.request.contextPath}/forgotpsw/enviarCodigo" method="post">
                             <div class="input-group input-group-outline mb-3">
-                              <label for="email" class="form-label">Ingrese su correo</label>
-                              <input #correo id="correo" name="correo" type="email" class="form-control"
+                              <label for="email" class="form-label">Ingrese su mail</label>
+                              <input #mail id="mail" name="mail" type="email" class="form-control"
                               autofocus />
                             </div>
                             <button type="submit" class="btn btn-primary d-grid w-100">Enviar codigo de
@@ -125,8 +125,8 @@
                           <form:form id="formReestablecerPass" role="multipart/form-data"
                             action="${pageContext.request.contextPath}/forgotpsw/reestablecerPassword" method="post">
                             <div class="input-group input-group-outline mb-3">
-                              <label for="email" class="form-label">Ingrese su correo</label>
-                              <input #correo id="correo" name="correo" type="email" class="form-control"
+                              <label for="email" class="form-label">Ingrese su mail</label>
+                              <input #mail id="mail" name="mail" type="email" class="form-control"
                               autofocus />
                             </div>
                             <div class="input-group input-group-outline mb-3">

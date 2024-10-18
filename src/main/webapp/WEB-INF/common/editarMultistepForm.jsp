@@ -39,28 +39,28 @@
 
       <div class="multisteps-form__form">
 
-      <%--@elvariable id="publicacion" type=""--%>
-      <form:form role="form" method="post" action="/publicacion/editarPublicacion/${publicacion.id}" modelAttribute="publicacion" class="text-start" id="form" enctype="multipart/form-data" >
+      <%--@elvariable id="publication" type=""--%>
+      <form:form role="form" method="post" action="/publication/editarPublicacion/${publication.id}" modelAttribute="publication" class="text-start" id="form" enctype="multipart/form-data" >
 
         <!--PANEL TIPO DE PROPIEDAD-->
         <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
           <h3 class="multisteps-form__title">Tipo de Propiedad</h3>
           <div class="multisteps-form__content">
 
-<%--              ${publicacion.idTipo.id}--%>
+<%--              ${publication.idTipo.id}--%>
 
             <div class="form-row mt-4 shadow-none p-3 mb-5 bg-light rounded">
 
-                <%--@elvariable id="tipos" type=""--%>
+                <%--@elvariable id="types" type=""--%>
               <form:select path="idTipo" class="multisteps-form__select form-control" id="inputTipo">
-                <option>Seleccione un tipo de propiedad</option>
-                <c:forEach items="${tipos}" var="tipo">
+                <option>Seleccione un type de propiedad</option>
+                <c:forEach items="${types}" var="type">
 
-                  <c:if test="${publicacion.idTipo.id == tipo.id}">
-                    <form:option value="${tipo.id}"  label="${tipo.tipo}" selected="true"/>
+                  <c:if test="${publication.idTipo.id == type.id}">
+                    <form:option value="${type.id}"  label="${type.type}" selected="true"/>
                   </c:if>
-                  <c:if test="${publicacion.idTipo.id != tipo.id}">
-                    <form:option value="${tipo.id}" label="${tipo.tipo}"/>
+                  <c:if test="${publication.idTipo.id != type.id}">
+                    <form:option value="${type.id}" label="${type.type}"/>
                   </c:if>
 
                 </c:forEach>
@@ -90,7 +90,7 @@
               <div class="input-group input-group-outline o my-3 is-focused">
                 <label class="form-label">Calle (*)</label>
                 <form:input class="multisteps-form__input form-control " type="text" path="callePublicacion" id="inputCalle"/>
-<%--                <input #correo type="email" name="correo" id="correo" >--%>
+<%--                <input #mail type="email" name="mail" id="mail" >--%>
               </div>
 <%--              <div class="col">--%>
 <%--                <label class="multisteps-form__label" for="inputDireccion">Dirección</label>--%>
@@ -118,8 +118,8 @@
 <%--            </div>--%>
 
             <div class="form-row mt-4 shadow-none p-3 mb-5 bg-light rounded">
-              <select class="multisteps-form__select form-control" name="provincia" id="inputProvincia">
-                <option >Seleccione una provincia</option>
+              <select class="multisteps-form__select form-control" name="province" id="inputProvincia">
+                <option >Seleccione una province</option>
                 <option value="Misiones" selected>Misiones</option>
               </select>
               <div class="text-danger"  id="divProvincia" ></div>
@@ -127,14 +127,14 @@
 
             <div class="form-row mt-4 shadow-none p-3 mb-5 bg-light rounded">
               <form:select path="idCiudad" class="multisteps-form__select form-control" id="inputCiudad">
-                <option>Seleccione una ciudad</option>
-                <c:forEach items="${ciudades}" var="ciudad">
+                <option>Seleccione una city</option>
+                <c:forEach items="${ciudades}" var="city">
 
-                  <c:if test="${publicacion.idCiudad.id == ciudad.id}">
-                    <form:option value="${ciudad.id}" label="${ciudad.ciudad}" selected="true"/>
+                  <c:if test="${publication.idCiudad.id == city.id}">
+                    <form:option value="${city.id}" label="${city.city}" selected="true"/>
                   </c:if>
-                  <c:if test="${publicacion.idCiudad.id != ciudad.id}">
-                    <form:option value="${ciudad.id}" label="${ciudad.ciudad}"/>
+                  <c:if test="${publication.idCiudad.id != city.id}">
+                    <form:option value="${city.id}" label="${city.city}"/>
                   </c:if>
 
                 </c:forEach>
@@ -151,8 +151,8 @@
 
 <%--                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4198.158044205938!2d-55.77119880812339!3d-27.77231641207666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94563758e73ae093%3A0x4642bcf36db682e7!2sKulipadel!5e0!3m2!1ses-419!2sar!4v1664591023556!5m2!1ses-419!2sar"  width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>--%>
 
-                <form:input type="hidden" id="latitud" name="latitud" path="latitudPublicacion" value="${publicacion.latitudPublicacion}"/>
-                <form:input type="hidden" id="longitud" name="longitud" path="longitudPublicacion" value="${publicacion.longitudPublicacion}"/>
+                <form:input type="hidden" id="latitud" name="latitud" path="latitudPublicacion" value="${publication.latitudPublicacion}"/>
+                <form:input type="hidden" id="longitud" name="longitud" path="longitudPublicacion" value="${publication.longitudPublicacion}"/>
                 <div class="text-danger"  id="divMapa" ></div>
               </div>
             </div>
@@ -351,7 +351,7 @@
 <%--              mostrar las imagenes de la base de datos--%>
               <div class="form-row mt-4  shadow-none p-3 mb-5 bg-light rounded">
                 <div class="col">
-                  <c:forEach items="${publicacion.imagenes}" var="imagen">
+                  <c:forEach items="${publication.imagenes}" var="imagen">
 <%--                      <div>--%>
                           <img src="../../assets/img/rents/${imagen.url}" alt="imagen" height="100">
 <%--                          <button type="button"  onclick="eliminarImagen(${imagen.id})">Eliminar</button>--%>
@@ -381,21 +381,21 @@
           <div class="multisteps-form__content">
 
 
-          <c:forEach items="${comodidades}" var="comodidad">
+          <c:forEach items="${comodidades}" var="comfort">
 
             <div class="form-row mt-4  shadow-none p-3 mb-5 bg-light rounded">
-              <h6>${comodidad.comodidad}</h6>
+              <h6>${comfort.comfort}</h6>
               <c:forEach items="${caracteristicaComodidades}"  var="caracteristica" >
 
-                <c:if test="${caracteristica.idComodidad.idComodidad == comodidad.idComodidad}">
+                <c:if test="${caracteristica.idComodidad.idComodidad == comfort.idComodidad}">
                     <div class="col form-check-inline">
 
-                      <c:if test="${publicacion.caracteristicasComodidades.contains(caracteristica)}">
+                      <c:if test="${publication.caracteristicasComodidades.contains(caracteristica)}">
                         <form:checkbox path="caracteristicasComodidades" value="${caracteristica.idCaracteristica}" class="form-check-input" checked="true"/>
                         <label class="form-check-label" >${caracteristica.nombreCaracteristica}</label>
                       </c:if>
 
-                      <c:if test="${!publicacion.caracteristicasComodidades.contains(caracteristica)}">
+                      <c:if test="${!publication.caracteristicasComodidades.contains(caracteristica)}">
                         <form:checkbox path="caracteristicasComodidades" value="${caracteristica.idCaracteristica}" class="form-check-input" />
                         <label class="form-check-label" >${caracteristica.nombreCaracteristica}</label>
                       </c:if>

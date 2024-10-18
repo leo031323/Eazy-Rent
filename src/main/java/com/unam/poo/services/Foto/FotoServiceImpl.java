@@ -2,44 +2,43 @@ package com.unam.poo.services.Foto;
 
 import java.util.List;
 
+import com.unam.poo.models.Photo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service; 
+import org.springframework.stereotype.Service;
 
-import com.fasterxml.jackson.core.util.ByteArrayBuilder;
-import com.unam.poo.models.Foto;
-import com.unam.poo.repository.FotosRepository;
+import com.unam.poo.repository.PhotosRepository;
 
 @Service
 public class FotoServiceImpl implements FotoService{
 
     @Autowired
-    FotosRepository fotosRepository;
+    PhotosRepository photosRepository;
 
     @Override
-    public List<Foto> findAll() {
-        return fotosRepository.findAll();
+    public List<Photo> findAll() {
+        return photosRepository.findAll();
     }
 
     @Override
     public void deleteFotoById(Long id) {
-        fotosRepository.deleteById(id);    
+        photosRepository.deleteById(id);
     }
 
     @Override
-    public Foto getFotoById(Long id) {
-        return fotosRepository.findById(id).orElse(null);
+    public Photo getFotoById(Long id) {
+        return photosRepository.findById(id).orElse(null);
     }
  
     @Override
-    public Foto saveFoto(Foto foto) {
-        return fotosRepository.save(foto);
+    public Photo saveFoto(Photo photo) {
+        return photosRepository.save(photo);
     }
 
     @Override
-    public String transformToDataURI(Foto foto) {
+    public String transformToDataURI(Photo photo) {
         String str = "";
         str += "data:image/png;base64,";
-        //str += Base64.getEncoder().encodeToString(foto.getBytes());
+        //str += Base64.getEncoder().encodeToString(photo.getBytes());
         return str;
     }
     

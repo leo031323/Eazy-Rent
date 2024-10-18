@@ -16,14 +16,14 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "pais")
-public class Pais {
+public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_pais", nullable = false)
+    @Column(name = "id_country", nullable = false)
     private Integer id;
 
     @Basic
-    @Column(name = "pais", length = 100)
-    private String pais;
+    @Column(name = "country", length = 100)
+    private String country;
 
 }

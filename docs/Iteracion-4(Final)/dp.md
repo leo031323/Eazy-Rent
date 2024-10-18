@@ -3,7 +3,7 @@ El lider de la cuarta iteracion sera: Emiliano Blazco
 
 La division de las Historias de Usuario sera la siguiente:
 
-- Dar de baja un usuario (baja lógica)
+- Dar de baja un user (baja lógica)
     - **Encargados**: Marcela Stigelmeier y Matias Fernandez
   
 - Agregar un alquiler a Favoritos
@@ -25,15 +25,15 @@ La division de las Historias de Usuario sera la siguiente:
 
 # Wireframe y caso de uso
 
-## Wireframe Dar de baja un usuario (baja lógica)
+## Wireframe Dar de baja un user (baja lógica)
 
 <img src="../../src/main/webapp/assets/img/imagenes_iteraciones/baja_usuario.jpeg" width="800"/>
 
 <br><br>
-**Caso de uso**: Dar de baja un usuario <br>
-**Descripción**: El usuario ingresa a su perfil y busca la opción para dar de baja su usuario, presiona sobre el botón "Dar de baja" y su usuario se desactiva <br>
-**Precondición**:  Que el usuario se encuentre con la sesión iniciada <br>
-**Postcondición**:  Que el usuario se haya dado de baja<br> 
+**Caso de uso**: Dar de baja un user <br>
+**Descripción**: El user ingresa a su perfil y busca la opción para dar de baja su user, presiona sobre el botón "Dar de baja" y su user se desactiva <br>
+**Precondición**:  Que el user se encuentre con la sesión iniciada <br>
+**Postcondición**:  Que el user se haya dado de baja<br> 
 
 **Flujo Típico de eventos**:
 <table>
@@ -42,7 +42,7 @@ La division de las Historias de Usuario sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>.  Este caso de uso comienza cuando el usuario una vez <br>en su perfil, hace click en el boton “Dar de baja” <br>
+    <td><b>1</b>.  Este caso de uso comienza cuando el user una vez <br>en su perfil, hace click en el boton “Dar de baja” <br>
     <td></td>
   </tr>
   <tr>
@@ -52,20 +52,20 @@ La division de las Historias de Usuario sera la siguiente:
     - Campo 2: Contraseña<br>
   </tr>
   <tr>
-    <td><b>3</b>. El usuario selecciona el campo con la etiqueta <br>“E-Mail” y lo completa<br>
+    <td><b>3</b>. El user selecciona el campo con la etiqueta <br>“E-Mail” y lo completa<br>
     <td></td>
   </tr>
   <tr>
-    <td><b>4</b>. El usuario selecciona el campo con la etiqueta <br>“Contraseña” y lo completa<br>
+    <td><b>4</b>. El user selecciona el campo con la etiqueta <br>“Contraseña” y lo completa<br>
     <td></td>
   </tr>
   <tr>
-    <td><b>5</b>. Una vez completos los campos el usuario selecciona <br> el botón “Dar de baja”
+    <td><b>5</b>. Una vez completos los campos el user selecciona <br> el botón “Dar de baja”
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>6</b>. El sistema valida los campos cargados y muestra el <br>mensaje “Este usuario fue dado de baja correctamente”
+    <td><b>6</b>. El sistema valida los campos cargados y muestra el <br>mensaje “Este user fue dado de baja correctamente”
  </tr>
 </table>
 
@@ -80,7 +80,7 @@ La division de las Historias de Usuario sera la siguiente:
 <br><br>
 **Caso de uso**: Agregar un alquiler a Favoritos<br>
 **Descripción**: El inquilino dentro de un alquiler seleccionado se dirige a la opción de agregar a favoritos y el sistema agrega a la lista de favoritos el alquiler seleccionado<br>
-**Precondición**:El usuario debe encontrarse dentro de una publicación<br>
+**Precondición**:El user debe encontrarse dentro de una publicación<br>
 **Postcondición**:  Se agregó un alquiler a favoritos<br>
 
 **Flujo Típico de eventos**:
@@ -116,8 +116,8 @@ La division de las Historias de Usuario sera la siguiente:
 
 <br><br>
 **Caso de uso**: Eliminar un alquiler de favoritos  <br>
-**Descripción**: Un usuario quiere eliminar una publicación de su lista de publicaciones favoritas.<br>
-**Precondición**: El usuario debe ingresar a su cuenta.<br>
+**Descripción**: Un user quiere eliminar una publicación de su lista de publicaciones favoritas.<br>
+**Precondición**: El user debe ingresar a su cuenta.<br>
 **Postcondición**: La publicación se elimina de la lista de favoritos (base de datos). <br>
 
 **Flujo Típico de eventos**:
@@ -127,15 +127,15 @@ La division de las Historias de Usuario sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1.</b> Esta caso de uso comienza cuando un usuario ingresa a su perfil y selecciona la opción de "Ver favoritos".</td>
+    <td><b>1.</b> Esta caso de uso comienza cuando un user ingresa a su perfil y selecciona la opción de "Ver favoritos".</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>2.</b>El sistema despliega una ventana con las publicaciones etiquetadas como favoritos por el usuario.</td>
+    <td><b>2.</b>El sistema despliega una ventana con las publicaciones etiquetadas como favoritos por el user.</td>
   </tr>
   <tr>
-    <td><b>3.</b>El usuario hace click al botón de "Eliminar" al lado de la publicación.</td>
+    <td><b>3.</b>El user hace click al botón de "Eliminar" al lado de la publicación.</td>
     <td></td>
   </tr>
   <tr>
@@ -145,14 +145,14 @@ La division de las Historias de Usuario sera la siguiente:
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso 2.1**: El usuario no posee publicaciones en su lista de favoritos, por tanto el sistema da aviso de ello.<br>
-**Paso 4.1**: El usuario eliminó el último favorito, por tanto el sistema avisa que ya no posee favoritos.
+**Paso 2.1**: El user no posee publicaciones en su lista de favoritos, por tanto el sistema da aviso de ello.<br>
+**Paso 4.1**: El user eliminó el último favorito, por tanto el sistema avisa que ya no posee favoritos.
 
 <br></br>
 
 # Backlog de iteraciones
 **Iteracion 4**
-- Dar de baja un usuario (baja lógica)
+- Dar de baja un user (baja lógica)
 - Agregar un alquiler a Favoritos
 - Eliminar un alquiler de Favoritos
 - Modificar propiedad
@@ -161,16 +161,16 @@ La division de las Historias de Usuario sera la siguiente:
 
 <br><br>
 
-## **Tareas para Dar de baja un usuario (baja lógica)**
+## **Tareas para Dar de baja un user (baja lógica)**
 
 **Como**  Usuario <br>
-**Quiero** dar de baja un usuario  <br>
+**Quiero** dar de baja un user  <br>
 **Para** eliminar una cuenta registrada <br>
 
 <u>Criterios de aceptación</u>
 
-- El Usuario debe ingresar al sistema con su usuario.<br>
-- El usuario debe completar los campos requeridos correctamente.<br>
+- El Usuario debe ingresar al sistema con su user.<br>
+- El user debe completar los campos requeridos correctamente.<br>
 
 
 <u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
@@ -208,7 +208,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 ## **Tareas para Eliminar un alquiler de Favoritos**
 
-**Como** usuario del sistema<br> 
+**Como** user del sistema<br> 
 **Quiero** eliminar un alquiler de favoritos<br>
 **Para** dejar de seguir una publicación que ya no le interesa.
 
@@ -227,6 +227,6 @@ La division de las Historias de Usuario sera la siguiente:
 
 Teniendo en cuenta lo realizado en la release 3 podemos decir que hubo un gran aporte por parte de todos los integrantes del grupo
 cada uno cumpliendo con sus tareas asignadas y trabajando de manera correcta con el repositorio de github.
-Por otra parte se realizaron de manera completa las 3 actividades (Consultar ubicación, Modificar datos de usuario, Consultar usuario) planteadas para la iteracion. 
+Por otra parte se realizaron de manera completa las 3 actividades (Consultar ubicación, Modificar datos de user, Consultar user) planteadas para la iteracion. 
 Cumpliendo con su documentacion, desarrollo de wireframes e implemntacion de funcionalidades
 Ademas de esto se mantuvo la forma de trabajo de a pares, siguiendo con esta metodologia para las siguientes iteraciones.

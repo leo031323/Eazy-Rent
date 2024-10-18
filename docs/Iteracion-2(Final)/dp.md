@@ -29,7 +29,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 **Descripción**: EL propietario ingresa en una propiedad propia publicada y busca la opción para desactivarla, presione sobre la opción y la publicación es ocultada de la vista principal de publicaciones  
 
-**Precondición**: Que el usuario se encuentre con la sesión iniciada. que la propiedad se encuentre registrada. que la publicación se encuentre activa. que el usuario se encuentre dentro de la publicacion. Que no se encuentre ningun inquilino asociado a la propiedad.
+**Precondición**: Que el user se encuentre con la sesión iniciada. que la propiedad se encuentre registrada. que la publicación se encuentre activa. que el user se encuentre dentro de la publication. Que no se encuentre ningun inquilino asociado a la propiedad.
 
 **Postcondición**:  Se dio de baja la publicación  
 
@@ -59,9 +59,9 @@ La division de las Historias de Usuario sera la siguiente:
 <br><br>
 **Caso de uso**: Consultar propiedad
 
-**Descripción**: El propietario ingresa en una propiedad propia publicada y el sistema despliega toda la informacion asociada a la publicacion con las respectivas acciones de desactivacion y modificacion asociada a la publicacion. <br>
+**Descripción**: El propietario ingresa en una propiedad propia publicada y el sistema despliega toda la informacion asociada a la publication con las respectivas acciones de desactivacion y modificacion asociada a la publication. <br>
 
-**Precondición**: Que el usuario se encuentre con su sesión iniciada. Que la propiedad se encuentre registrada. <br>
+**Precondición**: Que el user se encuentre con su sesión iniciada. Que la propiedad se encuentre registrada. <br>
 
 **Postcondición**: --
 
@@ -79,14 +79,14 @@ La division de las Historias de Usuario sera la siguiente:
     <td></td>
     <td><b>2</b>. El sistema despliegue la información asociada a la publicación como ser:<br> 
             - Foto asociada a la Propiedad <br>
-            - Nombre de la publicacion <br>
-            - Descripcion de publicacion<br>
+            - Nombre de la publication <br>
+            - Descripcion de publication<br>
             - Servicios y comodidades brindados por la propiedad <br>
             - Precio de la propiedad <br>
             - Ubicaion de la propiedad <br>
-            - Mapa asociado a la publicacion<br>
+            - Mapa asociado a la publication<br>
    <tr>
-    <td><b>3</b>. El propietario recorre la informacion asociada a la publicacion <br> scroleando con la rueda del mouse y una vez finazlizado <br> vuelve a la pagina principal
+    <td><b>3</b>. El propietario recorre la informacion asociada a la publication <br> scroleando con la rueda del mouse y una vez finazlizado <br> vuelve a la pagina principal
     <td></td>
   </tr>
 </table>
@@ -94,7 +94,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso**:El sistema no logra cargar la publicación. Entonces pide al usuario que recargue la página
+**Paso**:El sistema no logra cargar la publicación. Entonces pide al user que recargue la página
 
 <br><br>
 
@@ -105,7 +105,7 @@ La division de las Historias de Usuario sera la siguiente:
 <br><br>
 **Caso de uso**: Ver detalles del Alquiler  
 **Descripción**: El inquilino navega por la pantalla de la propiedad seleccionada donde podrá ver la descripción de tal propiedad con sus respectivas características <br>
-**Precondición**: Que el usuario se encuentre con su sesión iniciada. Haber seleccionado una publicación <br>
+**Precondición**: Que el user se encuentre con su sesión iniciada. Haber seleccionado una publicación <br>
 **Postcondición**:--
 
 **Flujo Típico de eventos**:
@@ -122,14 +122,14 @@ La division de las Historias de Usuario sera la siguiente:
     <td></td>
     <td><b>2</b>. El sistema despliegue la información asociada a la publicación como ser:<br> 
             - Foto asociada a la Propiedad <br>
-            - Nombre de la publicacion <br>
-            - Descripcion de publicacion<br>
+            - Nombre de la publication <br>
+            - Descripcion de publication<br>
             - Servicios y comodidades brindados por la propiedad <br>
             - Precio de la propiedad <br>
             - Ubicaion de la propiedad <br>
-            - Mapa asociado a la publicacion<br>
+            - Mapa asociado a la publication<br>
    <tr>
-    <td><b>3</b>. El propietario recorre la informacion asociada a la publicacion <br> scroleando con la rueda del mouse y una vez finazlizado <br> vuelve a la pagina principal
+    <td><b>3</b>. El propietario recorre la informacion asociada a la publication <br> scroleando con la rueda del mouse y una vez finazlizado <br> vuelve a la pagina principal
     <td></td>
   </tr>
 </table>
@@ -137,7 +137,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso**: El sistema no logra cargar la publicación. Entonces pide al usuario que recargue la página
+**Paso**: El sistema no logra cargar la publicación. Entonces pide al user que recargue la página
 
 
 <br></br>
@@ -150,7 +150,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 **Caso de uso**:  Consultar alquileres obtenidos.
 
-**Descripción**: El usuario en su perfil puede ver los alquileres asociados a su cuenta.
+**Descripción**: El user en su perfil puede ver los alquileres asociados a su cuenta.
 
 **Precondición**:   Haber ingresado al sistema.
   
@@ -164,14 +164,14 @@ La division de las Historias de Usuario sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1</b>. Este caso de uso comienza cuando el usuario ingresa al apartado <br>“Mis Alquileres”.
+    <td><b>1</b>. Este caso de uso comienza cuando el user ingresa al apartado <br>“Mis Alquileres”.
     <td></td>
   </tr> 
   <tr>
     <td></td>
-    <td><b>2</b>. El sistema muestra los alquileres asociados a ese usuario
+    <td><b>2</b>. El sistema muestra los alquileres asociados a ese user
    <tr>
-    <td><b>3</b>. El usuario selecciona una publicación (alquiler).
+    <td><b>3</b>. El user selecciona una publicación (alquiler).
     <td></td>
   </tr>
     <tr>
@@ -182,7 +182,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso** 2:  El sistema da aviso al usuario de que no tiene alquileres asociados y termina el caso de uso.
+**Paso** 2:  El sistema da aviso al user de que no tiene alquileres asociados y termina el caso de uso.
 
 
 
@@ -203,13 +203,13 @@ La division de las Historias de Usuario sera la siguiente:
 
 **Como** propietario <br/>
 **Quiero** dar de baja una propiedad <br/>
-**Para** ocultar una publicacion realizada <br/>
+**Para** ocultar una publication realizada <br/>
 
 <u>Criterios de aceptación</u>
 
-   - El propietario debe ingresar al sistema con su usuario.
-   - La publicacion debe existir
-   - La publicacion debe estar activa y no debe estar asociada a ningun inquilino
+   - El propietario debe ingresar al sistema con su user.
+   - La publication debe existir
+   - La publication debe estar activa y no debe estar asociada a ningun inquilino
 
 <u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
@@ -221,8 +221,8 @@ La division de las Historias de Usuario sera la siguiente:
 
 <u>Criterios de aceptación</u>
 
-   - El propietario debe ingresar al sistema con su usuario.
-   - El sistema da aviso al usuario de que no tiene alquileres asociados y termina el caso de uso.
+   - El propietario debe ingresar al sistema con su user.
+   - El sistema da aviso al user de que no tiene alquileres asociados y termina el caso de uso.
 
 ## **Tareas para Consultar propiedad (Exclusivo para propietarios)**
 
@@ -258,7 +258,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 <u>Criterios de aceptación</u>
 
-- La publicacion debe estar activa
+- La publication debe estar activa
 
 <u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
@@ -282,13 +282,13 @@ La division de las Historias de Usuario sera la siguiente:
 
 ## **Tareas para Consultar alquileres obtenidos**
 
-**Como** usuario (propietario/inquilino)<br/>
+**Como** user (propietario/inquilino)<br/>
 **Quiero**  consultar mis alquileres obtenidos <br/>
 **Para**  poder ver los alquileres que tengo asociado <br/>
 
 <u>Criterios de aceptación</u>
 
-- El usuario debe tener alquileres asociados(si no, se da aviso de tal circunstancia).
+- El user debe tener alquileres asociados(si no, se da aviso de tal circunstancia).
 
 <u>Las siguientes tareas comprenderán el desarrollo de la Historia de Usuario:</u>
 
@@ -301,7 +301,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 Teniendo en cuenta lo realizado en la release 1 podemos decir que hubo un gran aporte por parte de todos los integrantes del grupo
 cada uno cumpliendo con sus tareas asignadas y trabajando de manera correcta con el repositorio de github.
-Por otra parte se realizo 3 actividades (Crear un nuevo usuario, Ingresar usuario, Registrar propiedad) totalmente funcionales de las 4 planteadas 
+Por otra parte se realizo 3 actividades (Crear un nuevo user, Ingresar user, Registrar propiedad) totalmente funcionales de las 4 planteadas 
 de las cuales 1(Modificar propiedad) solo se realizo la documentacion y se establecio entre los integrantes del equipo en moverla
 a alguna iteracion futura(Iteracion 4), ya que nos dimos cuenta que iba a ser complicado integrar la funcionalidad en esta altura
 del desarrollo por no poseer el registro de propiedades de manera totalmente funcional (Ya que no se posee integrado el manejo de imagenes y la integracion de la ubicacion)

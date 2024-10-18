@@ -2,10 +2,10 @@
 El lider de la primera iteracion sera: Guillermo Quintana
 
 La division de las Historias de Usuario sera la siguiente:
-- Modificar datos de usuario
+- Modificar datos de user
     - **Encargados**: Marcela Stigelmeier y Matias Fernandez
 
-- Consultar usuario
+- Consultar user
     - **Encargados**: Emiliano Blazco y Ariel Cristaldo
 
 - Consultar ubicación
@@ -18,7 +18,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 # Wireframe y caso de uso
 
-## Wireframe Modificar datos de usuario
+## Wireframe Modificar datos de user
 
 <img src="../../src/main/webapp/assets/img/imagenes_iteraciones/modificar_datos_usuarios.jpeg" width="800"/>
 
@@ -86,7 +86,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 **Paso**:
 
-## Wireframe Consultar usuario
+## Wireframe Consultar user
 
 <img src="../../src/main/webapp/assets/img/imagenes_iteraciones/consultar_usuario.jpeg" width="800"/>
 
@@ -202,8 +202,8 @@ La division de las Historias de Usuario sera la siguiente:
 # Backlog de iteraciones
 **Iteracion 3**
 - Consultar ubicación
-- Modificar datos de usuario
-- Consultar usuario
+- Modificar datos de user
+- Consultar user
 
 
 # Tareas
@@ -232,7 +232,7 @@ La division de las Historias de Usuario sera la siguiente:
 - Validación de campos con sus respectivas alertas
 
 
-## **Tareas para Modificar datos de usuario**
+## **Tareas para Modificar datos de user**
 
 **Como**  
 **Quiero**  
@@ -255,7 +255,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 <br><br>
 
-## **Tareas para Consultar usuario**
+## **Tareas para Consultar user**
 
 **Como**  
 **Quiero**  

@@ -8,12 +8,12 @@ Así también las personas que poseen los lugares a ser alquilados muchas veces 
 
 ## Clientes potenciales
 
-Los usuarios potenciales para este software serian todas aquellas personas que cuenten con una propiedad y quieran publicarla para ser alquilada, y a su vez todas aquellas personas que tengan la necesidad de adquirir un alquiler.
-Sin la necesidad de perder la comodidad
+Los users potenciales para este software serian todas aquellas personas que cuenten con una propiedad y quieran publicarla para ser alquilada, y a su vez todas aquellas personas que tengan la necesidad de adquirir un alquiler.
+Sin la necesidad de perder la comfort
 
 ## Solución propuesta 
 
-En la versión inicial del proyecto se presentará un software que se ejecutará sobre navegadores web en principio la zona en la que se plantea probar el desempeño de la plataforma será en la ciudad de Apóstoles.
+En la versión inicial del proyecto se presentará un software que se ejecutará sobre navegadores web en principio la zona en la que se plantea probar el desempeño de la plataforma será en la city de Apóstoles.
 En el cual se presentarán dos partes principales, que serían las interfaces para las personas que buscan el alquiler (inquilinos) y para personas que publican sus lugares a alquilar (propietarios).
 Una última cosa a implementar sería la recomendación de ciertos alquileres a través de un sistema de calificación realizada por los inquilinos con el fin de poder tener presente que alquileres ofrecen mejores características que otros.
 
@@ -21,11 +21,11 @@ Una última cosa a implementar sería la recomendación de ciertos alquileres a 
 
 Funcionales
 
-- Crear un nuevo usuario
-- Modificar datos de usuario
-- Dar de baja un usuario (baja lógica)
-- Consultar usuario
-- Ingresar usuario
+- Crear un nuevo user
+- Modificar datos de user
+- Dar de baja un user (baja lógica)
+- Consultar user
+- Ingresar user
 - Restablecer contraseña
 - Registrar propiedad
 - Modificar propiedad
@@ -40,7 +40,7 @@ Funcionales
 
 No funcionales
 
-- Autenticación de usuario. 
+- Autenticación de user. 
 - Manejo de roles
 - Filtrar caracteristicas
 - Notificaciones

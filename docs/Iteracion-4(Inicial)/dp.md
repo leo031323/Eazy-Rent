@@ -3,7 +3,7 @@ El lider de la cuarta iteracion sera: Emiliano Blazco
 
 La division de las Historias de Usuario sera la siguiente:
 
-- Dar de baja un usuario (baja lógica)
+- Dar de baja un user (baja lógica)
     - **Encargados**: Marcela Stigelmeier y Matias Fernandez
   
 - Agregar un alquiler a Favoritos
@@ -25,7 +25,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 # Wireframe y caso de uso
 
-## Wireframe Dar de baja un usuario (baja lógica)
+## Wireframe Dar de baja un user (baja lógica)
 
 <img src="../../src/main/webapp/assets/img/imagenes_iteraciones/baja_usuario.jpeg" width="800"/>
 
@@ -150,10 +150,10 @@ La division de las Historias de Usuario sera la siguiente:
 <br><br>
 **Caso de uso**: Eliminar un alquiler de favoritos  
 
-**Descripción**: Un usuario quiere eliminar una publicación de su lista de publicaciones favoritas.  
+**Descripción**: Un user quiere eliminar una publicación de su lista de publicaciones favoritas.  
 
 **Precondición**:
-* El usuario debe ingresar a su cuenta.  
+* El user debe ingresar a su cuenta.  
 
 **Postcondición**:
 * La publicación se elimina de la lista de favoritos (base de datos). 
@@ -165,15 +165,15 @@ La division de las Historias de Usuario sera la siguiente:
     <th>Sistema</th>
   </tr>
   <tr>
-    <td><b>1.</b> Esta caso de uso comienza cuando un usuario ingresa a su perfil y selecciona la opción de "Ver favoritos".</td>
+    <td><b>1.</b> Esta caso de uso comienza cuando un user ingresa a su perfil y selecciona la opción de "Ver favoritos".</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td><b>2.</b>El sistema despliega una ventana con las publicaciones etiquetadas como favoritos por el usuario.</td>
+    <td><b>2.</b>El sistema despliega una ventana con las publicaciones etiquetadas como favoritos por el user.</td>
   </tr>
   <tr>
-    <td><b>3.</b>El usuario hace click al botón de "Eliminar" al lado de la publicación.</td>
+    <td><b>3.</b>El user hace click al botón de "Eliminar" al lado de la publicación.</td>
     <td></td>
   </tr>
   <tr>
@@ -183,14 +183,14 @@ La division de las Historias de Usuario sera la siguiente:
 
 <u>**Flujo Alternativo de Eventos**.</u>  
 
-**Paso 2.1**: El usuario no posee publicaciones en su lista de favoritos, por tanto el sistema da aviso de ello.<br>
-**Paso 4.1**: El usuario eliminó el último favorito, por tanto el sistema avisa que ya no posee favoritos.
+**Paso 2.1**: El user no posee publicaciones en su lista de favoritos, por tanto el sistema da aviso de ello.<br>
+**Paso 4.1**: El user eliminó el último favorito, por tanto el sistema avisa que ya no posee favoritos.
 
 <br></br>
 
 # Backlog de iteraciones
 **Iteracion 4**
-- Dar de baja un usuario (baja lógica)
+- Dar de baja un user (baja lógica)
 - Agregar un alquiler a Favoritos
 - Eliminar un alquiler de Favoritos
 - Modificar propiedad
@@ -199,7 +199,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 <br><br>
 
-## **Tareas para Dar de baja un usuario (baja lógica)**
+## **Tareas para Dar de baja un user (baja lógica)**
 
 **Como**  
 **Quiero**  
@@ -246,7 +246,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 ## **Tareas para Eliminar un alquiler de Favoritos**
 
-**Como** usuario del sistema<br> 
+**Como** user del sistema<br> 
 **Quiero** eliminar un alquiler de favoritos<br>
 **Para** dejar de seguir una publicación que ya no le interesa.
 
@@ -265,6 +265,6 @@ La division de las Historias de Usuario sera la siguiente:
 
 Teniendo en cuenta lo realizado en la release 3 podemos decir que hubo un gran aporte por parte de todos los integrantes del grupo
 cada uno cumpliendo con sus tareas asignadas y trabajando de manera correcta con el repositorio de github.
-Por otra parte se realizaron de manera completa las 3 actividades (Consultar ubicación, Modificar datos de usuario, Consultar usuario) planteadas para la iteracion. 
+Por otra parte se realizaron de manera completa las 3 actividades (Consultar ubicación, Modificar datos de user, Consultar user) planteadas para la iteracion. 
 Cumpliendo con su documentacion, desarrollo de wireframes e implementacion de funcionalidades
 Ademas de esto se mantuvo la forma de trabajo de a pares, siguiendo con esta metodologia para las siguientes iteraciones.

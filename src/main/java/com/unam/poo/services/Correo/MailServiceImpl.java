@@ -2,10 +2,10 @@ package com.unam.poo.services.Correo;
 
 import java.util.List;
 
+import com.unam.poo.models.Mail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.unam.poo.models.Correo;
 import com.unam.poo.repository.MailRepository;
 
 @Service
@@ -15,7 +15,7 @@ public class MailServiceImpl implements MailService {
     MailRepository mailRepository;
 
     @Override
-    public List<Correo> findAll() {
+    public List<Mail> findAll() {
         return mailRepository.findAll();
     }
 
@@ -25,19 +25,19 @@ public class MailServiceImpl implements MailService {
     }
 
     @Override
-    public Correo getCorreoById(Long id) {
+    public Mail getCorreoById(Long id) {
         return mailRepository.findById(id).orElse(null);
     }
 
     @Override
-    public Correo saveCorreo(Correo correo) {
-        return mailRepository.save(correo);
+    public Mail saveCorreo(Mail mail) {
+        return mailRepository.save(mail);
     }
 
     @Override
-    public Correo getCorreoByMail(String mail) {
-        for (Correo correo : mailRepository.findAll()) {
-            if (correo.getUsuario().getCorreo().equals(mail)){
+    public Mail getCorreoByMail(String mail) {
+        for (Mail correo : mailRepository.findAll()) {
+            if (correo.getUser().getMail().equals(mail)){
                 return correo;
             }
         }

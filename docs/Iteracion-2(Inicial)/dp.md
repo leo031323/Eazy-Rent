@@ -361,7 +361,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 Teniendo en cuenta lo realizado en la release 1 podemos decir que hubo un gran aporte por parte de todos los integrantes del grupo
 cada uno cumpliendo con sus tareas asignadas y trabajando de manera correcta con el repositorio de github.
-Por otra parte se realizo 3 actividades (Crear un nuevo usuario, Ingresar usuario, Registrar propiedad) totalmente funcionales de las 4 planteadas 
+Por otra parte se realizo 3 actividades (Crear un nuevo user, Ingresar user, Registrar propiedad) totalmente funcionales de las 4 planteadas 
 de las cuales 1(Modificar propiedad) solo se realizo la documentacion y se establecio entre los integrantes del equipo en moverla
 a alguna iteracion futura(Iteracion 4), ya que nos dimos cuenta que iba a ser complicado integrar la funcionalidad en esta altura
 del desarrollo por no poseer el registro de propiedades de manera totalmente funcional (Ya que no se posee integrado el manejo de imagenes y la integracion de la ubicacion)

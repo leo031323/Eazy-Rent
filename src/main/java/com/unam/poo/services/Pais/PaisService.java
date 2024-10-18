@@ -2,11 +2,11 @@ package com.unam.poo.services.Pais;
 
 import java.util.List;
 
-import com.unam.poo.models.Pais;
+import com.unam.poo.models.Country;
 
 public interface PaisService {
-    List<Pais> findAll();
+    List<Country> findAll();
     void deletePaisById(Long id);
-    Pais getPaisById(Long id);
-    Pais savePais(Pais pais);
+    Country getPaisById(Long id);
+    Country savePais(Country country);
 }

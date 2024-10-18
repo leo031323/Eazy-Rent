@@ -2,7 +2,7 @@ package com.unam.poo.security.modelo;
 
 import java.io.Serializable;
 
-import com.unam.poo.security.enums.RolNombre;
+import com.unam.poo.security.enums.RoleName;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -17,19 +17,19 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Rol implements Serializable {
+public class Role implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @NotNull
     @Enumerated(EnumType.STRING)
-    private RolNombre rolNombre;
+    private RoleName roleName;
 
-    public Rol() {
+    public Role() {
     }
 
-    public Rol(RolNombre rolNombre) {
-        this.rolNombre = rolNombre;
+    public Role(RoleName roleName) {
+        this.roleName = roleName;
     }
 
 }

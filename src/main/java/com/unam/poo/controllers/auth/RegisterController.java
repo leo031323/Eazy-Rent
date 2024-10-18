@@ -1,12 +1,12 @@
 package com.unam.poo.controllers.auth;
 
 import com.unam.poo.dto.UsuarioDto;
-import com.unam.poo.models.Ciudad;
-import com.unam.poo.models.Correo;
-import com.unam.poo.models.Foto;
-import com.unam.poo.models.Usuario;
-import com.unam.poo.security.enums.RolNombre;
-import com.unam.poo.security.modelo.Rol;
+import com.unam.poo.models.City;
+import com.unam.poo.models.Mail;
+import com.unam.poo.models.Photo;
+import com.unam.poo.models.User;
+import com.unam.poo.security.enums.RoleName;
+import com.unam.poo.security.modelo.Role;
 import com.unam.poo.security.service.RolService;
 import com.unam.poo.services.UsuarioService;
 import com.unam.poo.services.Ciudad.CiudadService;
@@ -60,7 +60,7 @@ public class RegisterController {
 
     @GetMapping ("/authRegister")
     public String registerload(Model model) {
-        List<Ciudad> ciudades = ciudadService.findAll();
+        List<City> ciudades = ciudadService.findAll();
         model.addAttribute("ciudades", ciudades);
         return "authRegister";
     }
@@ -72,35 +72,35 @@ public class RegisterController {
           return "authRegister";
         } 
         try {
-            Usuario user = new Usuario();
+            User user = new User();
             if (usuarioDto.getNombre()!="" && usuarioDto.getApellido() != "" && usuarioDto.getCorreo() != ""){
                 if (usuarioDto.getDni() > 10000000L){
                     if (usuarioDto.getContraseña().length() > 7 && usuarioDto.getContraseña().length() < 17){                   
-                        Ciudad ciudad = ciudadService.getCiudadById(usuarioDto.getCiudad());
-                        System.out.println(ciudad);
-                        user.setCiudad(ciudad);
-                        user.setNombre(usuarioDto.getNombre());
-                        user.setApellido(usuarioDto.getApellido());
-                        user.setTelefono(usuarioDto.getTelefono());
-                        user.setDescripcion("¡Ingrese una descripcion!");
-                        user.setCorreo(usuarioDto.getCorreo());
+                        City city = ciudadService.getCiudadById(usuarioDto.getCiudad());
+                        System.out.println(city);
+                        user.setCity(city);
+                        user.setName(usuarioDto.getNombre());
+                        user.setLastName(usuarioDto.getApellido());
+                        user.setPhone(usuarioDto.getTelefono());
+                        user.setDescription("¡Ingrese una descripcion!");
+                        user.setMail(usuarioDto.getCorreo());
                         user.setDni(usuarioDto.getDni());
-                        user.setContraseña(passwordEncoder.encode(usuarioDto.getContraseña()));
+                        user.setPassword(passwordEncoder.encode(usuarioDto.getContraseña()));
                         
-                        Set<Rol> roles = new HashSet<>();
-                        roles.add(rolService.getByRolNombre(RolNombre.ROL_USUARIO).get());
+                        Set<Role> roles = new HashSet<>();
+                        roles.add(rolService.getByRolNombre(RoleName.ROL_USER).get());
                         user.setRoles(roles); 
                         
-                        Foto foto = new Foto();
-                        foto.setUsuario(user);
-                        foto.setPerfil("../assets/img/pp.jpeg");
-                        foto.setPortada("../assets/img/bgdep.jpeg");
-                        fotoService.saveFoto(foto);
-                        user.setFoto(foto); 
+                        Photo photo = new Photo();
+                        photo.setUser(user);
+                        photo.setProfile("../assets/img/pp.jpeg");
+                        photo.setFront("../assets/img/bgdep.jpeg");
+                        fotoService.saveFoto(photo);
+                        user.setPhoto(photo);
 
-                        Correo correo = new Correo();
-                        correo.setUsuario(user);
-                        mailService.saveCorreo(correo);
+                        Mail mail = new Mail();
+                        mail.setUser(user);
+                        mailService.saveCorreo(mail);
 
                         System.out.println("Registrando...");
                         usuarioService.saveUsuario(user);

@@ -10,18 +10,18 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "provincia")
-public class Provincia {
+public class Province {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_provincia", nullable = false)
+    @Column(name = "id_province", nullable = false)
     private Integer id;
 
     @Basic
-    @Column(name = "provincia", length = 100)
-    private String provincia;
+    @Column(name = "province", length = 100)
+    private String province;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_pais", nullable = false)
-    private Pais idPais;
+    @JoinColumn(name = "id_country", nullable = false)
+    private Country idCountry;
 }

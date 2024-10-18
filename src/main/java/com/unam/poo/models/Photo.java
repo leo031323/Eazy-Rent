@@ -15,15 +15,15 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor 
 @Entity
-public class Foto {
+public class Photo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String perfil; 
-    private String portada;
+    private String profile;
+    private String front;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "usuario_id", referencedColumnName = "id")
-    private Usuario usuario;
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
     
 }

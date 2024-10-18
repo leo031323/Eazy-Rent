@@ -198,7 +198,7 @@ La division de las Historias de Usuario sera la siguiente:
 
 Teniendo en cuenta lo realizado en la release 4 podemos decir que hubo un gran aporte por parte de todos los integrantes del grupo
 cada uno cumpliendo con sus tareas asignadas y trabajando de manera correcta con el repositorio de github.
-Por otra parte se realizaron de manera completa las 4 actividades (Dar de baja un usuario (baja lógica), Agregar un alquiler a Favoritos, Eliminar un alquiler de Favoritos, Modificar propiedad) planteadas para la iteracion. 
+Por otra parte se realizaron de manera completa las 4 actividades (Dar de baja un user (baja lógica), Agregar un alquiler a Favoritos, Eliminar un alquiler de Favoritos, Modificar propiedad) planteadas para la iteracion. 
 Cumpliendo con su documentacion, desarrollo de wireframes e implementacion de funcionalidades
 Ademas de esto se mantuvo la forma de trabajo de a pares, siguiendo con esta metodologia para las siguientes iteraciones.
 

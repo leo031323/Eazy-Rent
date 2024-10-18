@@ -2,35 +2,35 @@ package com.unam.poo.services.Pais;
 
 import java.util.List;
 
+import com.unam.poo.models.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.unam.poo.models.Pais;
-import com.unam.poo.repository.PaisRepository;
+import com.unam.poo.repository.CountryRepository;
 
 @Service
 public class PaisServiceImpl implements PaisService{
 
     @Autowired
-    PaisRepository paisRepository;
+    CountryRepository countryRepository;
 
     @Override
-    public List<Pais> findAll() {
-        return paisRepository.findAll();
+    public List<Country> findAll() {
+        return countryRepository.findAll();
     }
 
     @Override
     public void deletePaisById(Long id) {
-        paisRepository.deleteById(id);
+        countryRepository.deleteById(id);
     }
 
     @Override
-    public Pais getPaisById(Long id) {
-        return paisRepository.findById(id).get();
+    public Country getPaisById(Long id) {
+        return countryRepository.findById(id).get();
     }
 
     @Override
-    public Pais savePais(Pais pais) {
-        return paisRepository.save(pais);
+    public Country savePais(Country country) {
+        return countryRepository.save(country);
     } 
 }

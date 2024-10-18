@@ -14,7 +14,7 @@
 <%
 System.out.println("----------------------------------------------");
 System.out.println("ID Sesion: " + session.getId());
-System.out.println("Usuario ID: " + session.getAttribute("userId"));
+System.out.println("User ID: " + session.getAttribute("userId"));
 System.out.println("----------------------------------------------");
 %>
 <tags:jsp_imports/>
@@ -55,7 +55,7 @@ System.out.println("----------------------------------------------");
 <body class="container bg-gray-200">
 <%@include file="common/navBar2.jsp"%>
 <div class="container-fluid px-2 px-md-4 mt-8">
-  <div class="page-header min-height-300 border-radius-xl mt-4 align-items-center" style="background-image: url('${usuario.foto.portada}');">
+  <div class="page-header min-height-300 border-radius-xl mt-4 align-items-center" style="background-image: url('${user.photo.portada}');">
     <h2 class="text-white z-index-1 ms-5 bg-gradient-faded-dark border-radius-xl shadow-dark " style="padding-left: 10px; padding-right: 10px"> Perfil personal </h2>
     <span class="mask  bg-gradient-primary  opacity-0">
     </span>
@@ -64,17 +64,17 @@ System.out.println("----------------------------------------------");
     <div class="row gx-4 mb-2">
       <div class="col-auto">
         <div class="avatar avatar-xl position-relative">
-          <img src="${usuario.foto.perfil}" alt="profile_image" class="w-100 border-radius-lg shadow-xl">
+          <img src="${user.photo.perfil}" alt="profile_image" class="w-100 border-radius-lg shadow-xl">
         </div>
       </div> 
 
       <div class="col-auto my-auto">
         <div class="h-100">
           <h5 class="mb-1">
-            ${usuario.nombre}
+            ${user.nombre}
           </h5>
           <p class="mb-0 font-weight-normal text-sm">
-            <i class="fas fa-map-marker-alt text-sm me-1 text-primary"></i>  ${usuario.ciudad.ciudad}, ${usuario.ciudad.idProvincia.provincia}
+            <i class="fas fa-map-marker-alt text-sm me-1 text-primary"></i>  ${user.city.city}, ${user.city.idProvince.province}
           </p>
         </div>
       </div>
@@ -125,17 +125,17 @@ System.out.println("----------------------------------------------");
                   <div class="row">
                     <div class="col card bg-gray-100 m-3">
                       <ul class="list-group">
-                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Nombre completo:</strong> &nbsp; ${usuario.nombre} ${usuario.apellido}</li>
-                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Telefono:</strong> &nbsp; ${usuario.telefono}</li>
-                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Email:</strong> &nbsp; ${usuario.correo}</li>
-                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Ubicacion:</strong> ${usuario.ciudad.ciudad}, ${usuario.ciudad.idProvincia.provincia}, ${usuario.ciudad.idProvincia.idPais.pais}</li>
+                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Nombre completo:</strong> &nbsp; ${user.nombre} ${user.apellido}</li>
+                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Telefono:</strong> &nbsp; ${user.telefono}</li>
+                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Email:</strong> &nbsp; ${user.mail}</li>
+                        <li class="list-group-item border-0 ps-0 bg-transparent"><strong class="text-dark">Ubicacion:</strong> ${user.city.city}, ${user.city.idProvince.province}, ${user.city.idProvince.idPais.country}</li>
                       </ul>
                     </div>
                     <div class="col card bg-gray-100 m-3">
                       <strong class="text-dark">Descripcion:</strong>
                       <p>
                         <!--Doctor, atronauta, bombero, policia, ingeniero, plomero, electricista, repartidor de pizza... Y ahora tambien cliente de <strong>EASY-RENT</strong>! Con mas de 20 años de experiencia en el rubro, me considero un experto en el tema. Siempre estoy dispuesto a ayudar a los demas y a compartir mis conocimientos.-->
-                        ${usuario.descripcion}
+                        ${user.descripcion}
                       </p>
                     </div>
                   </div>
@@ -168,7 +168,7 @@ System.out.println("----------------------------------------------");
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2" data-order="desc">Tipo</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Estado</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Visualizaciones</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Fecha de publicacion</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Fecha de publication</th>
                         <th class="text-secondary opacity-7"></th>
                       </tr>
                       </thead>
@@ -181,30 +181,30 @@ System.out.println("----------------------------------------------");
                                 <img src="../assets/img/rents/1.webp" class="avatar avatar-xl me-3" alt="logo">
                               </div>
                               <div class="d-flex flex-column justify-content-center">
-                                <a class="mb-0 h6" href="${pageContext.request.contextPath}/publicacion/verPublicacion/${propiedad.id}">${propiedad.tituloPublicacion}</a>
-                                <p class="text-xs text-secondary mb-0">${propiedad.precioPublicacion}</p>
+                                <a class="mb-0 h6" href="${pageContext.request.contextPath}/publication/verPublicacion/${propiedad.id}">${propiedad.qualificationPublication}</a>
+                                <p class="text-xs text-secondary mb-0">${propiedad.pricePublication}</p>
                               </div>
                             </div>
                           </td>
                           <td>
-                            <p class="text-xs text-secondary mb-0">${propiedad.idTipo.tipo}</p>
+                            <p class="text-xs text-secondary mb-0">${propiedad.idType.type}</p>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="badge bg-gradient-<c:if test="${propiedad.estadoPublicacion == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.estadoPublicacion == \"activo\"}">success</c:if>" href="www.google.com">${propiedad.estadoPublicacion}</span>
+                            <span class="badge bg-gradient-<c:if test="${propiedad.statePublicacion == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.statePublicacion == \"activo\"}">success</c:if>" href="www.google.com">${propiedad.statePublicacion}</span>
                           </td>
 
                           <td class="align-middle text-center">
                             <span class="text-secondary text-xs font-weight-normal">420</span>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="text-secondary text-xs font-weight-normal">${propiedad.fechaHoraPublicacion.toLocalDate()}</span>
+                            <span class="text-secondary text-xs font-weight-normal">${propiedad.dateTimePublication.toLocalDate()}</span>
                           </td>
                           <td class="align-middle">
                             <form:form action="bajaPublicacion/${propiedad.id}" method="post" modelAttribute="publicaciones" name="${propiedad.id}">
                               <form:button type="submit" class="fas fa-trash m-3" />
-                              <%--                                        <a class="fas fa-trash m-3" data-toggle="tooltip" data-original-title="Borrar publicacion"  data-bs-toggle="modal" data-bs-target="#es${propiedad.id}"></a>--%>
+                              <%--                                        <a class="fas fa-trash m-3" data-toggle="tooltip" data-original-title="Borrar publication"  data-bs-toggle="modal" data-bs-target="#es${propiedad.id}"></a>--%>
                               <%--                                        <button type="button" onclick="pregunta(${propiedad.id})" class="btn btn-primary"> WENAS TARDES</button>--%>
-                              <a href="${pageContext.request.contextPath}/publicacion/editarPublicacion/${propiedad.id}" class="fas fa-edit" data-toggle="tooltip" data-original-title="Editar"></a>
+                              <a href="${pageContext.request.contextPath}/publication/editarPublicacion/${propiedad.id}" class="fas fa-edit" data-toggle="tooltip" data-original-title="Editar"></a>
                             </form:form>
                           </td>
                         </tr>
@@ -243,14 +243,14 @@ System.out.println("----------------------------------------------");
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2" data-order="desc">Tipo</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Estado</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Visualizaciones</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Fecha de publicacion</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" data-order="desc">Fecha de publication</th>
                         <th class="text-secondary opacity-7"></th>
                       </tr>
                       </thead>
                       <tbody id="myTable2">
                       <c:forEach items="${publicaciones}" var="propiedad">
 
-                        <c:if test="${usuario.favoritos.contains(propiedad)}">
+                        <c:if test="${user.favoritos.contains(propiedad)}">
 <%--                          <%System.out.println("PRUEBAAAAA");%>--%>
 
                         <tr style="height:100px">
@@ -260,30 +260,30 @@ System.out.println("----------------------------------------------");
                                 <img src="../assets/img/rents/1.webp" class="avatar avatar-xl me-3" alt="logo">
                               </div>
                               <div class="d-flex flex-column justify-content-center">
-                                <a class="mb-0 h6" href="${pageContext.request.contextPath}/publicacion/verPublicacion/${propiedad.id}">${propiedad.tituloPublicacion}</a>
-                                <p class="text-xs text-secondary mb-0">${propiedad.precioPublicacion}</p>
+                                <a class="mb-0 h6" href="${pageContext.request.contextPath}/publication/verPublicacion/${propiedad.id}">${propiedad.qualificationPublication}</a>
+                                <p class="text-xs text-secondary mb-0">${propiedad.pricePublication}</p>
                               </div>
                             </div>
                           </td>
                           <td>
-                            <p class="text-xs text-secondary mb-0">${propiedad.idTipo.tipo}</p>
+                            <p class="text-xs text-secondary mb-0">${propiedad.idType.type}</p>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="badge bg-gradient-<c:if test="${propiedad.estadoPublicacion == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.estadoPublicacion == \"activo\"}">success</c:if>" href="www.google.com">${propiedad.estadoPublicacion}</span>
+                            <span class="badge bg-gradient-<c:if test="${propiedad.statePublicacion == \"Alquilado\"}">warning</c:if><c:if test="${propiedad.statePublicacion == \"activo\"}">success</c:if>" href="www.google.com">${propiedad.statePublicacion}</span>
                           </td>
 
                           <td class="align-middle text-center">
                             <span class="text-secondary text-xs font-weight-normal">420</span>
                           </td>
                           <td class="align-middle text-center">
-                            <span class="text-secondary text-xs font-weight-normal">${propiedad.fechaHoraPublicacion.toLocalDate()}</span>
+                            <span class="text-secondary text-xs font-weight-normal">${propiedad.dateTimePublication.toLocalDate()}</span>
                           </td>
                           <td class="align-middle">
                             <form:form action="bajaPublicacion/${propiedad.id}" method="post" modelAttribute="publicaciones" name="${propiedad.id}">
                               <form:button type="submit" class="fas fa-trash m-3" />
-                              <%--                                        <a class="fas fa-trash m-3" data-toggle="tooltip" data-original-title="Borrar publicacion"  data-bs-toggle="modal" data-bs-target="#es${propiedad.id}"></a>--%>
+                              <%--                                        <a class="fas fa-trash m-3" data-toggle="tooltip" data-original-title="Borrar publication"  data-bs-toggle="modal" data-bs-target="#es${propiedad.id}"></a>--%>
                               <%--                                        <button type="button" onclick="pregunta(${propiedad.id})" class="btn btn-primary"> WENAS TARDES</button>--%>
-                              <a href="${pageContext.request.contextPath}/publicacion/editarPublicacion/${propiedad.id}" class="fas fa-edit" data-toggle="tooltip" data-original-title="Editar"></a>
+                              <a href="${pageContext.request.contextPath}/publication/editarPublicacion/${propiedad.id}" class="fas fa-edit" data-toggle="tooltip" data-original-title="Editar"></a>
                             </form:form>
                           </td>
                         </tr>
@@ -381,13 +381,13 @@ System.out.println("----------------------------------------------");
                       <div class="col">
                         <div class="input-group input-group-dynamic m-4">
                           <label class="form-label">Nombre</label>
-                          <input type="text" name="nombre" id="nombre" class="inputs form-control" value="${usuario.nombre}">
+                          <input type="text" name="nombre" id="nombre" class="inputs form-control" value="${user.nombre}">
                         </div>
                       </div>
                       <div class="col">
                         <div class="input-group input-group-dynamic m-4">
                           <label class="form-label">Apellido</label>
-                          <input type="text" name="apellido" id="apellido" class="inputs form-control" value="${usuario.apellido}">
+                          <input type="text" name="apellido" id="apellido" class="inputs form-control" value="${user.apellido}">
                         </div>
                       </div>
                     </div>
@@ -395,25 +395,25 @@ System.out.println("----------------------------------------------");
                       <div class="col">
                         <div class="input-group input-group-dynamic m-4">
                           <label class="form-label">Email</label>
-                          <input type="email" name="correo" id="correo" class="inputs form-control" value="${usuario.correo}">
+                          <input type="email" name="mail" id="mail" class="inputs form-control" value="${user.mail}">
                         </div>
                       </div>
                       <div class="col">
                         <div class="input-group input-group-dynamic m-4">
                           <label class="form-label">Numero de telefono</label>
-                          <input type="number" name="telefono" id="telefono" class="inputs form-control" value="${usuario.telefono}">
+                          <input type="number" name="telefono" id="telefono" class="inputs form-control" value="${user.telefono}">
                         </div>
                       </div>
                     </div>
                       <div class="row">
                         <div class="col">
                             <div class="input-group input-group-dynamic m-4">
-                              <select id="ciudad" name="ciudad" class="form-control">
-                                <option disabled value="">Seleccione una ciudad</option> 
+                              <select id="city" name="city" class="form-control">
+                                <option disabled value="">Seleccione una city</option>
                                 <c:forEach items="${ciudades}" var="city">
                                   <c:choose>
-                                    <c:when test="${usuario.ciudad == city}"><option selected value="${city.id}">${city.ciudad}</option></c:when>
-                                    <c:otherwise><option value="${city.id}">${city.ciudad}</option></c:otherwise>
+                                    <c:when test="${user.city == city}"><option selected value="${city.id}">${city.city}</option></c:when>
+                                    <c:otherwise><option value="${city.id}">${city.city}</option></c:otherwise>
                                  </c:choose>
                                 </c:forEach>
                             </select>
@@ -421,18 +421,18 @@ System.out.println("----------------------------------------------");
                         </div>
                     <div class="input-group input-group-static m-2 mt-4 row">
                       <label><i class="fas fa-circle-info me-3"></i>Informacion</label>
-                      <textarea name="descripcion" class="inputs form-control" id="descripcion" rows="4">${usuario.descripcion}</textarea>
+                      <textarea name="descripcion" class="inputs form-control" id="descripcion" rows="4">${user.descripcion}</textarea>
                     </div>
                     <div class="row">
                       <ul class="list-group">
                         <li class="list-group-item border-0 px-0">
                           <div class="text-center">
-                            <button type="button" class="btn btn-outline-dark btn-sm mb-0 w-100" data-bs-toggle="modal" data-bs-target="#fotoModal"><i class="fas fa-user me-3"></i>Actualizar foto perfil</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm mb-0 w-100" data-bs-toggle="modal" data-bs-target="#fotoModal"><i class="fas fa-user me-3"></i>Actualizar photo perfil</button>
                           </div>
                         </li>
                         <li class="list-group-item border-0 px-0">
                           <div class="text-center">
-                            <button type="button" class="btn btn-outline-dark btn-sm mb-0 w-100" data-bs-toggle="modal" data-bs-target="#portadaModal"><i class="fas fa-key me-3"></i>Actualizar foto portada</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm mb-0 w-100" data-bs-toggle="modal" data-bs-target="#portadaModal"><i class="fas fa-key me-3"></i>Actualizar photo portada</button>
                           </div>
                         </li>
                       </ul>
@@ -513,12 +513,12 @@ System.out.println("----------------------------------------------");
     </div>
   </div>
 </div>
-<%-- modal para cambiar la foto de perfil --%>
+<%-- modal para cambiar la photo de perfil --%>
 <div class="modal fade" id="fotoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class=" modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header align-content-center">
-        <h3 class="text-center w-100">Actualice su foto de perfil</h3>
+        <h3 class="text-center w-100">Actualice su photo de perfil</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -551,7 +551,7 @@ System.out.println("----------------------------------------------");
     </div>
   </div>
 </div>
-<%-- modal para desactivar la cuenta pidiendo correo y contraseña para confirmar--%>
+<%-- modal para desactivar la cuenta pidiendo mail y contraseña para confirmar--%>
 <div class="modal fade" id="desactivarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class=" modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -569,11 +569,11 @@ System.out.println("----------------------------------------------");
                   <div class="card-body">
                     <div class="row">
                       <h5><i class="fas fa-warning text-3xl text-danger me-3"></i>Esta accion no puede deshacerse</h5>
-                      <h6 class="text-body ms-5 text-xxs">Para confirmar ingrese su correo y contraseña</h6>
+                      <h6 class="text-body ms-5 text-xxs">Para confirmar ingrese su mail y contraseña</h6>
                       <div class="col">
                         <div class="input-group input-group-dynamic m-4">
                           <label class="form-label"><i class="fas fa-user me-3"></i>Correo</label>
-                          <input #correo type="email" name="correo" id="correo" class="form-control">
+                          <input #mail type="email" name="mail" id="mail" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -601,12 +601,12 @@ System.out.println("----------------------------------------------");
   </div>
 </div>
 
-<%-- modal para cambiar la foto de portada--%>
+<%-- modal para cambiar la photo de portada--%>
 <div class="modal fade" id="portadaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class=" modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header align-content-center">
-        <h3 class="text-center w-100">Actualice su foto de portada</h3>
+        <h3 class="text-center w-100">Actualice su photo de portada</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -674,7 +674,7 @@ System.out.println("----------------------------------------------");
 
     $(document).ready(function(){
       $('th').on('click', function(){
-          // ordenar la columna de publicacion de forma ascendente sin importar mayusculas o minusculas, y al volver a darle click ordenar de forma descendente
+          // ordenar la columna de publication de forma ascendente sin importar mayusculas o minusculas, y al volver a darle click ordenar de forma descendente
 
           // si cantidadClicks es igual a 0, ordenar de forma ascendente
 

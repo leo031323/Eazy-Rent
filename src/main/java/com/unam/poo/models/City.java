@@ -14,23 +14,23 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "ciudad")
-public class Ciudad {
+@Table(name = "city")
+public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_ciudad", nullable = false)
+    @Column(name = "id_city", nullable = false)
     private Long id;
 
     @Basic
-    @Column(name = "ciudad", length = 100)
-    private String ciudad;
+    @Column(name = "city", length = 100)
+    private String city;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_provincia", nullable = false)
-    private Provincia idProvincia;
+    @JoinColumn(name = "id_province", nullable = false)
+    private Province idProvince;
 
-    @OneToMany(mappedBy = "ciudad", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
-    private Set<Usuario> usuario;
+    private Set<User> user;
 
 }

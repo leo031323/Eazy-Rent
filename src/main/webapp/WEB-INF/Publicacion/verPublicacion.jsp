@@ -13,7 +13,7 @@
 <tags:jsp_imports/>
 <html>
 <head>
-    <title>Ver publicacion</title>
+    <title>Ver publication</title>
 <%--    CSS IMPORTS--%>
     <tags:css_imports/>
 
@@ -32,11 +32,11 @@
 
 
 
-                        <c:forEach items="${publicacion.imagenes}" var="imagen">
-                            <c:if test="${imagen.id == publicacion.imagenes[0].id}">
+                        <c:forEach items="${publication.imagenes}" var="imagen">
+                            <c:if test="${imagen.id == publication.imagenes[0].id}">
                                 <div class="carousel-item active ratio ratio-1x1 "><img class="rounded" style="object-fit:cover; height:100%; width: 100%;" src="../../assets/img/rents/${imagen.url}" alt="Slide Image" /></div>
                             </c:if>
-                            <c:if test="${imagen.id != publicacion.imagenes[0].id}">
+                            <c:if test="${imagen.id != publication.imagenes[0].id}">
                                 <div class="carousel-item ratio ratio-1x1 "><img class="rounded" style="object-fit:cover; height:100%; width: 100%;" src="../../assets/img/rents/${imagen.url}" alt="Slide Image" /></div>
                             </c:if>
 <%--                            <div class="carousel-item ratio ratio-1x1 "><img class="rounded" style="object-fit:cover; height:100%; width: 100%;" src="../../assets/img/rents/3.webp" alt="Slide Image" /></div>--%>
@@ -49,32 +49,32 @@
                     <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></a></div>
                     <ol class="carousel-indicators">
                         <c:choose>
-                            <c:when test="${publicacion.imagenes.size() == 1}">
+                            <c:when test="${publication.imagenes.size() == 1}">
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
                             </c:when>
-                            <c:when test="${publicacion.imagenes.size() == 2}">
+                            <c:when test="${publication.imagenes.size() == 2}">
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
                             </c:when>
-                            <c:when test="${publicacion.imagenes.size() == 3}">
+                            <c:when test="${publication.imagenes.size() == 3}">
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
                             </c:when>
-                            <c:when test="${publicacion.imagenes.size() == 4}">
+                            <c:when test="${publication.imagenes.size() == 4}">
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="3"></li>
                             </c:when>
-                            <c:when test="${publicacion.imagenes.size() == 5}">
+                            <c:when test="${publication.imagenes.size() == 5}">
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="3"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="4"></li>
                             </c:when>
-                            <c:when test="${publicacion.imagenes.size() == 6}">
+                            <c:when test="${publication.imagenes.size() == 6}">
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
@@ -82,7 +82,7 @@
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="4"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="5"></li>
                             </c:when>
-                            <c:when test="${publicacion.imagenes.size() == 7}">
+                            <c:when test="${publication.imagenes.size() == 7}">
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
                                 <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
@@ -97,7 +97,7 @@
             </div>
 
             <div class="col-lg-7 pb-5">
-                <h3 class="font-weight-semi-bold">${publicacion.tituloPublicacion}</h3>
+                <h3 class="font-weight-semi-bold">${publication.tituloPublicacion}</h3>
                 <div class="d-flex mb-3">
                     <div class="text-primary mr-2">
                         <small class="fas fa-star"></small>
@@ -108,7 +108,7 @@
                     </div>
                     <small class="pt-1">(50 Reviews)</small>
                 </div>
-<%--                <h3 class="font-weight-semi-bold mb-4">${publicacion.precioPublicacion}</h3>--%>
+<%--                <h3 class="font-weight-semi-bold mb-4">${publication.precioPublicacion}</h3>--%>
 <%--                agregar a favoritos y contacto--%>
                 <div class="d-flex mb-3">
                     <div class="text-primary mr-2 ms-2 me-2">
@@ -123,13 +123,13 @@
                         <%
                             if (session.getAttribute("autenticado") == "true"){
                         %>
-                        <c:if test="${usuario.favoritos.contains(publicacion)}">
-                            <form:form method="post" action="/publicacion/quitarFavorito/${publicacion.id}" >
+                        <c:if test="${user.favoritos.contains(publication)}">
+                            <form:form method="post" action="/publication/quitarFavorito/${publication.id}" >
                                 <button type="submit" class="btn btn-outline-primary btn-sm">Quitar de favoritos</button>
                             </form:form>
                         </c:if>
-                        <c:if test="${!usuario.favoritos.contains(publicacion)}">
-                            <form:form method="post" action="/publicacion/agregarFavorito/${publicacion.id}" >
+                        <c:if test="${!user.favoritos.contains(publication)}">
+                            <form:form method="post" action="/publication/agregarFavorito/${publication.id}" >
                                 <button type="submit" class="btn btn-outline-primary btn-sm">Agregar a favoritos</button>
                             </form:form>
                         </c:if>
@@ -146,47 +146,47 @@
                 </div>
 
                 <div class="row">
-                    <c:if test="${publicacion.dormitoriosPublicacion > 0}">
+                    <c:if test="${publication.dormitoriosPublicacion > 0}">
                     <div class="col-6">
                         <div class="d-flex align-items-center mb-3">
                             <div class="bg-primary p-2 mr-3 rounded-circle" style="height: 32px; width: 32px;"><i class="fas fa-bed text-white"></i></div>
                             <div>
-                                <h6 class="font-weight-semi-bold ms-2 mb-0">${publicacion.dormitoriosPublicacion} Habitaciones</h6>
+                                <h6 class="font-weight-semi-bold ms-2 mb-0">${publication.dormitoriosPublicacion} Habitaciones</h6>
 <%--                                <small class="text-muted ms-2">2 camas dobles y 1 simple</small>--%>
                             </div>
                         </div>
                     </div>
                     </c:if>
-                    <c:if  test="${publicacion.baniosPublicacion > 0}">
+                    <c:if  test="${publication.baniosPublicacion > 0}">
                     <div class="col-6">
                         <div class="d-flex align-items-center mb-3">
                             <div class="bg-primary rounded-circle p-2 mr-3" style="height: 32px; width: 32px;"><i class="fas fa-bath text-white"></i></div>
                             <div>
-                                <h6 class="font-weight-semi-bold ms-2 mb-0">${publicacion.baniosPublicacion} Baños</h6>
+                                <h6 class="font-weight-semi-bold ms-2 mb-0">${publication.baniosPublicacion} Baños</h6>
 <%--                                <small class="text-muted ms-2">1 con bañera y 1 con ducha</small>--%>
                             </div>
                         </div>
                     </div>
                     </c:if>
 
-                    <c:if  test="${publicacion.superficieTotalTerreno > 0}">
+                    <c:if  test="${publication.superficieTotalTerreno > 0}">
                         <div class="col-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary rounded-circle p-2 mr-3"><i class="fas fa-ruler-combined text-white"></i></div>
                                 <div>
-                                    <h6 class="font-weight-semi-bold ms-2 mb-0">${publicacion.superficieTotalTerreno} m2</h6>
+                                    <h6 class="font-weight-semi-bold ms-2 mb-0">${publication.superficieTotalTerreno} m2</h6>
                                     <small class="text-muted ms-2">Superficie total</small>
                                 </div>
                             </div>
                         </div>
                     </c:if>
 
-                    <c:if  test="${publicacion.cocheraPublicacion > 0}">
+                    <c:if  test="${publication.cocheraPublicacion > 0}">
                         <div class="col-6">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="bg-primary rounded-circle p-2 mr-3"><i class="fas fa-car text-white"></i></div>
                                 <div>
-                                    <h6 class="font-weight-semi-bold ms-2 mb-0">${publicacion.cocheraPublicacion} Cochera</h6>
+                                    <h6 class="font-weight-semi-bold ms-2 mb-0">${publication.cocheraPublicacion} Cochera</h6>
                                     <small class="text-muted ms-2">Cochera cubierta</small>
                                 </div>
                             </div>
@@ -199,7 +199,7 @@
                         <div class="card-body">
                             <h5 class="font-weight-semi-bold">Precio mensual</h5>
                             <div class="row align-items-start">
-                                <h3 class="font-weight-semi-bold mb-4 col">$ ${publicacion.precioPublicacion.intValue()} ARS</h3>
+                                <h3 class="font-weight-semi-bold mb-4 col">$ ${publication.precioPublicacion.intValue()} ARS</h3>
                                 <%--                                    -----------------ACÁ VA EL BOTÓN DE MERCADO PAGO-----------------------------------------------------%>
                                 <a href="#" class="btn btn-primary btn-block col">Alquilar</a>
                                 <%--                                    <div class="cho-container"></div>--%>
@@ -215,14 +215,14 @@
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-body">
                             <h5 class="font-weight-semi-bold">Descripción</h5>
-                            <p class="text-muted">${publicacion.descripcionPublicacion}</p>
+                            <p class="text-muted">${publication.descripcionPublicacion}</p>
                         </div>
                     </div>
                 </div>
             </div>
 
 <%--            Listado de comodidades de la base de datos--%>
-            <c:if test="${!publicacion.caracteristicasComodidades.isEmpty()}">
+            <c:if test="${!publication.caracteristicasComodidades.isEmpty()}">
             <div class="row px-xl-5">
                 <div class="col">
                     <div class="card border-0 shadow-sm mb-4">
@@ -235,13 +235,13 @@
 <%--                                        crear una variable para contar las iteraciones--%>
 
 
-                                        <c:forEach items="${publicacion.caracteristicasComodidades}" var="comodidad">
+                                        <c:forEach items="${publication.caracteristicasComodidades}" var="comfort">
                                             <li class="mb-2">
                                                 <div class="d-flex align-items-center">
                                                     <div class="bg-primary
                                                         rounded-circle p-2 mr-3" style="width: 32px; height: 32px"><i class="fas fa-check text-white align-items-center"></i></div>
                                                     <div>
-                                                        <h6 class="font-weight-semi-bold ms-2 mb-0">${comodidad.featureName}</h6>
+                                                        <h6 class="font-weight-semi-bold ms-2 mb-0">${comfort.featureName}</h6>
                                                     </div>
                                                 </div>
                                             </li>
@@ -257,7 +257,7 @@
 
 <%--&lt;%&ndash;                                        Solamente visualiza 5 comodidades&ndash;%&gt;--%>
 <%--                                        @if($loop->iteration <= 5)--%>
-<%--                                        <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>{{$comodidad->nombre_caracteristica_comodidad}}</li>--%>
+<%--                                        <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>{{$comfort->nombre_caracteristica_comodidad}}</li>--%>
 <%--                                        @endif--%>
 
 <%--&lt;%&ndash;                                        Cuando es mayor a 5 lo coloca dentro de un span oculto y con javascript lo muestra&ndash;%&gt;--%>
@@ -266,7 +266,7 @@
 <%--                                            @if($loop->iteration == 6)--%>
 <%--                                                <span id="dots"></span><span id="more" style="display: none">--%>
 <%--                                            @endif--%>
-<%--                                            <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>{{$comodidad->nombre_caracteristica_comodidad}}</li>--%>
+<%--                                            <li class="mb-2"><i class="fas fa-check text-primary mr-2"></i>{{$comfort->nombre_caracteristica_comodidad}}</li>--%>
 <%--                                                @if($loop->last)--%>
 <%--                                                    </span>--%>
 <%--                                                @endif--%>
@@ -276,7 +276,7 @@
 <%--                                    </ul>--%>
 <%--                                </div>--%>
 <%--&lt;%&ndash;                                si el array tiene más de 5 comodidades, muestra el botón de ver más&ndash;%&gt;--%>
-<%--                                @if($publicacion->caracteristica_comodidades()->count() > 5)--%>
+<%--                                @if($publication->caracteristica_comodidades()->count() > 5)--%>
 <%--                                    <button onclick="myFunction()" id="myBtn" class="btn btn-link text-decoration-none text-primary p-0 align-items-center justify-content-center ">Mostrar más<i class="fas fa-chevron-down ms-2"></i></button>--%>
 <%--                                @endif--%>
 <%--                            </div>--%>
@@ -293,14 +293,14 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <h5 class="font-weight-semi-bold">Ubicación</h5>
-                                    <p class="text-muted">${publicacion.callePublicacion} - ${publicacion.alturaPublicacion} - ${publicacion.idCiudad.ciudad}</p>
+                                    <p class="text-muted">${publication.callePublicacion} - ${publication.alturaPublicacion} - ${publication.idCity.city}</p>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center justify-content-lg-end">
                                         <div class="bg-primary p-2 mr-3 rounded-circle position-relative" style="height: 32px; width: 32px;"><i class="fas fa-map-marker-alt text-white w-50 h-50 position-absolute"></i></div>
                                         <div>
-                                            <a class="font-weight-semi-bold ms-2 mb-0 h6" href="https://www.google.com/maps/search/?api=1&query=${publicacion.latitudPublicacion}+${publicacion.longitudPublicacion}&zoom=20" target="_blank">Ver en el mapa</a> <br>
-                                            <small class="text-muted ms-2">${publicacion.callePublicacion} - ${publicacion.alturaPublicacion} - ${publicacion.idCiudad.ciudad}</small>
+                                            <a class="font-weight-semi-bold ms-2 mb-0 h6" href="https://www.google.com/maps/search/?api=1&query=${publication.latitudPublicacion}+${publication.longitudPublicacion}&zoom=20" target="_blank">Ver en el mapa</a> <br>
+                                            <small class="text-muted ms-2">${publication.callePublicacion} - ${publication.alturaPublicacion} - ${publication.idCity.city}</small>
                                         </div>
                                     </div>
                                 </div>
@@ -343,8 +343,8 @@
         //
         // };
 
-        // Obtenemos la posicion de la publicacion
-        var posicion = {lat: ${publicacion.latitudPublicacion}, lng: ${publicacion.longitudPublicacion}};
+        // Obtenemos la posicion de la publication
+        var posicion = {lat: ${publication.latitudPublicacion}, lng: ${publication.longitudPublicacion}};
 
         // Creamos el mapa
         var map = new google.maps.Map(document.getElementById('map'), {

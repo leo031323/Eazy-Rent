@@ -3,6 +3,8 @@ package com.unam.poo.controllers.auth;
 
 import java.util.UUID;
 
+import com.unam.poo.models.Mail;
+import com.unam.poo.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -12,8 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.unam.poo.models.Correo;
-import com.unam.poo.models.Usuario;
 import com.unam.poo.services.UsuarioService;
 import com.unam.poo.services.Correo.MailServiceImpl;
 import com.unam.poo.services.SpringMailSender.MailSenderService;
@@ -59,8 +59,8 @@ public class ForgotPswController {
 
             emailSender.sendCustomMail(toInternetAdress, subject, body);
 
-            Correo aux = mailService.getCorreoByMail(correo);
-            aux.setCodigo(codigo);
+            Mail aux = mailService.getCorreoByMail(correo);
+            aux.setCode(codigo);
             mailService.saveCorreo(aux);
             System.out.println("Codigo: " + codigo);
             response.sendRedirect(request.getContextPath() + "/forgotpsw/");
@@ -86,17 +86,17 @@ public class ForgotPswController {
 
             password = arr[3];
 
-            System.out.println("Correo: " + correo);
+            System.out.println("Mail: " + correo);
             System.out.println("Codigo: " + codigo);
             System.out.println("Contraseña: " + password); 
             if (uService.getUsuarioByCorreo(correo) != null){
                 System.out.println("USUARIO ENCONTRADO");
-                Usuario user = uService.getUsuarioByCorreo(correo);
-                if (user.getMail().getCodigo().equals(codigo)){
-                    user.setContraseña(passwordEncoder.encode(password));
+                User user = uService.getUsuarioByCorreo(correo);
+                if (user.getMail().getCode().equals(codigo)){
+                    user.setPassword(passwordEncoder.encode(password));
                     uService.saveUsuario(user);
-                    Correo mail = mailService.getCorreoByMail(correo);
-                    mail.setCodigo("");
+                    Mail mail = mailService.getCorreoByMail(correo);
+                    mail.setCode("");
                     mailService.saveCorreo(mail);
                     System.out.println("Cambio de contraseña exitoso");
                     response.sendRedirect(request.getContextPath() + "/");

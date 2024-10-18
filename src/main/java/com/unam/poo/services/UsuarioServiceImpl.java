@@ -1,51 +1,51 @@
 package com.unam.poo.services;
 import java.util.List;
 
+import com.unam.poo.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.unam.poo.models.Usuario;
-import com.unam.poo.repository.PublicacionRepository;
-import com.unam.poo.repository.UsuarioRepository;
+import com.unam.poo.repository.PublicationRepository;
+import com.unam.poo.repository.UserRepository;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService {
 
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private UserRepository userRepository;
 
     @Autowired
-    private PublicacionRepository publicacionRepository;
+    private PublicationRepository publicationRepository;
 
     @Override
-    public List<Usuario> findAll() {
-        return usuarioRepository.findAll();
+    public List<User> findAll() {
+        return userRepository.findAll();
     }
 
     @Override
     public void deleteUsuarioById(Long id) {
-        usuarioRepository.deleteById(id);
+        userRepository.deleteById(id);
     }
 
     @Override
-    public Usuario getUsuarioById(Long id) {
-        return usuarioRepository.findById(id).get();
+    public User getUsuarioById(Long id) {
+        return userRepository.findById(id).get();
     }
 
     @Override
-    public Usuario saveUsuario(Usuario usuario) {
-        return usuarioRepository.save(usuario);
+    public User saveUsuario(User user) {
+        return userRepository.save(user);
     }
     
     @Override
-    public Usuario getUsuarioByCorreo(String correo){
-        List<Usuario> usuarios = usuarioRepository.findAll();
-        Usuario aux = new Usuario();
+    public User getUsuarioByCorreo(String correo){
+        List<User> users = userRepository.findAll();
+        User aux = new User();
         aux.setId(-1); 
-        for (int i = 0; i < usuarios.size(); i++) { 
-            if (correo.equals(usuarios.get(i).getCorreo())){
-                System.out.println("Encontrado: " + usuarios.get(i).getCorreo());
-                aux = usuarios.get(i);
+        for (int i = 0; i < users.size(); i++) {
+            if (correo.equals(users.get(i).getMail())){
+                System.out.println("Encontrado: " + users.get(i).getMail());
+                aux = users.get(i);
             }
         }
         if (aux.getId() > 0){
@@ -57,16 +57,16 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public void agregarFavoritos(Long idPublicacion, Long id) {
-        Usuario usuario = usuarioRepository.findById(id).get();
-        usuario.getFavoritos().add(publicacionRepository.findById(idPublicacion).get());
-        usuarioRepository.save(usuario);
+        User user = userRepository.findById(id).get();
+        user.getFavorites().add(publicationRepository.findById(idPublicacion).get());
+        userRepository.save(user);
     }
 
     @Override
     public void quitarFavoritos(Long idPublicacion, Long id) {
-        Usuario usuario = usuarioRepository.findById(id).get();
-        usuario.getFavoritos().remove(publicacionRepository.findById(idPublicacion).get());
-        usuarioRepository.save(usuario);
+        User user = userRepository.findById(id).get();
+        user.getFavorites().remove(publicationRepository.findById(idPublicacion).get());
+        userRepository.save(user);
     }
 
 }

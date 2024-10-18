@@ -1,14 +1,14 @@
 package com.unam.poo.security.util;
 
+import com.unam.poo.models.City;
+import com.unam.poo.models.Country;
+import com.unam.poo.models.Province;
+import com.unam.poo.security.modelo.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.unam.poo.models.Ciudad;
-import com.unam.poo.models.Pais;
-import com.unam.poo.models.Provincia;
-import com.unam.poo.security.enums.RolNombre;
-import com.unam.poo.security.modelo.Rol;
+import com.unam.poo.security.enums.RoleName;
 import com.unam.poo.security.service.RolService;
 import com.unam.poo.services.CaracteristicaComodidad.CaracteristicaComodidadService;
 import com.unam.poo.services.Ciudad.CiudadService;
@@ -44,54 +44,54 @@ public class StarterCommand implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        if (!(rolService.getByRolNombre(RolNombre.ROL_USUARIO).isPresent())) {
-            Rol rolAdmin = new Rol(RolNombre.ROL_USUARIO);
-            rolService.save(rolAdmin);
+        if (!(rolService.getByRolNombre(RoleName.ROL_USER).isPresent())) {
+            Role roleAdmin = new Role(RoleName.ROL_USER);
+            rolService.save(roleAdmin);
             System.out.println("ROL_USUARIO CREADO");
         }else{
             System.out.println("ROL_USUARIO EXISTENTE");
         } 
 
         Boolean valor = false;
-        for (Pais pais : paisService.findAll()) {
-            if (pais.getPais().equals("Argentina")){
+        for (Country country : paisService.findAll()) {
+            if (country.getCountry().equals("Argentina")){
                 valor = true;
             }
         }
         if (!valor){
-            /* Carga de pais */
-            Pais pais = new Pais();
-            pais.setPais("Argentina");
-            paisService.savePais(pais);
-            System.out.println("Pais creado: " + pais.getPais());
+            /* Carga de country */
+            Country country = new Country();
+            country.setCountry("Argentina");
+            paisService.savePais(country);
+            System.out.println("Country creado: " + country.getCountry());
 
             Boolean valor2 = false;
-            for (Provincia prov : provinciaService.findAll()) {
-                if (prov.getProvincia().equals("Misiones")){
+            for (Province prov : provinciaService.findAll()) {
+                if (prov.getProvince().equals("Misiones")){
                     valor = true;
                 }
             }
             if (!valor2){
-                /* Carga de provincia */
-                Provincia provincia = new Provincia();
-                provincia.setIdPais(pais);
-                provincia.setProvincia("Misiones");
-                provinciaService.saveProvincia(provincia);
-                System.out.println("Provincia creada: " + provincia.getProvincia());
+                /* Carga de province */
+                Province province = new Province();
+                province.setIdCountry(country);
+                province.setProvince("Misiones");
+                provinciaService.saveProvincia(province);
+                System.out.println("Province creada: " + province.getProvince());
 
                 Boolean valor3 = false;
-                for (Ciudad ciudad : ciudadService.findAll()) {
-                    if (ciudad.getCiudad().equals("Apostoles")){
+                for (City city : ciudadService.findAll()) {
+                    if (city.getCity().equals("Apostoles")){
                         valor = true;
                     }
                 }
                 if (!valor3){
-                    /* Carga de ciudad */
-                    Ciudad ciudad = new Ciudad();
-                    ciudad.setIdProvincia(provincia);
-                    ciudad.setCiudad("Apostoles");
-                    ciudadService.saveCiudad(ciudad);
-                    System.out.println("Ciudad creada: " + ciudad.getCiudad());
+                    /* Carga de city */
+                    City city = new City();
+                    city.setIdProvince(province);
+                    city.setCity("Apostoles");
+                    ciudadService.saveCiudad(city);
+                    System.out.println("City creada: " + city.getCity());
                 }
             }
         }

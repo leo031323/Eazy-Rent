@@ -50,7 +50,7 @@
                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tipo</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Estado</th>
                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Visualizaciones</th>
-                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Fecha de publicacion</th>
+                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Fecha de publication</th>
                             <th class="text-secondary opacity-7"></th>
                         </tr>
                         </thead>
@@ -74,22 +74,22 @@
 <%--                                        </c:choose>--%>
                                     </div>
                                     <div class="d-flex flex-column justify-content-center">
-                                        <a class="mb-0 h6" href="${pageContext.request.contextPath}/publicacion/verPublicacion/${propiedad.id}">${propiedad.tituloPublicacion}</a>
-                                        <p class="text-xs text-secondary mb-0">${propiedad.precioPublicacion}</p>
+                                        <a class="mb-0 h6" href="${pageContext.request.contextPath}/publication/verPublicacion/${propiedad.id}">${propiedad.qualificationPublication}</a>
+                                        <p class="text-xs text-secondary mb-0">${propiedad.pricePublication}</p>
                                     </div>
                                 </div>
                             </td>
                             <td>
 <%--                                <p class="font-weight-bold mb-0"></p>--%>
-                                <p class="text-xs text-secondary mb-0">${propiedad.idTipo.tipo}</p>
+                                <p class="text-xs text-secondary mb-0">${propiedad.idType.type}</p>
                             </td>
                             <td class="align-middle text-center">
                                 <c:choose>
-                                    <c:when test="${propiedad.estadoPublicacion == \"activo\" }">
-                                        <span class="badge bg-gradient-success">${propiedad.estadoPublicacion}</span>
+                                    <c:when test="${propiedad.statePublicacion == \"activo\" }">
+                                        <span class="badge bg-gradient-success">${propiedad.statePublicacion}</span>
                                     </c:when>
                                     <c:otherwise>
-                                        <span class="badge bg-gradient-warning">${propiedad.estadoPublicacion}</span>
+                                        <span class="badge bg-gradient-warning">${propiedad.statePublicacion}</span>
                                     </c:otherwise>
                                 </c:choose>
                             </td>
@@ -97,7 +97,7 @@
                                 <span class="text-secondary text-xs font-weight-normal">420</span>
                             </td>
                             <td class="align-middle text-center">
-                                <span class="text-secondary text-xs font-weight-normal">${propiedad.fechaHoraPublicacion.toLocalDate()}</span>
+                                <span class="text-secondary text-xs font-weight-normal">${propiedad.dateTimePublication.toLocalDate()}</span>
                             </td>
                             <td class="align-middle">
 
@@ -107,11 +107,11 @@
                                     <form:button type="submit" >Eliminar</form:button>
                                 </form:form>
                             </td>
-<%--                                        <a class="fas fa-trash m-3" data-toggle="tooltip" data-original-title="Borrar publicacion"  data-bs-toggle="modal" data-bs-target="#es${propiedad.id}"></a>--%>
+<%--                                        <a class="fas fa-trash m-3" data-toggle="tooltip" data-original-title="Borrar publication"  data-bs-toggle="modal" data-bs-target="#es${propiedad.id}"></a>--%>
 <%--                                        <button type="button" onclick="pregunta(${propiedad.id})" class="btn btn-primary"> WENAS TARDES</button>--%>
                             <td class="align-middle">
 <%--                                class=" fa-edit"--%>
-                                <a href="${pageContext.request.contextPath}/publicacion/editarPublicacion/${propiedad.id}"  data-original-title="Editar">EDITAR</a>
+                                <a href="${pageContext.request.contextPath}/publication/editarPublicacion/${propiedad.id}"  data-original-title="Editar">EDITAR</a>
 
 
 <%--                                    <!-- Modal -->--%>
@@ -193,7 +193,7 @@
 
         $(document).ready(function(){
             $('th').on('click', function(){
-                // ordenar la columna de publicacion de forma ascendente sin importar mayusculas o minusculas, y al volver a darle click ordenar de forma descendente
+                // ordenar la columna de publication de forma ascendente sin importar mayusculas o minusculas, y al volver a darle click ordenar de forma descendente
 
                 // si cantidadClicks es igual a 0, ordenar de forma ascendente
 

@@ -57,36 +57,36 @@ public class PublicacionController {
     @GetMapping("/crearPublicacion")
     public String publicacionLoad(Model model){
 
-        List<Tipo> tipos = tipoService.findAll();
-        List<Provincia> provincias = provinciaService.findAll();
-        List<Ciudad> ciudades = ciudadService.findAll();
-        List<Comodidad> comodidades = comodidadService.findAll();
+        List<Type> types = tipoService.findAll();
+        List<Province> provinces = provinciaService.findAll();
+        List<City> ciudades = ciudadService.findAll();
+        List<Comfort> comodidades = comodidadService.findAll();
         List<FeatureComfort> caracteristicaComodidades = caracteristicaComodidadService.findAll();
 
 
         model.addAttribute("ciudades", ciudades);
-        model.addAttribute("provincias", provincias);
-        model.addAttribute("tipos", tipos);
+        model.addAttribute("provincias", provinces);
+        model.addAttribute("tipos", types);
         model.addAttribute("comodidades", comodidades);
         model.addAttribute("caracteristicaComodidades", caracteristicaComodidades);
-        model.addAttribute("publicacion", new Publicacion());
+        model.addAttribute("publicacion", new Publication());
         return "Publicacion/crearPublicacion";
     }
 
-//    Ruta localhost:8080/publicacion/nuevaPublicacion
+//    Ruta localhost:8080/publication/nuevaPublicacion
     @PostMapping("/nuevaPublicacion")
-    public String crearPublicacion(@Validated @ModelAttribute ("publicacion")Publicacion publicacion, BindingResult result, Model model, @RequestParam("file[]") List<MultipartFile> imagen) {
+    public String crearPublicacion(@Validated @ModelAttribute ("publicacion") Publication publication, BindingResult result, Model model, @RequestParam("file[]") List<MultipartFile> imagen) {
     if (result.hasErrors()) {
         //aca deberia ir una pagina de error o algo xd
-        // retornar y pasarle el objeto publicacion, tipo, provincia, ciudad, comodidad, caracteristicaComodidad;
-        List<Tipo> tipos = tipoService.findAll();
-        List<Provincia> provincias = provinciaService.findAll();
-        List<Ciudad> ciudades = ciudadService.findAll();
-        List<Comodidad> comodidades = comodidadService.findAll();
+        // retornar y pasarle el objeto publication, tipo, provincia, ciudad, comodidad, caracteristicaComodidad;
+        List<Type> types = tipoService.findAll();
+        List<Province> provinces = provinciaService.findAll();
+        List<City> ciudades = ciudadService.findAll();
+        List<Comfort> comodidades = comodidadService.findAll();
         List<FeatureComfort> caracteristicaComodidades = caracteristicaComodidadService.findAll();
 
 
-        model.addAttribute("tipos", tipos);
+        model.addAttribute("tipos", types);
         model.addAttribute("comodidades", comodidades);
         model.addAttribute("caracteristicaComodidades", caracteristicaComodidades);
 
@@ -99,7 +99,7 @@ public class PublicacionController {
             Path directorioImagenes = Path.of("src//main//webapp//assets//img//rents");
             String rutaAbsoluta = directorioImagenes.toFile().getAbsolutePath();
 
-            List<FotoPublicacion> fotos = new ArrayList<>();
+            List<PhotoPublication> fotos = new ArrayList<>();
 
             for (MultipartFile file : imagen) {
                 System.out.println(file.getOriginalFilename());
@@ -112,22 +112,22 @@ public class PublicacionController {
                 Path rutaCompleta = Paths.get(rutaAbsoluta + "//" + nombreImagen);
                 Files.write(rutaCompleta, bytes);
 
-                FotoPublicacion fotoPublicacion = new FotoPublicacion();
-                fotoPublicacion.setUrl(nombreImagen);
-                fotoPublicacion.setIdPublicacion(publicacion);
+                PhotoPublication photoPublication = new PhotoPublication();
+                photoPublication.setUrl(nombreImagen);
+                photoPublication.setIdPublication(publication);
 
-                fotos.add(fotoPublicacion);
+                fotos.add(photoPublication);
             }
-            publicacion.setImagenes(fotos);
+            publication.setImagenes(fotos);
 
-//            publicacionService.save(publicacion, imagen);
+//            publicacionService.save(publication, imagen);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
 
-    publicacionService.savePublicacion(publicacion);
+    publicacionService.savePublicacion(publication);
     return "redirect:/publicacion/consultarPublicacion";
     }
 
@@ -137,20 +137,20 @@ public class PublicacionController {
 //    Ruta localhost:8080/publicacion/editarPublicacion/{id}
     @GetMapping("/editarPublicacion/{id}")
     public String editarPublicacion(@PathVariable("id") Long id, Model model) {
-        Publicacion publicacion = publicacionService.getPublicacionById(id);
-        List<Tipo> tipos = tipoService.findAll();
-        List<Provincia> provincias = provinciaService.findAll();
-        List<Ciudad> ciudades = ciudadService.findAll();
-        List<Comodidad> comodidades = comodidadService.findAll();
+        Publication publication = publicacionService.getPublicacionById(id);
+        List<Type> types = tipoService.findAll();
+        List<Province> provinces = provinciaService.findAll();
+        List<City> ciudades = ciudadService.findAll();
+        List<Comfort> comodidades = comodidadService.findAll();
         List<FeatureComfort> caracteristicaComodidades = caracteristicaComodidadService.findAll();
 
         model.addAttribute("ciudades", ciudades);
-        model.addAttribute("provincias", provincias);
-        model.addAttribute("tipos", tipos);
+        model.addAttribute("provincias", provinces);
+        model.addAttribute("tipos", types);
         model.addAttribute("comodidades", comodidades);
         model.addAttribute("caracteristicaComodidades", caracteristicaComodidades);
 
-        model.addAttribute("publicacion", publicacion);
+        model.addAttribute("publicacion", publication);
 
 //        publicacionService.deletePublicacionById(4L);
 
@@ -158,7 +158,7 @@ public class PublicacionController {
     }
 
     @PostMapping("/editarPublicacion/{id}")
-    public String editarPublicacion(@PathVariable("id") Long id, @Validated @ModelAttribute ("publicacion")Publicacion publicacion, BindingResult result,@RequestParam("file[]") List<MultipartFile> imagen ) {
+    public String editarPublicacion(@PathVariable("id") Long id, @Validated @ModelAttribute ("publicacion") Publication publication, BindingResult result, @RequestParam("file[]") List<MultipartFile> imagen ) {
         if (result.hasErrors()) {
             //aca deberia ir una pagina de error o algo xd
             return "Publicacion/editarPublicacion";
@@ -169,7 +169,7 @@ public class PublicacionController {
                 Path directorioImagenes = Path.of("src//main//webapp//assets//img//rents");
                 String rutaAbsoluta = directorioImagenes.toFile().getAbsolutePath();
 
-                List<FotoPublicacion> fotos = new ArrayList<>();
+                List<PhotoPublication> fotos = new ArrayList<>();
 
                 for (MultipartFile file : imagen) {
                     System.out.println(file.getOriginalFilename());
@@ -182,21 +182,21 @@ public class PublicacionController {
                     Path rutaCompleta = Paths.get(rutaAbsoluta + "//" + nombreImagen);
                     Files.write(rutaCompleta, bytes);
 
-                    FotoPublicacion fotoPublicacion = new FotoPublicacion();
-                    fotoPublicacion.setUrl(nombreImagen);
-                    fotoPublicacion.setIdPublicacion(publicacion);
+                    PhotoPublication photoPublication = new PhotoPublication();
+                    photoPublication.setUrl(nombreImagen);
+                    photoPublication.setIdPublication(publication);
 
-                    fotos.add(fotoPublicacion);
+                    fotos.add(photoPublication);
                 }
-                publicacion.setImagenes(fotos);
+                publication.setImagenes(fotos);
 
-//            publicacionService.save(publicacion, imagen);
+//            publicacionService.save(publication, imagen);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
 
-        publicacionService.updatePublicacion(publicacion, id);
+        publicacionService.updatePublicacion(publication, id);
         return "redirect:/publicacion/consultarPublicacion";
     }
 
@@ -207,7 +207,7 @@ public class PublicacionController {
     @GetMapping("/consultarPublicacion")
     public String consultarPublicacion(Model model){
 
-        List<Publicacion> publicaciones = publicacionService.findAllByEstadoPublicacion("activo");
+        List<Publication> publicaciones = publicacionService.findAllByEstadoPublicacion("activo");
         publicaciones.addAll(publicacionService.findAllByEstadoPublicacion("Alquilado"));
         List<FeatureComfort> caracteristicaComodidades = caracteristicaComodidadService.findAll();
 
@@ -220,7 +220,7 @@ public class PublicacionController {
     @GetMapping("/consultarAlquiler")
     public String consultarAlquiler(Model model){
 
-        List<Publicacion> publicaciones = publicacionService.findAllByEstadoPublicacion("Alquilado");
+        List<Publication> publicaciones = publicacionService.findAllByEstadoPublicacion("Alquilado");
 
         model.addAttribute("publicaciones", publicaciones);
 
@@ -234,12 +234,12 @@ public class PublicacionController {
     @GetMapping("/verPublicacion/{id}")
     public String verPublicacion(@PathVariable("id") Long id, Model model, HttpServletRequest request){
 
-        Publicacion publicacion = publicacionService.getPublicacionById(id);
+        Publication publication = publicacionService.getPublicacionById(id);
         Long idUsuario = (Long) request.getSession().getAttribute("userId");
-        Usuario usuario = usuarioService.getUsuarioById(idUsuario);
+        User user = usuarioService.getUsuarioById(idUsuario);
 
-        model.addAttribute("usuario", usuario);
-        model.addAttribute("publicacion", publicacion);
+        model.addAttribute("usuario", user);
+        model.addAttribute("publicacion", publication);
 //        usuarioService.agregarFavoritos(id,1L);
 
 //        usuarioService.quitarFavoritos(1L,1L);
@@ -259,7 +259,7 @@ public class PublicacionController {
     @GetMapping("/verPublicaciones")
     public String verPublicaciones(Model model){
 
-        List<Publicacion> publicaciones = publicacionService.findAllByEstadoPublicacion("activo");
+        List<Publication> publicaciones = publicacionService.findAllByEstadoPublicacion("activo");
 
         model.addAttribute("publicaciones", publicaciones);
 
@@ -285,11 +285,11 @@ public class PublicacionController {
 //    @GetMapping("/verFavoritos")
 //    public String verFavoritos(Model model){
 //
-////        List<Publicacion> publicaciones = publicacionService.findAllByFavorito("si");
+////        List<Publication> publicaciones = publicacionService.findAllByFavorito("si");
 //
 //        model.addAttribute("publicaciones", publicaciones);
 //
-//        return "Publicacion/verFavoritos";
+//        return "Publication/verFavoritos";
 //    }
 
 

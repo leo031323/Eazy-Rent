@@ -40,8 +40,8 @@
 
       <div class="multisteps-form__form">
 
-      <%--@elvariable id="publicacion" type=""--%>
-      <form:form role="form" method="post" action="/publicacion/nuevaPublicacion" modelAttribute="publicacion"  class="text-start" id="form" enctype="multipart/form-data" >
+      <%--@elvariable id="publication" type=""--%>
+      <form:form role="form" method="post" action="/publication/nuevaPublicacion" modelAttribute="publication"  class="text-start" id="form" enctype="multipart/form-data" >
 
         <!--PANEL TIPO DE PROPIEDAD-->
         <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
@@ -49,11 +49,11 @@
           <div class="multisteps-form__content">
 
             <div class="form-row mt-4 shadow-none p-3 mb-5 bg-light rounded">
-                <%--@elvariable id="tipos" type=""--%>
+                <%--@elvariable id="types" type=""--%>
               <form:select path="idTipo" class="multisteps-form__select form-control" id="inputTipo">
-                <option value="">Seleccione un tipo de propiedad (*)</option>
-                <c:forEach items="${tipos}" var="tipo">
-                  <form:option value="${tipo.id}" label="${tipo.tipo}" />
+                <option value="">Seleccione un type de propiedad (*)</option>
+                <c:forEach items="${types}" var="type">
+                  <form:option value="${type.id}" label="${type.type}" />
                 </c:forEach>
               </form:select>
 
@@ -95,8 +95,8 @@
             </div>
 
             <div class="form-row mt-4 shadow-none p-3 mb-5 bg-light rounded">
-              <select class="multisteps-form__select form-control" name="provincia" id="inputProvincia">
-                <option value="">Seleccione una provincia (*)</option>
+              <select class="multisteps-form__select form-control" name="province" id="inputProvincia">
+                <option value="">Seleccione una province (*)</option>
                 <option value="Misiones">Misiones</option>
               </select>
               <div class="text-danger"  id="divProvincia" ></div>
@@ -104,9 +104,9 @@
 
             <div class="form-row mt-4 shadow-none p-3 mb-5 bg-light rounded">
               <form:select path="idCiudad" class="multisteps-form__select form-control" id="inputCiudad">
-                <option value="">Seleccione una ciudad (*)</option>
-                <c:forEach items="${ciudades}" var="ciudad">
-                  <form:option value="${ciudad.id}" label="${ciudad.ciudad}"/>
+                <option value="">Seleccione una city (*)</option>
+                <c:forEach items="${ciudades}" var="city">
+                  <form:option value="${city.id}" label="${city.city}"/>
                 </c:forEach>
               </form:select>
               <div class="text-danger"  id="divCiudad" ></div>
@@ -236,7 +236,7 @@
 
             <div class="form-row mt-4 shadow-none p-3 mb-5 bg-light rounded">
               <div class="col">
-<%--                <input type="file" name="file[]" placeholder="Imagen" multiple id="inputImagen" accept="image/*"/>--%>
+<%--                <input type="file" name="file[]" placeholder="Image" multiple id="inputImagen" accept="image/*"/>--%>
 
                 <div class="drop-area">
                   <div id="preview"></div>
@@ -256,13 +256,13 @@
 
 <%--            <div class="form-row mt-4  shadow-none p-3 mb-5 bg-light rounded">--%>
 <%--              <div class="col">--%>
-<%--                <input type="file" placeholder="Imagen" />--%>
+<%--                <input type="file" placeholder="Image" />--%>
 <%--              </div>--%>
 <%--            </div>--%>
 
 <%--            <div class="form-row mt-4  shadow-none p-3 mb-5 bg-light rounded">--%>
 <%--              <div class="col">--%>
-<%--                <input type="file" placeholder="Imagen"/>--%>
+<%--                <input type="file" placeholder="Image"/>--%>
 <%--              </div>--%>
 <%--            </div>--%>
 
@@ -287,13 +287,13 @@
           <div class="multisteps-form__content">
 
 
-          <c:forEach items="${comodidades}" var="comodidad">
+          <c:forEach items="${comodidades}" var="comfort">
 
             <div class="form-row mt-4  shadow-none p-3 mb-5 bg-light rounded">
-              <h6>${comodidad.comodidad}</h6>
+              <h6>${comfort.comfort}</h6>
               <c:forEach items="${caracteristicaComodidades}"  var="caracteristica" >
 
-                <c:if test="${caracteristica.idComodidad.idComodidad == comodidad.idComodidad}">
+                <c:if test="${caracteristica.idComodidad.idComodidad == comfort.idComodidad}">
                     <div class="col form-check-inline">
                       <form:checkbox path="caracteristicasComodidades" value="${caracteristica.idCaracteristica}" class="form-check-input "/>
                       <label class="form-check-label" >${caracteristica.nombreCaracteristica}</label>

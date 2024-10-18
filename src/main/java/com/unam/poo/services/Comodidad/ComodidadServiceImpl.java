@@ -1,7 +1,7 @@
 package com.unam.poo.services.Comodidad;
 
-import com.unam.poo.models.Comodidad;
-import com.unam.poo.repository.ComodidadRepository;
+import com.unam.poo.models.Comfort;
+import com.unam.poo.repository.ComfortRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +11,11 @@ import java.util.List;
 public class ComodidadServiceImpl implements ComodidadService {
 
     @Autowired
-    private ComodidadRepository comodidadRepository;
+    private ComfortRepository comfortRepository;
 
     @Override
-    public List<Comodidad> findAll() {
-        return comodidadRepository.findAll();
+    public List<Comfort> findAll() {
+        return comfortRepository.findAll();
     }
 
     @Override
@@ -24,12 +24,12 @@ public class ComodidadServiceImpl implements ComodidadService {
     }
 
     @Override
-    public Comodidad getComodidadById(Long id) {
-        return comodidadRepository.findById(id).get();
+    public Comfort getComodidadById(Long id) {
+        return comfortRepository.findById(id).get();
     }
 
     @Override
-    public Comodidad saveComodidad(Comodidad comodidad) {
+    public Comfort saveComodidad(Comfort comfort) {
         return null;
     }
 }

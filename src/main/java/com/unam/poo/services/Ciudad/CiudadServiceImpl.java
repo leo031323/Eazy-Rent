@@ -1,7 +1,7 @@
 package com.unam.poo.services.Ciudad;
 
-import com.unam.poo.models.Ciudad;
-import com.unam.poo.repository.CiudadRepository;
+import com.unam.poo.models.City;
+import com.unam.poo.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +11,11 @@ import java.util.List;
 public class CiudadServiceImpl implements CiudadService {
 
     @Autowired
-    private CiudadRepository ciudadRepository;
+    private CityRepository cityRepository;
 
     @Override
-    public List<Ciudad> findAll() {
-        return ciudadRepository.findAll();
+    public List<City> findAll() {
+        return cityRepository.findAll();
     }
 
     @Override
@@ -24,13 +24,13 @@ public class CiudadServiceImpl implements CiudadService {
     }
 
     @Override
-    public Ciudad getCiudadById(Long id) {
-        return ciudadRepository.findById(id).get();
+    public City getCiudadById(Long id) {
+        return cityRepository.findById(id).get();
     }
 
     @Override
-    public Ciudad saveCiudad(Ciudad ciudad) {
-        return ciudadRepository.save(ciudad);
+    public City saveCiudad(City city) {
+        return cityRepository.save(city);
     }
 }
 
